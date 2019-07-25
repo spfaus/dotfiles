@@ -1,7 +1,10 @@
 #! /bin/bash
 logfile=/var/log/maintenance.log
 date > ${logfile}
-sudo apt update -qy >> ${logfile}
-sudo apt full-upgrade -qy >> ${logfile}
-sudo apt autoremove -qy >> ${logfile}
+echo "###### Updating package list ######" | tee -a ${logfile}
+sudo apt update -qy | tee -a ${logfile}
+echo "###### Downloading and installing package updates ######" | tee -a ${logfile}
+sudo apt full-upgrade -qy | tee -a ${logfile}
+echo "###### Autoremoving unneeded automatically-installed packages ######" | tee -a ${logfile}
+sudo apt autoremove -qy | tee -a ${logfile}
 
