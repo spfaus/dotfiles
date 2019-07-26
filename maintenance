@@ -1,10 +1,16 @@
 #! /bin/bash
 logfile=/var/log/maintenance.log
+
 date > ${logfile}
+
 echo "###### Updating package list ######" | tee -a ${logfile}
 sudo apt update -qy | tee -a ${logfile}
+
 echo "###### Downloading and installing package updates ######" | tee -a ${logfile}
 sudo apt full-upgrade -qy | tee -a ${logfile}
+
 echo "###### Autoremoving unneeded automatically-installed packages ######" | tee -a ${logfile}
 sudo apt autoremove -qy | tee -a ${logfile}
 
+echo "###### Updating snap packages ######" | tee -a ${logfile}
+sudo snap refresh | tee -a ${logfile}
