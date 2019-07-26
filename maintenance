@@ -14,3 +14,6 @@ sudo apt autoremove -qy | tee -a ${logfile}
 
 echo "###### Updating snap packages ######" | tee -a ${logfile}
 sudo snap refresh | tee -a ${logfile}
+
+echo "###### Updating global npm packages ######" | tee -a ${logfile}
+sudo npm update -g | tee -a ${logfile}
