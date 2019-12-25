@@ -1,4 +1,4 @@
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+#[[ -f ~/.bashrc ]] && . ~/.bashrc
 
 export PATH=$PATH:$HOME/.scripts
 
