@@ -7,3 +7,6 @@
 !/.bashrc
 !/.zshrc
 !/.gitconfig
+!/.profile
+!/.zprofile
+!/.scripts/**
