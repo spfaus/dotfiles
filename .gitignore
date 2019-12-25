@@ -1,7 +1,9 @@
-# Ignore everything...
+# Setup whitelist
 *
+!*/
 
-# ...except the following:
-!.gitignore
-!.gitkeep
-!maintenance
+# Files to track
+!/.gitignore
+!/.bashrc
+!/.zshrc
+!/.gitconfig
