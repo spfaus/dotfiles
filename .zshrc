@@ -12,3 +12,4 @@ compinit
 # End of lines added by compinstall
 
 alias ls='ls -lA'
+alias grep='grep -i'
