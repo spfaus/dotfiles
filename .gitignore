@@ -10,3 +10,4 @@
 !/.profile
 !/.zprofile
 !/.scripts/**
+!/.vimrc
