@@ -96,6 +96,8 @@ alias free='free -m'					                      	# show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 	# config instead of git for dotfiles
+alias vi='nvim'
+alias vim='nvim'
 
 xhost +local:root > /dev/null 2>&1
 
