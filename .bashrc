@@ -100,6 +100,8 @@ alias vi='nvim'
 alias vim='nvim'
 alias roadmap='nvim $HOME/projects/notes/roadmap'
 
+shopt -s autoc
+
 xhost +local:root > /dev/null 2>&1
 
 complete -cf sudo
