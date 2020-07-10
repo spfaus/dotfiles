@@ -103,6 +103,7 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 shopt -s autocd
+export HISTCONTROL=ignoreboth
 
 xhost +local:root > /dev/null 2>&1
 
