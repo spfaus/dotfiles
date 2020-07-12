@@ -98,7 +98,6 @@ alias more=less
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' 	# config instead of git for dotfiles
 alias vi='nvim'
 alias vim='nvim'
-alias roadmap='nvim $HOME/projects/notes/roadmap'
 alias mv='mv -i'
 alias rm='rm -i'
 
