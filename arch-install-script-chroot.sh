@@ -17,6 +17,8 @@ echo "127.0.0.1   localhost" >> /etc/hosts
 echo "::1         localhost" >> /etc/hosts
 echo "127.0.1.1   hp14s.localdomain hp14s" >> /etc/hosts
 
+systemctl enable NetworkManager.service
+
 echo "Enter root password"
 passwd
 
@@ -43,6 +45,10 @@ su -c "yay -S rtl8821ce-dkms-git" simon
 dkms autoinstall
 
 systemctl enable gdm.service
-#systemctl edit gdm # Does not work in script?
+sudo mkdir -p /etc/systemd/system/gdm.service.d/
+{ echo "[Service]"; 
+  echo "ExecStartPre=/bin/sleep 1";
+} | sudo tee /etc/systemd/system/gdm.service.d/gdm.conf
+sudo systemctl daemon-reload
 
 sed -i -e 's/ALL ALL=(ALL) NOPASSWD: ALL/ALL ALL=(ALL) ALL/g' /etc/sudoers # Fixes earlier security vulnerability (if script gets to this point)

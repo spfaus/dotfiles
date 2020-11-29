@@ -9,8 +9,9 @@ loadkeys de-latin1
 timedatectl set-ntp true
 
 cfdisk /dev/nvme0n1
+sleep 5
 
-mkfs.ext4 /dev/nvme0n1p3 # TODO: Is sleep prior to this necessary for the partition to be known / to exist?
+mkfs.ext4 /dev/nvme0n1p3
 mkfs.vfat /dev/nvme0n1p1
 mkswap /dev/nvme0n1p2
 
@@ -21,7 +22,7 @@ swapon /dev/nvme0n1p2
 
 reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
-pacstrap /mnt base base-devel linux linux-firmware neovim reflector sudo man-db man-pages texinfo networkmanager curl git firefox-developer-edition grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gdm i3-gaps i3blocks i3status i3lock dmenu
+pacstrap /mnt base base-devel linux linux-firmware neovim reflector sudo man-db man-pages texinfo networkmanager curl git firefox-developer-edition grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gdm i3-gaps i3blocks i3status i3lock dmenu alacritty
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
@@ -29,4 +30,5 @@ echo "mv ./dotfiles/arch-install-script-chroot.sh /mnt/dotfiles/arch-install-scr
 mv ./dotfiles/arch-install-script-chroot.sh /mnt/arch-install-script-chroot.sh
 arch-chroot /mnt ./arch-install-script-chroot.sh
 
-reboot
+#deactivated for debugging
+#reboot
