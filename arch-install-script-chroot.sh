@@ -78,4 +78,4 @@ systemctl enable gdm.service
 #systemctl edit gdm # Does not work in script?
 
 echo "NEXT: sed -i -e 's/ALL ALL=(ALL) NOPASSWD: ALL/ALL ALL=(ALL) ALL/g' /etc/sudoers" && sleep 2
-sed -i -e 's/ALL ALL=(ALL) NOPASSWD: ALL/ALL ALL=(ALL) ALL/g' /etc/sudoers
+sed -i -e 's/ALL ALL=(ALL) NOPASSWD: ALL/ALL ALL=(ALL) ALL/g' /etc/sudoers # Fixes earlier security vulnerability (if script gets to this point)
