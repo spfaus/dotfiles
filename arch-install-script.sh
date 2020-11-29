@@ -6,9 +6,6 @@
 echo "NEXT: loadkeys de-latin1" && sleep 2
 loadkeys de-latin1
 
-echo "NEXT: pacman -Syu" && sleep 2
-pacman -Syu
-
 echo "NEXT: timedatectl set-ntp true" && sleep 2
 timedatectl set-ntp true
 
@@ -46,4 +43,4 @@ echo "NEXT: arch-chroot /mnt" && sleep 2
 arch-chroot /mnt ./arch-install-script-chroot.sh
 
 echo "NEXT: reboot" && sleep 2
-#reboot
+reboot
