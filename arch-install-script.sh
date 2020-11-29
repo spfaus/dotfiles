@@ -41,9 +41,9 @@ echo "NEXT: genfstab -U /mnt >> /mnt/etc/fstab" && sleep 2
 genfstab -U /mnt >> /mnt/etc/fstab
 
 echo "mv ./dotfiles/arch-install-script-chroot.sh /mnt/dotfiles/arch-install-script-chroot.sh" && sleep 2
-mv ./dotfiles/arch-install-script-chroot.sh /mnt/dotfiles/arch-install-script-chroot.sh
+mv ./dotfiles/arch-install-script-chroot.sh /mnt/arch-install-script-chroot.sh
 echo "NEXT: arch-chroot /mnt" && sleep 2
 arch-chroot /mnt ./arch-install-script-chroot.sh
 
 echo "NEXT: reboot" && sleep 2
-reboot
+#reboot
