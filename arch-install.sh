@@ -19,7 +19,7 @@ swapon /dev/nvme0n1p2
 
 reflector --latest 5 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
-pacstrap /mnt base base-devel linux linux-firmware grub efibootmgr
+pacstrap /mnt base linux linux-firmware grub efibootmgr
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
@@ -28,5 +28,4 @@ cp ./dotfiles/arch-packages.sh /mnt
 arch-chroot /mnt ./arch-chroot.sh
 rm /mnt/arch-chroot.sh /mnt/arch-packages.sh
 
-#deactivated for debugging
-#reboot
+reboot
