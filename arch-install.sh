@@ -19,7 +19,7 @@ swapon /dev/nvme0n1p2
 
 reflector --latest 5 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
-pacstrap /mnt base base-devel linux linux-firmware grub efibootmgr
+pacstrap /mnt base base-devel linux linux-firmware grub efibootmgr git
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
