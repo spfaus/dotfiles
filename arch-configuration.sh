@@ -5,7 +5,7 @@ sudo timedatectl set-ntp true
 
 sudo reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
-./arch-packages-script.sh
+./arch-packages.sh
 
 sudo ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 sudo hwclock --systohc
