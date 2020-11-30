@@ -23,10 +23,10 @@ pacstrap /mnt base linux linux-firmware grub efibootmgr
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
-cp ./dotfiles/arch-install-script-chroot.sh /mnt
-cp ./dotfiles/arch-packages-script.sh /mnt
-arch-chroot /mnt ./arch-install-script-chroot.sh
-rm /mnt/arch-install-script-chroot.sh /mnt/arch-packages-script.sh
+cp ./dotfiles/arch-chroot.sh /mnt
+cp ./dotfiles/arch-packages.sh /mnt
+arch-chroot /mnt ./arch-chroot.sh
+rm /mnt/arch-chroot.sh /mnt/arch-packages.sh
 
 #deactivated for debugging
 #reboot
