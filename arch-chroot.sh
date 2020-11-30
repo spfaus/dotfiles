@@ -20,4 +20,4 @@ passwd simon
 sed -i -e 's/# Defaults targetpw/Defaults targetpw/g' /etc/sudoers
 sed -i -e 's/# ALL ALL=(ALL) ALL/ALL ALL=(ALL) ALL/g' /etc/sudoers
 
-#TODO: find way to run configuration script only once after next reboot
+#TODO: find way to run configuration script only once after next reboot or execute directly as user
