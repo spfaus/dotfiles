@@ -1,12 +1,11 @@
 #!/bin/bash
+set -ex
 
-# To be executed upon arch-chroot
-
-#necessary?
-echo "hp14s" > /etc/hostname
+read -p "Enter your hostname: " MY_HOSTNAME
+echo $MY_HOSTNAME > /etc/hostname
 echo "127.0.0.1   localhost" >> /etc/hosts
 echo "::1         localhost" >> /etc/hosts
-echo "127.0.1.1   hp14s.localdomain hp14s" >> /etc/hosts
+echo "127.0.1.1   $MY_HOSTNAME.localdomain $MY_HOSTNAME" >> /etc/hosts
 
 echo "Enter root password"
 passwd
@@ -14,10 +13,11 @@ passwd
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
-useradd -m simon
-echo "Enter user password"
-passwd simon
+read -p "Enter your username: " MY_USERNAME
+useradd -m $MY_USERNAME
+passwd $MY_USERNAME
 sed -i -e 's/# Defaults targetpw/Defaults targetpw/g' /etc/sudoers
 sed -i -e 's/# ALL ALL=(ALL) ALL/ALL ALL=(ALL) ALL/g' /etc/sudoers
 
-#TODO: find way to run configuration script only once after next reboot or execute directly as user
+su -c "git clone https://github.com/simon-a-p/dotfiles.git $HOME" $MY_USERNAME
+su - $MY_USERNAME
