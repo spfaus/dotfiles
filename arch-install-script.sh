@@ -1,8 +1,5 @@
 #!/bin/bash
-
-# TODO: Implement error handling - script continues after commands return errorcodes
-# TODO: Debug / verification outputs
-# TODO: Handle device-specific steps more dynamically
+set -ex
 
 loadkeys de-latin1
 
@@ -22,13 +19,14 @@ swapon /dev/nvme0n1p2
 
 reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
-pacstrap /mnt base base-devel linux linux-firmware neovim reflector sudo man-db man-pages texinfo networkmanager curl git firefox-developer-edition grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gdm i3-gaps i3blocks i3status i3lock dmenu alacritty
+pacstrap /mnt base linux linux-firmware
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
-echo "mv ./dotfiles/arch-install-script-chroot.sh /mnt/dotfiles/arch-install-script-chroot.sh" && sleep 2
-mv ./dotfiles/arch-install-script-chroot.sh /mnt/arch-install-script-chroot.sh
+cp ./dotfiles/arch-install-script-chroot.sh /mnt
+cp ./dotfiles/arch-packages-script.sh /mnt
 arch-chroot /mnt ./arch-install-script-chroot.sh
+rm /mnt/arch-install-script-chroot.sh /mnt/arch-packages-script.sh
 
 #deactivated for debugging
 #reboot

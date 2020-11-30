@@ -3,6 +3,7 @@
 # To be executed upon arch-chroot
 
 pacman -Syu
+./arch-packages-script.sh
 
 ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 hwclock --systohc
@@ -49,6 +50,5 @@ sudo mkdir -p /etc/systemd/system/gdm.service.d/
 { echo "[Service]"; 
   echo "ExecStartPre=/bin/sleep 1";
 } | sudo tee /etc/systemd/system/gdm.service.d/gdm.conf
-sudo systemctl daemon-reload
 
 sed -i -e 's/ALL ALL=(ALL) NOPASSWD: ALL/ALL ALL=(ALL) ALL/g' /etc/sudoers # Fixes earlier security vulnerability (if script gets to this point)
