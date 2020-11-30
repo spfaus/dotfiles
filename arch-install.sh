@@ -17,9 +17,9 @@ mkdir /mnt/efi
 mount /dev/nvme0n1p1 /mnt/efi
 swapon /dev/nvme0n1p2
 
-reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+reflector --latest 5 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
-pacstrap /mnt base linux linux-firmware
+pacstrap /mnt base linux linux-firmware grub efibootmgr
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
