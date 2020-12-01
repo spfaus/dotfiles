@@ -1,6 +1,12 @@
 #!/bin/bash
 set -ex
 
+cd $HOME/dotfiles
+
+for file in $(find $HOME/dotfiles/home -type f); do mkdir -p $(dirname $(echo $file | sed -r 's/\/dotfiles\/home//')) && ln -sf $file $(echo $file | sed -r 's/\/dotfiles\/home//'); done
+
+#for file in $(find $HOME/dotfiles/home -type f); do ln -sf $file $(printf '%s\n' "${${file}//\/dotfiles/}"); done
+
 sudo timedatectl set-ntp true
 
 sudo pacman -Syyu
@@ -29,6 +35,7 @@ sudo mkdir -p /etc/systemd/system/gdm.service.d/
 } | sudo tee /etc/systemd/system/gdm.service.d/override.conf
 sudo systemctl daemon-reload
 
+#TODO: Move this into installation?
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git
 makepkg -si
