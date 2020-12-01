@@ -12,7 +12,7 @@ cfdisk /dev/$INSTALL_DRIVE
 sleep 5
 
 lsblk
-read -p "Enter EFI, swap, root partitions seperated by spaces (eg. nvme0n1p1 nvme0n1p2 nvme0n1p3: " EFI_PARTITION SWAP_PARTITION ROOT_PARTITION 
+read -p "Enter EFI, swap, and root partition in order seperated by spaces (eg. nvme0n1p1 nvme0n1p2 nvme0n1p3): " EFI_PARTITION SWAP_PARTITION ROOT_PARTITION 
 
 mkfs.ext4 /dev/$ROOT_PARTITION
 mkfs.vfat /dev/$EFI_PARTITION
@@ -30,8 +30,7 @@ pacstrap /mnt base base-devel linux linux-firmware grub efibootmgr git
 genfstab -U /mnt >> /mnt/etc/fstab
 
 cp ./dotfiles/arch-chroot.sh /mnt
-cp ./dotfiles/arch-packages.sh /mnt
 arch-chroot /mnt ./arch-chroot.sh
-rm /mnt/arch-chroot.sh /mnt/arch-packages.sh
+rm /mnt/arch-chroot.sh
 
 reboot
