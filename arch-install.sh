@@ -5,17 +5,23 @@ loadkeys de-latin1
 
 timedatectl set-ntp true
 
-cfdisk /dev/nvme0n1
+lsblk
+read -p "Enter drive to installl on (eg. nvme0n1): " INSTALL_DRIVE
+
+cfdisk /dev/$INSTALL_DRIVE
 sleep 5
 
-mkfs.ext4 /dev/nvme0n1p3
-mkfs.vfat /dev/nvme0n1p1
-mkswap /dev/nvme0n1p2
+lsblk
+read -p "Enter EFI, swap, root partitions seperated by spaces (eg. nvme0n1p1 nvme0n1p2 nvme0n1p3: " EFI_PARTITION SWAP_PARTITION ROOT_PARTITION 
 
-mount /dev/nvme0n1p3 /mnt
+mkfs.ext4 /dev/$ROOT_PARTITION
+mkfs.vfat /dev/$EFI_PARTITION
+mkswap /dev/$SWAP_PARTITION
+
+mount /dev/$ROOT_PARTITION /mnt
 mkdir /mnt/efi
-mount /dev/nvme0n1p1 /mnt/efi
-swapon /dev/nvme0n1p2
+mount /dev/$EFI_PARTITION /mnt/efi
+swapon /dev/$SWAP_PARTITION
 
 reflector --latest 5 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
