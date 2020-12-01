@@ -15,8 +15,8 @@ sudo ln -s /usr/bin/nvim /usr/bin/vi
 # replace
 sudo sed -i -e 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
 sudo locale-gen
-sudo echo "LANG=en_US.UTF-8" > /etc/locale.conf
-sudo echo "KEYMAP=de-latin1" > /etc/vconsole.conf
+echo "LANG=en_US.UTF-8" | sudo tee /etc/locale.conf
+echo "KEYMAP=de-latin1" | sudo tee /etc/vconsole.conf
 
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable gdm.service
