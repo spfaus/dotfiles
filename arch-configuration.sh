@@ -26,7 +26,7 @@ sudo mkdir -p /etc/systemd/system/gdm.service.d/
 { echo "[Service]";
   echo "ExecStartPre=/bin/sleep 1";
 } | sudo tee /etc/systemd/system/gdm.service.d/override.conf
-daemon-reload
+sudo systemctl daemon-reload
 
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git
@@ -35,4 +35,4 @@ cd ..
 rm -rf yay-git
 
 yay -S rtl8821ce-dkms-git
-dkms autoinstall
+sudo dkms autoinstall
