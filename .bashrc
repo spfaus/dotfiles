@@ -1,1 +1,0 @@
-/home/simon/dotfiles/home/.bashrc
