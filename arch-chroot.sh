@@ -20,4 +20,5 @@ sed -i -e 's/# Defaults targetpw/Defaults targetpw/g' /etc/sudoers
 sed -i -e 's/# ALL ALL=(ALL) ALL/ALL ALL=(ALL) ALL/g' /etc/sudoers
 
 su -c "git clone https://github.com/simon-a-p/dotfiles.git /home/$MY_USERNAME/dotfiles" $MY_USERNAME
-su - $MY_USERNAME #TODO: can this be replaced to automatically call configuration script and then reboot?
+
+su - $MY_USERNAME
