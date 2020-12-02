@@ -190,3 +190,10 @@ for_window [class=".*"] border pixel 3
 # Add gaps
 gaps inner 10
 gaps outer 5
+
+# Bind lockscreen
+bindsym $mod+Escape exec i3lock
+
+# Set background image
+exec_always feh --bg-fill $HOME/dotfiles/resources/wallpaper.webp
+exec_always xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x1080 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal
