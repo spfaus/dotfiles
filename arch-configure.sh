@@ -3,10 +3,6 @@ set -ex
 
 cd $HOME/dotfiles
 
-for file in $(find $HOME/dotfiles/home -type f); do mkdir -p $(dirname $(echo $file | sed -r 's/\/dotfiles\/home//')) && ln -sf $file $(echo $file | sed -r 's/\/dotfiles\/home//'); done
-
-#for file in $(find $HOME/dotfiles/home -type f); do ln -sf $file $(printf '%s\n' "${${file}//\/dotfiles/}"); done
-
 sudo timedatectl set-ntp true
 
 sudo pacman -Syyu
@@ -43,6 +39,10 @@ cd ..
 rm -rf yay-git
 
 yay -Syyu
+
+for file in $(find $HOME/dotfiles/home -type f); do mkdir -p $(dirname $(echo $file | sed -r 's/\/dotfiles\/home//')) && ln -sf $file $(echo $file | sed -r 's/\/dotfiles\/home//'); done
+
+for file in $(find $HOME/dotfiles/root -type f); do sudo mkdir -p $(dirname $(echo $file | sed -r "s/\/home\/$USER\/dotfiles\/root//")) && sudo ln -sf $file $(echo $file | sed -r "s/\/home\/$USER\/dotfiles\/root//"); done
 
 read -p "Enter device name (hp14s, ...): " DEVICE_NAME
 type $HOME/dotfiles/arch-configure-$DEVICE_NAME.sh && $HOME/dotfiles/arch-configure-$DEVICE_NAME.sh
