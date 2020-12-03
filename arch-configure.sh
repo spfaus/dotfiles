@@ -38,7 +38,7 @@ sudo timedatectl set-ntp true
 sudo hwclock --systohc
 sudo locale-gen
 
-sudo reflector --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --latest 50 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
 # TODO: Catch error on unknown device
 # Do additional device-specific configuration
