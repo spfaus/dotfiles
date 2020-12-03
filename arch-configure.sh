@@ -23,7 +23,6 @@ for file in $(find $HOME/dotfiles/root -type f); do sudo mkdir -p $(dirname $(ec
 
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable gdm.service
-sudo systemctl daemon-reload
 
 sudo ln -sf /usr/bin/nvim /usr/bin/vim
 sudo ln -sf /usr/bin/nvim /usr/bin/vi
@@ -38,3 +37,5 @@ sudo reflector --latest 200 --protocol http --protocol https --sort rate --save 
 # Do additional device-specific configuration
 read -p "Enter device name (eg. hp14s): " DEVICE_NAME
 type $HOME/dotfiles/arch-configure-$DEVICE_NAME.sh && $HOME/dotfiles/arch-configure-$DEVICE_NAME.sh
+
+reboot
