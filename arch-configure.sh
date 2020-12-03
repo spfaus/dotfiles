@@ -21,6 +21,7 @@ for file in $(find $HOME/dotfiles/home -type f); do mkdir -p $(dirname $(echo $f
 # Symlink all root config
 for file in $(find $HOME/dotfiles/root -type f); do sudo mkdir -p $(dirname $(echo $file | sed -r "s/\/home\/$USER\/dotfiles\/root//")) && sudo ln -sf $file $(echo $file | sed -r "s/\/home\/$USER\/dotfiles\/root//"); done
 
+sudo systemctl enable NetworkManager.service
 sudo systemctl enable gdm.service
 sudo systemctl daemon-reload
 
