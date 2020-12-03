@@ -4,7 +4,7 @@ set -ex
 cd $HOME/dotfiles
 
 sudo pacman -Syyu --noconfirm
-sudo pacman -S --noconfirm base base-devel linux linux-firmware neovim reflector sudo man-db man-pages texinfo networkmanager curl git firefox-developer-edition grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gdm i3-gaps i3blocks i3lock rofi alacritty openssh feh alsa-utils arandr pavucontrol
+sudo pacman -S --noconfirm base base-devel linux linux-firmware neovim reflector sudo man-db man-pages texinfo networkmanager curl git firefox-developer-edition grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gdm i3-gaps i3blocks i3lock rofi alacritty openssh feh alsa-utils arandr pavucontrol xorg-fonts-misc
 
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git
@@ -13,7 +13,7 @@ cd ..
 rm -rf yay-git
 
 yay -Syyu --noconfirm
-yay -S --noconfirm polybar
+yay -S --noconfirm polybar siji-git ttf-unifont
 
 # Symlink all user config
 for file in $(find $HOME/dotfiles/home -type f); do mkdir -p $(dirname $(echo $file | sed -r 's/\/dotfiles\/home//')) && ln -sf $file $(echo $file | sed -r 's/\/dotfiles\/home//'); done
@@ -27,6 +27,7 @@ sudo systemctl enable gdm.service
 sudo systemctl daemon-reload
 
 sudo rm -f /usr/share/xsessions/gnome**
+sudo rm -f /usr/share/wayland-sessions/gnome**
 
 sudo ln -sf /usr/bin/nvim /usr/bin/vim
 sudo ln -sf /usr/bin/nvim /usr/bin/vi
