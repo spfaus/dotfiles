@@ -3,17 +3,17 @@ set -ex
 
 cd $HOME/dotfiles
 
-sudo pacman -Syyu
-sudo pacman -S base base-devel linux linux-firmware neovim reflector sudo man-db man-pages texinfo networkmanager curl git firefox-developer-edition grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gdm i3-gaps i3blocks i3lock rofi alacritty openssh feh
+sudo pacman -Syyu --noconfirm
+sudo pacman -S --noconfirm base base-devel linux linux-firmware neovim reflector sudo man-db man-pages texinfo networkmanager curl git firefox-developer-edition grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gdm i3-gaps i3blocks i3lock rofi alacritty openssh feh alsa-utils arandr pavucontrol
 
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git
-makepkg -si
+makepkg -sic --noconfirm
 cd ..
 rm -rf yay-git
 
-yay -Syyu
-yay -S polybar
+yay -Syyu --noconfirm
+yay -S --noconfirm polybar
 
 # Symlink all user config
 for file in $(find $HOME/dotfiles/home -type f); do mkdir -p $(dirname $(echo $file | sed -r 's/\/dotfiles\/home//')) && ln -sf $file $(echo $file | sed -r 's/\/dotfiles\/home//'); done

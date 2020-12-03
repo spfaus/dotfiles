@@ -3,5 +3,5 @@
 
 set -ex
 
-yay -S rtl8821ce-dkms-git
+yay -S --noconfirm rtl8821ce-dkms-git
 sudo dkms autoinstall
