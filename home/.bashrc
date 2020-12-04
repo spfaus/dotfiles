@@ -97,8 +97,6 @@ HISTFILESIZE=20000
 export EDITOR=nvim
 
 PS1="$color_grey_black \u@\h $color_blue_white$separator$color_blue_white \W $color_black_blue$separator"
-
 PS1="$weight_bold$PS1$weight_normal$color_reset "
 
 PS2="$color_blue_white-$color_black_blue$separator$color_reset"
-PS4="$PS2"
