@@ -5,7 +5,7 @@ index-recursive-directories=['&DESKTOP', '&DOCUMENTS', '&MUSIC', '&PICTURES', '&
 active-view='month'
 window-maximized=false
 window-position=(26, 23)
-window-size=(1904, 1017)
+window-size=(1872, 958)
 
 [org/gnome/control-center]
 last-panel='keyboard'
@@ -129,6 +129,17 @@ workspace-names=@as []
 migrated=true
 network-monitor-gio-name=''
 
+[org/gnome/gnome-system-monitor]
+current-tab='resources'
+maximized=false
+show-dependencies=false
+show-whose-processes='user'
+window-state=(924, 985, 26, 23)
+
+[org/gnome/gnome-system-monitor/disktreenew]
+col-6-visible=true
+col-6-width=0
+
 [org/gnome/mutter]
 attach-modal-dialogs=false
 center-new-windows=false
@@ -179,7 +190,7 @@ favorite-apps=@as []
 
 [org/gnome/shell/extensions/pop-shell]
 active-hint=true
-gap-inner=uint32 6
+gap-inner=uint32 3
 gap-outer=uint32 6
 hint-color-rgba='rgb(21,83,158)'
 log-level=uint32 2
