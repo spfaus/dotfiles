@@ -4,7 +4,7 @@ set -ex
 cd $HOME/dotfiles
 
 sudo pacman -Syyu --noconfirm
-sudo pacman -S --noconfirm base base-devel linux linux-firmware neovim reflector sudo man-db man-pages texinfo networkmanager curl git firefox-developer-edition grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gnome gnome-tweaks
+sudo pacman -S --noconfirm base base-devel linux linux-firmware neovim reflector sudo man-db man-pages texinfo networkmanager curl git firefox-developer-edition grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gnome gnome-tweaks neofetch htop net-tools
 
 git clone https://aur.archlinux.org/yay-git.git
 cd yay-git
