@@ -23,7 +23,7 @@ size=(930, 1005)
 state=87168
 
 [org/gnome/control-center]
-last-panel='background'
+last-panel='keyboard'
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
@@ -174,13 +174,13 @@ toggle-tiled-right=@as []
 restore-shortcuts=@as []
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-last-coordinates=(53.042500719942403, 8.8895999999999997)
+night-light-last-coordinates=(53.069498560115186, 8.8895999999999997)
 
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot=['Print']
 area-screenshot-clip=@as []
 help=@as []
-logout=['<Shift><Super>Escape']
+logout=@as []
 magnifier=@as []
 magnifier-zoom-in=@as []
 magnifier-zoom-out=@as []
