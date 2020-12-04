@@ -12,7 +12,7 @@ window-size=[930, 958]
 active-view='month'
 window-maximized=false
 window-position=(26, 23)
-window-size=(930, 985)
+window-size=(1872, 958)
 
 [org/gnome/clocks]
 world-clocks=@aa{sv} []
@@ -23,7 +23,7 @@ size=(930, 1005)
 state=87168
 
 [org/gnome/control-center]
-last-panel='keyboard'
+last-panel='user-accounts'
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
@@ -40,6 +40,7 @@ name='suse-yast.directory'
 translate=true
 
 [org/gnome/desktop/background]
+color-shading-type='solid'
 picture-options='zoom'
 picture-uri='file:///usr/share/backgrounds/gnome/Icetwigs.jpg'
 primary-color='#ffffff'
@@ -83,6 +84,7 @@ disable-camera=true
 disable-microphone=true
 
 [org/gnome/desktop/screensaver]
+color-shading-type='solid'
 lock-delay=uint32 0
 lock-enabled=true
 picture-options='zoom'
@@ -160,10 +162,10 @@ col-6-visible=true
 col-6-width=0
 
 [org/gnome/mutter]
-attach-modal-dialogs=false
+attach-modal-dialogs=true
 center-new-windows=false
 dynamic-workspaces=true
-edge-tiling=false
+edge-tiling=true
 workspaces-only-on-primary=true
 
 [org/gnome/mutter/keybindings]
@@ -234,8 +236,14 @@ check-timestamp=int64 1607079497
 [org/gnome/system/location]
 enabled=true
 
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+bold-is-bright=false
+cursor-shape='ibeam'
+palette=['rgb(23,20,33)', 'rgb(192,28,40)', 'rgb(38,162,105)', 'rgb(162,115,76)', 'rgb(18,72,139)', 'rgb(163,71,186)', 'rgb(42,161,179)', 'rgb(208,207,204)', 'rgb(94,92,100)', 'rgb(246,97,81)', 'rgb(51,209,122)', 'rgb(233,173,12)', 'rgb(42,123,222)', 'rgb(192,97,203)', 'rgb(51,199,222)', 'rgb(255,255,255)']
+use-theme-colors=true
+
 [org/gtk/settings/color-chooser]
-custom-colors=[(0.082352941176470615, 0.32549019607843171, 0.61960784313725492, 1.0), (0.0, 0.32941176470588235, 0.81960784313725488, 1.0), (0.0, 0.32800000000000029, 0.82000000000000006, 1.0), (0.76470588235294112, 0.8666666666666667, 1.0, 1.0), (0.76333333333333342, 0.86521674140508231, 1.0, 1.0), (0.0, 0.37647058823529411, 0.87450980392156863, 1.0), (0.0, 0.37647058823529445, 0.87450980392156863, 1.0), (0.396078431372549, 0.40000000000000002, 0.94509803921568625, 1.0)]
+custom-colors=[(0.082352941176470587, 0.32549019607843138, 0.61960784313725492, 1.0), (0.74509803921568629, 0.80784313725490198, 0.8666666666666667, 1.0), (0.082352941176470615, 0.32549019607843171, 0.61960784313725492, 1.0), (0.0, 0.32941176470588235, 0.81960784313725488, 1.0), (0.0, 0.32800000000000029, 0.82000000000000006, 1.0), (0.76470588235294112, 0.8666666666666667, 1.0, 1.0), (0.76333333333333342, 0.86521674140508231, 1.0, 1.0), (0.0, 0.37647058823529411, 0.87450980392156863, 1.0)]
 selected-color=(true, 0.082352941176470615, 0.32549019607843171, 0.61960784313725492, 1.0)
 
 [org/gtk/settings/file-chooser]
