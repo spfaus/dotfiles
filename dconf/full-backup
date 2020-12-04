@@ -1,14 +1,29 @@
 [org/freedesktop/tracker/miner/files]
 index-recursive-directories=['&DESKTOP', '&DOCUMENTS', '&MUSIC', '&PICTURES', '&VIDEOS', '&DOWNLOAD']
 
+[org/gnome/boxes]
+first-run=false
+view='icon-view'
+window-maximized=false
+window-position=[26, 23]
+window-size=[930, 958]
+
 [org/gnome/calendar]
 active-view='month'
 window-maximized=false
 window-position=(26, 23)
-window-size=(1872, 958)
+window-size=(930, 985)
+
+[org/gnome/clocks]
+world-clocks=@aa{sv} []
+
+[org/gnome/clocks/state/window]
+panel-id='world'
+size=(930, 1005)
+state=87168
 
 [org/gnome/control-center]
-last-panel='keyboard'
+last-panel='background'
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
@@ -26,7 +41,7 @@ translate=true
 
 [org/gnome/desktop/background]
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/gnome/SeaSunset.jpg'
+picture-uri='file:///usr/share/backgrounds/gnome/Icetwigs.jpg'
 primary-color='#ffffff'
 secondary-color='#000000'
 
@@ -50,7 +65,11 @@ monospace-font-name='Source Code Pro 11'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
+application-children=['firefox-developer-edition']
 show-in-lock-screen=false
+
+[org/gnome/desktop/notifications/application/firefox-developer-edition]
+application-id='firefox-developer-edition.desktop'
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='default'
@@ -67,7 +86,7 @@ disable-microphone=true
 lock-delay=uint32 0
 lock-enabled=true
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/gnome/SeaSunset.jpg'
+picture-uri='file:///usr/share/backgrounds/gnome/Icetwigs.jpg'
 primary-color='#ffffff'
 secondary-color='#000000'
 
@@ -155,7 +174,7 @@ toggle-tiled-right=@as []
 restore-shortcuts=@as []
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-last-coordinates=(53.060499280057591, 8.8895999999999997)
+night-light-last-coordinates=(53.042500719942403, 8.8895999999999997)
 
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot=['Print']

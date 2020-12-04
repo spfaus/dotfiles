@@ -1,5 +1,4 @@
 #!/bin/bash
-#TODO: Automatically skip unnecessary steps that take a long time
 set -ex
 
 cd $HOME/dotfiles
@@ -12,19 +11,17 @@ cd yay-git
 makepkg -sic --noconfirm
 cd ..
 rm -rf yay-git
-
 yay -Syyu --noconfirm
 yay -S --noconfirm gnome-shell-extension-pop-shell
-
-#TODO: Get changes from outside dotfiles	before symlinking them out again. Maybe manual handling?
 
 # Load all dconf settings
 dconf load / < ./dconf/full-backup
 
-# Symlink all user config
+# Symlink all user config files
 for file in $(find $HOME/dotfiles/home -type f); do mkdir -p $(dirname $(echo $file | sed -r 's/\/dotfiles\/home//')) && ln -sf $file $(echo $file | sed -r 's/\/dotfiles\/home//'); done
 
-# Symlink all root config
+# Symlink all root config files
+sudo chown -R root:root ./root
 for file in $(find $HOME/dotfiles/root -type f); do sudo mkdir -p $(dirname $(echo $file | sed -r "s/\/home\/$USER\/dotfiles\/root//")) && sudo ln -sf $file $(echo $file | sed -r "s/\/home\/$USER\/dotfiles\/root//"); done
 
 sudo systemctl enable NetworkManager.service
@@ -40,7 +37,6 @@ sudo locale-gen
 
 sudo reflector --latest 50 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 
-# TODO: Catch error on unknown device
 # Do additional device-specific configuration
 read -p "Enter device name (eg. hp14s): " DEVICE_NAME
 type $HOME/dotfiles/arch-configure-$DEVICE_NAME.sh && $HOME/dotfiles/arch-configure-$DEVICE_NAME.sh
