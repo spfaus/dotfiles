@@ -39,6 +39,6 @@ sudo reflector --latest 50 --protocol http --protocol https --sort rate --save /
 
 # Do additional device-specific configuration
 read -p "Enter device name (eg. hp14s): " DEVICE_NAME
-type $HOME/dotfiles/$DEVICE_NAME.sh/arch-configure.sh && $HOME/dotfiles/$DEVICE_NAME.sh/arch-configure.sh
+type $HOME/dotfiles/$DEVICE_NAME/arch-configure.sh && $HOME/dotfiles/$DEVICE_NAME/arch-configure.sh
 
 reboot
