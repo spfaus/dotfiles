@@ -12,7 +12,7 @@ window-size=[930, 958]
 active-view='month'
 window-maximized=false
 window-position=(26, 23)
-window-size=(1872, 958)
+window-size=(930, 985)
 
 [org/gnome/clocks]
 world-clocks=@aa{sv} []
@@ -23,7 +23,7 @@ size=(930, 1005)
 state=87168
 
 [org/gnome/control-center]
-last-panel='user-accounts'
+last-panel='display'
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
@@ -62,15 +62,18 @@ document-font-name='Cantarell 11'
 font-name='Cantarell 11'
 gtk-im-module='gtk-im-context-simple'
 gtk-theme='Adwaita-dark'
-monospace-font-name='Source Code Pro 11'
+monospace-font-name='Source Code Pro Medium 11'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['firefox-developer-edition']
+application-children=['firefox-developer-edition', 'gnome-network-panel']
 show-in-lock-screen=false
 
 [org/gnome/desktop/notifications/application/firefox-developer-edition]
 application-id='firefox-developer-edition.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-network-panel]
+application-id='gnome-network-panel.desktop'
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='default'
@@ -150,12 +153,15 @@ workspace-names=@as []
 migrated=true
 network-monitor-gio-name=''
 
+[org/gnome/evolution]
+default-calendar='system-calendar'
+
 [org/gnome/gnome-system-monitor]
 current-tab='resources'
 maximized=false
 show-dependencies=false
 show-whose-processes='user'
-window-state=(924, 985, 26, 23)
+window-state=(738, 985, 26, 23)
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-6-visible=true
@@ -163,9 +169,9 @@ col-6-width=0
 
 [org/gnome/mutter]
 attach-modal-dialogs=true
-center-new-windows=false
+center-new-windows=true
 dynamic-workspaces=true
-edge-tiling=true
+edge-tiling=false
 workspaces-only-on-primary=true
 
 [org/gnome/mutter/keybindings]
@@ -176,7 +182,7 @@ toggle-tiled-right=@as []
 restore-shortcuts=@as []
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-last-coordinates=(53.069498560115186, 8.8895999999999997)
+night-light-last-coordinates=(53.05659973988481, 8.9342059999999996)
 
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot=['Print']
@@ -231,7 +237,7 @@ toggle-overview=@as []
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1607079497
+check-timestamp=int64 1607144563
 
 [org/gnome/system/location]
 enabled=true
@@ -243,8 +249,8 @@ palette=['rgb(23,20,33)', 'rgb(192,28,40)', 'rgb(38,162,105)', 'rgb(162,115,76)'
 use-theme-colors=true
 
 [org/gtk/settings/color-chooser]
-custom-colors=[(0.082352941176470587, 0.32549019607843138, 0.61960784313725492, 1.0), (0.74509803921568629, 0.80784313725490198, 0.8666666666666667, 1.0), (0.082352941176470615, 0.32549019607843171, 0.61960784313725492, 1.0), (0.0, 0.32941176470588235, 0.81960784313725488, 1.0), (0.0, 0.32800000000000029, 0.82000000000000006, 1.0), (0.76470588235294112, 0.8666666666666667, 1.0, 1.0), (0.76333333333333342, 0.86521674140508231, 1.0, 1.0), (0.0, 0.37647058823529411, 0.87450980392156863, 1.0)]
-selected-color=(true, 0.082352941176470615, 0.32549019607843171, 0.61960784313725492, 1.0)
+custom-colors=[(0.99607843137254903, 0.83137254901960789, 0.82745098039215681, 1.0), (0.082352941176470587, 0.32549019607843138, 0.61960784313725492, 1.0), (0.74509803921568629, 0.80784313725490198, 0.8666666666666667, 1.0), (0.082352941176470615, 0.32549019607843171, 0.61960784313725492, 1.0), (0.0, 0.32941176470588235, 0.81960784313725488, 1.0), (0.0, 0.32800000000000029, 0.82000000000000006, 1.0), (0.76470588235294112, 0.8666666666666667, 1.0, 1.0), (0.76333333333333342, 0.86521674140508231, 1.0, 1.0)]
+selected-color=(true, 0.082352941176470587, 0.32549019607843138, 0.61960784313725492, 1.0)
 
 [org/gtk/settings/file-chooser]
 date-format='regular'
