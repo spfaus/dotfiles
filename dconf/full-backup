@@ -1,6 +1,10 @@
 [org/freedesktop/tracker/miner/files]
 index-recursive-directories=['&DESKTOP', '&DOCUMENTS', '&MUSIC', '&PICTURES', '&VIDEOS', '&DOWNLOAD']
 
+[org/gnome/baobab/ui]
+window-size=(930, 449)
+window-state=87168
+
 [org/gnome/boxes]
 first-run=false
 view='icon-view'
@@ -12,7 +16,7 @@ window-size=[930, 958]
 active-view='month'
 window-maximized=false
 window-position=(26, 23)
-window-size=(930, 985)
+window-size=(1872, 985)
 
 [org/gnome/clocks]
 world-clocks=@aa{sv} []
@@ -23,7 +27,7 @@ size=(930, 1005)
 state=87168
 
 [org/gnome/control-center]
-last-panel='display'
+last-panel='background'
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
@@ -42,9 +46,9 @@ translate=true
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/gnome/Icetwigs.jpg'
-primary-color='#ffffff'
-secondary-color='#000000'
+picture-uri='file:///home/simon/.local/share/backgrounds/2020-12-06-17-23-55-wallpaper.png'
+primary-color='#000000000000'
+secondary-color='#000000000000'
 
 [org/gnome/desktop/calendar]
 show-weekdate=false
@@ -66,7 +70,7 @@ monospace-font-name='Source Code Pro Medium 11'
 show-battery-percentage=true
 
 [org/gnome/desktop/notifications]
-application-children=['firefox-developer-edition', 'gnome-network-panel']
+application-children=['firefox-developer-edition', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-baobab']
 show-in-lock-screen=false
 
 [org/gnome/desktop/notifications/application/firefox-developer-edition]
@@ -74,6 +78,12 @@ application-id='firefox-developer-edition.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-baobab]
+application-id='org.gnome.baobab.desktop'
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='default'
@@ -91,9 +101,9 @@ color-shading-type='solid'
 lock-delay=uint32 0
 lock-enabled=true
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/gnome/Icetwigs.jpg'
-primary-color='#ffffff'
-secondary-color='#000000'
+picture-uri='file:///home/simon/.local/share/backgrounds/2020-12-06-17-23-55-wallpaper.png'
+primary-color='#000000000000'
+secondary-color='#000000000000'
 
 [org/gnome/desktop/search-providers]
 disabled=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Boxes.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Photos.desktop', 'org.gnome.Software.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Epiphany.desktop', 'org.gnome.Calculator.desktop']
@@ -181,8 +191,16 @@ toggle-tiled-right=@as []
 [org/gnome/mutter/wayland/keybindings]
 restore-shortcuts=@as []
 
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+search-filter-time-type='last_modified'
+
+[org/gnome/nautilus/window-state]
+initial-size=(930, 449)
+maximized=false
+
 [org/gnome/settings-daemon/plugins/color]
-night-light-last-coordinates=(53.05659973988481, 8.9342059999999996)
+night-light-last-coordinates=(53.092596260115187, 8.9342120000000005)
 
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot=['Print']
@@ -237,7 +255,7 @@ toggle-overview=@as []
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1607144563
+check-timestamp=int64 1607237062
 
 [org/gnome/system/location]
 enabled=true
@@ -250,7 +268,7 @@ use-theme-colors=true
 
 [org/gtk/settings/color-chooser]
 custom-colors=[(0.99607843137254903, 0.83137254901960789, 0.82745098039215681, 1.0), (0.082352941176470587, 0.32549019607843138, 0.61960784313725492, 1.0), (0.74509803921568629, 0.80784313725490198, 0.8666666666666667, 1.0), (0.082352941176470615, 0.32549019607843171, 0.61960784313725492, 1.0), (0.0, 0.32941176470588235, 0.81960784313725488, 1.0), (0.0, 0.32800000000000029, 0.82000000000000006, 1.0), (0.76470588235294112, 0.8666666666666667, 1.0, 1.0), (0.76333333333333342, 0.86521674140508231, 1.0, 1.0)]
-selected-color=(true, 0.082352941176470587, 0.32549019607843138, 0.61960784313725492, 1.0)
+selected-color=(true, 0.96078431372549022, 0.47450980392156861, 0.0, 1.0)
 
 [org/gtk/settings/file-chooser]
 date-format='regular'
