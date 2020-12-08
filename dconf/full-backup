@@ -14,9 +14,9 @@ window-size=[930, 958]
 
 [org/gnome/calendar]
 active-view='month'
-window-maximized=false
-window-position=(26, 23)
-window-size=(1872, 985)
+window-maximized=true
+window-position=(0, 0)
+window-size=(1920, 1006)
 
 [org/gnome/clocks]
 world-clocks=@aa{sv} []
@@ -27,7 +27,7 @@ size=(930, 1005)
 state=87168
 
 [org/gnome/control-center]
-last-panel='background'
+last-panel='sound'
 
 [org/gnome/desktop/app-folders]
 folder-children=['Utilities', 'YaST']
@@ -149,6 +149,7 @@ switch-to-workspace-2=@as []
 switch-to-workspace-3=@as []
 switch-to-workspace-4=@as []
 switch-to-workspace-last=@as []
+toggle-fullscreen=@as []
 toggle-maximized=['<Super>m']
 unmaximize=@as []
 
@@ -171,7 +172,7 @@ current-tab='resources'
 maximized=false
 show-dependencies=false
 show-whose-processes='user'
-window-state=(738, 985, 26, 23)
+window-state=(1872, 958, 26, 23)
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-6-visible=true
@@ -196,11 +197,11 @@ default-folder-viewer='icon-view'
 search-filter-time-type='last_modified'
 
 [org/gnome/nautilus/window-state]
-initial-size=(930, 449)
+initial-size=(942, 982)
 maximized=false
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-last-coordinates=(53.092596260115187, 8.9342120000000005)
+night-light-last-coordinates=(53.498400719942403, 9.9842999999999993)
 
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot=['Print']
@@ -236,7 +237,7 @@ favorite-apps=@as []
 [org/gnome/shell/extensions/pop-shell]
 active-hint=true
 gap-inner=uint32 3
-gap-outer=uint32 6
+gap-outer=uint32 3
 hint-color-rgba='rgb(21,83,158)'
 log-level=uint32 2
 show-title=false
@@ -255,7 +256,7 @@ toggle-overview=@as []
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1607237062
+check-timestamp=int64 1607421018
 
 [org/gnome/system/location]
 enabled=true
@@ -281,5 +282,5 @@ sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-position=(26, 23)
+window-position=(359, 79)
 window-size=(1203, 902)
