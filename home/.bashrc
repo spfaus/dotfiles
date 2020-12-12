@@ -90,10 +90,10 @@ weight_normal="$(tput sgr0)"
 #separator='❯'
 separator=''
 
-HISTCONTROL=ignoreboth
-shopt -s histappend
-HISTSIZE=10000
-HISTFILESIZE=20000
+#HISTCONTROL=ignoreboth
+#shopt -s histappend
+#HISTSIZE=10000
+#HISTFILESIZE=20000
 export EDITOR=nvim
 
 PS1="$color_grey_black \u@\h $color_blue_white$separator$color_blue_white \W $color_black_blue$separator"
