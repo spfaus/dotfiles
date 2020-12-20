@@ -15,8 +15,8 @@ window-size=[930, 958]
 [org/gnome/calendar]
 active-view='month'
 window-maximized=false
-window-position=(0, 0)
-window-size=(1948, 1034)
+window-position=(26, 23)
+window-size=(942, 982)
 
 [org/gnome/cheese]
 burst-delay=1000
@@ -35,7 +35,7 @@ size=(930, 1005)
 state=87168
 
 [org/gnome/control-center]
-last-panel='sound'
+last-panel='default-apps'
 
 [org/gnome/desktop/a11y/applications]
 screen-reader-enabled=false
@@ -251,7 +251,7 @@ ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-last-coordinates=(53.069498560115186, 8.8895999999999997)
+night-light-last-coordinates=(53.056599439884813, 8.9342164999999998)
 
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot=['Print']
@@ -311,15 +311,36 @@ check-timestamp=int64 1608467827
 [org/gnome/system/location]
 enabled=true
 
+[org/gnome/terminal/legacy/profiles:]
+default='b1dcc9dd-5262-4d8d-a863-c897e6d979b9'
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9']
+
 [org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+audible-bell=true
+background-color='rgb(22,25,35)'
+bold-color='rgb(255,255,255)'
+bold-color-same-as-fg=true
 bold-is-bright=false
+cell-width-scale=1.0
+cursor-background-color='rgb(0,0,0)'
+cursor-blink-mode='on'
+cursor-colors-set=false
+cursor-foreground-color='rgb(255,255,255)'
 cursor-shape='ibeam'
-palette=['rgb(23,20,33)', 'rgb(192,28,40)', 'rgb(38,162,105)', 'rgb(162,115,76)', 'rgb(18,72,139)', 'rgb(163,71,186)', 'rgb(42,161,179)', 'rgb(208,207,204)', 'rgb(94,92,100)', 'rgb(246,97,81)', 'rgb(51,209,122)', 'rgb(233,173,12)', 'rgb(42,123,222)', 'rgb(192,97,203)', 'rgb(51,199,222)', 'rgb(255,255,255)']
-use-theme-colors=true
+foreground-color='rgb(245,245,245)'
+highlight-colors-set=false
+login-shell=false
+palette=['rgb(22,25,35)', 'rgb(218,40,40)', 'rgb(41,198,41)', 'rgb(218,189,25)', 'rgb(21,83,158)', 'rgb(205,26,205)', 'rgb(30,207,207)', 'rgb(245,245,245)', 'rgb(72,75,85)', 'rgb(255,90,90)', 'rgb(91,248,91)', 'rgb(255,239,75)', 'rgb(71,133,208)', 'rgb(255,76,255)', 'rgb(80,255,255)', 'rgb(255,255,255)']
+scroll-on-keystroke=true
+scrollbar-policy='never'
+use-custom-command=false
+use-system-font=true
+use-theme-colors=false
+visible-name='Custom'
 
 [org/gtk/settings/color-chooser]
-custom-colors=[(0.99607843137254903, 0.83137254901960789, 0.82745098039215681, 1.0), (0.082352941176470587, 0.32549019607843138, 0.61960784313725492, 1.0), (0.74509803921568629, 0.80784313725490198, 0.8666666666666667, 1.0), (0.082352941176470615, 0.32549019607843171, 0.61960784313725492, 1.0), (0.0, 0.32941176470588235, 0.81960784313725488, 1.0), (0.0, 0.32800000000000029, 0.82000000000000006, 1.0), (0.76470588235294112, 0.8666666666666667, 1.0, 1.0), (0.76333333333333342, 0.86521674140508231, 1.0, 1.0)]
-selected-color=(true, 0.96078431372549022, 0.47450980392156861, 0.0, 1.0)
+custom-colors=[(0.28235294117647058, 0.29411764705882359, 0.33333333333333331, 1.0), (0.086274509803921567, 0.098039215686274508, 0.13725490196078433, 1.0), (0.33333333333333331, 0.33333333333333331, 0.33333333333333331, 1.0), (0.086274509803921581, 0.098039215686274481, 0.13725490196078433, 1.0), (0.086274509803921581, 0.098039215686274508, 0.13725490196078433, 1.0), (0.096666666666666679, 0.096666666666666679, 0.096666666666666679, 1.0), (0.79000000000000004, 0.0, 0.0, 1.0), (0.66666666666666663, 0.0, 0.0, 1.0)]
+selected-color=(true, 0.28235294117647058, 0.29411764705882359, 0.33333333333333331, 1.0)
 
 [org/gtk/settings/file-chooser]
 date-format='regular'
