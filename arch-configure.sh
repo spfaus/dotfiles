@@ -8,7 +8,7 @@ yay -Syyu --noconfirm
 
 sudo pacman -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl git firefox-developer-edition grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gnome gnome-tweaks rustup rust-analyzer
 
-yay -S --noconfirm gnome-shell-extension-pop-shell yay neovim-nightly vim-plug
+yay -S --noconfirm gnome-shell-extension-pop-shell yay neovim-nightly 
 
 # Load all dconf settings
 dconf load / < ./dconf/full-backup
