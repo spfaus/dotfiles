@@ -4,15 +4,11 @@ set -ex
 cd $HOME/dotfiles
 
 sudo pacman -Syyu --noconfirm
-sudo pacman -S --noconfirm base base-devel linux linux-firmware neovim reflector sudo man-db man-pages texinfo networkmanager curl git firefox-developer-edition grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gnome gnome-tweaks neofetch htop net-tools
-
-git clone https://aur.archlinux.org/yay-git.git
-cd yay-git
-makepkg -sic --noconfirm
-cd ..
-rm -rf yay-git
 yay -Syyu --noconfirm
-yay -S --noconfirm gnome-shell-extension-pop-shell
+
+sudo pacman -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl git firefox-developer-edition grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gnome gnome-tweaks rustup rust-analyzer
+
+yay -S --noconfirm gnome-shell-extension-pop-shell yay neovim-nightly vim-plug
 
 # Load all dconf settings
 dconf load / < ./dconf/full-backup
@@ -23,6 +19,8 @@ for file in $(find $HOME/dotfiles/home -type f); do mkdir -p $(dirname $(echo $f
 # Symlink all root config files
 sudo chown -R root:root ./root
 for file in $(find $HOME/dotfiles/root -type f); do sudo mkdir -p $(dirname $(echo $file | sed -r "s/\/home\/$USER\/dotfiles\/root//")) && sudo ln -sf $file $(echo $file | sed -r "s/\/home\/$USER\/dotfiles\/root//"); done
+
+rustup default stable
 
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable gdm.service
