@@ -8,7 +8,7 @@ yay -Syyu --noconfirm
 
 sudo pacman -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl git firefox-developer-edition grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gnome gnome-tweaks rustup rust-analyzer
 
-yay -S --noconfirm gnome-shell-extension-pop-shell yay neovim-nightly 
+yay -S --noconfirm gnome-shell-extension-pop-shell yay neovim-nightly vim-plug
 
 # Load all dconf settings
 dconf load / < ./dconf/full-backup
@@ -25,7 +25,7 @@ rustup default stable
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable gdm.service
 
-sudo ln -sf /usr/bin/nvim /usr/bin/vim
+#sudo ln -sf /usr/bin/nvim /usr/bin/vim
 sudo ln -sf /usr/bin/nvim /usr/bin/vi
 sudo ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 
