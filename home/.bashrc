@@ -83,8 +83,8 @@ color_grey_white='\[\e[37;47m\]'
 
 color_reset='\[\033[0m\]'
 
-weight_bold="$(tput bold)"
-weight_normal="$(tput sgr0)"
+#weight_bold="$(tput bold)"
+#weight_normal="$(tput sgr0)"
 
 #separator=''
 #separator='❯'
@@ -97,6 +97,6 @@ separator=''
 export EDITOR=nvim
 
 PS1="$color_grey_black \u@\h $color_blue_white$separator$color_blue_white \W $color_black_blue$separator"
-PS1="$weight_bold$PS1$weight_normal$color_reset "
+PS1="$PS1$color_reset "
 
 PS2="$color_blue_white-$color_black_blue$separator$color_reset"
