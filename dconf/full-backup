@@ -16,7 +16,7 @@ window-size=[930, 958]
 active-view='month'
 window-maximized=false
 window-position=(26, 23)
-window-size=(942, 982)
+window-size=(1896, 982)
 
 [org/gnome/cheese]
 burst-delay=1000
@@ -279,7 +279,7 @@ ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-last-coordinates=(53.489401439884809, 9.9842999999999993)
+night-light-last-coordinates=(53.033501439884809, 8.8895999999999997)
 
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot=['Print']
@@ -334,7 +334,7 @@ toggle-overview=@as []
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1608546898
+check-timestamp=int64 1608786317
 
 [org/gnome/system/location]
 enabled=true
@@ -381,7 +381,7 @@ sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-position=(26, 23)
+window-position=(359, 1159)
 window-size=(1203, 902)
 
 [system/proxy]

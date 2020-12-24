@@ -14,4 +14,5 @@
     "terminal.integrated.fontWeightBold": "650",
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
+    "editor.formatOnSave": true,
 }
