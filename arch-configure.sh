@@ -33,7 +33,7 @@ sudo timedatectl set-ntp true
 sudo hwclock --systohc
 sudo locale-gen
 
-sudo reflector --latest 50 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --verbose --country Germany --latest 50 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Do additional device-specific configuration
 read -p "Enter device name (eg. hp14s): " DEVICE_NAME
