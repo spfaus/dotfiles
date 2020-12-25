@@ -35,7 +35,7 @@ size=(930, 1005)
 state=87168
 
 [org/gnome/control-center]
-last-panel='background'
+last-panel='display'
 
 [org/gnome/desktop/a11y/applications]
 screen-reader-enabled=false
@@ -82,7 +82,7 @@ show-battery-percentage=true
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['firefox-developer-edition', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-baobab', 'discord']
+application-children=['firefox-developer-edition', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-baobab', 'discord', 'visual-studio-code']
 show-in-lock-screen=false
 
 [org/gnome/desktop/notifications/application/discord]
@@ -108,6 +108,9 @@ application-id='org.gnome.Nautilus.desktop'
 
 [org/gnome/desktop/notifications/application/thunderbird]
 application-id='thunderbird.desktop'
+
+[org/gnome/desktop/notifications/application/visual-studio-code]
+application-id='visual-studio-code.desktop'
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='default'
@@ -238,7 +241,7 @@ current-tab='resources'
 maximized=false
 show-dependencies=false
 show-whose-processes='user'
-window-state=(1896, 1009, 26, 23)
+window-state=(942, 982, 26, 23)
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-6-visible=true
@@ -279,7 +282,7 @@ ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-last-coordinates=(53.033501439884809, 8.8895999999999997)
+night-light-last-coordinates=(53.069498560115186, 8.8895999999999997)
 
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot=['Print']
@@ -334,7 +337,7 @@ toggle-overview=@as []
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1608786317
+check-timestamp=int64 1608890118
 
 [org/gnome/system/location]
 enabled=true
