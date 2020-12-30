@@ -35,7 +35,7 @@ size=(930, 1005)
 state=87168
 
 [org/gnome/control-center]
-last-panel='display'
+last-panel='wifi'
 
 [org/gnome/desktop/a11y/applications]
 screen-reader-enabled=false
@@ -82,7 +82,7 @@ show-battery-percentage=true
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['firefox-developer-edition', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-baobab', 'discord', 'visual-studio-code']
+application-children=['firefox-developer-edition', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-baobab', 'discord', 'visual-studio-code', 'org-gnome-software']
 show-in-lock-screen=false
 
 [org/gnome/desktop/notifications/application/discord]
@@ -106,6 +106,9 @@ application-id='org.gnome.baobab.desktop'
 [org/gnome/desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
+
 [org/gnome/desktop/notifications/application/thunderbird]
 application-id='thunderbird.desktop'
 
@@ -121,7 +124,7 @@ two-finger-scrolling-enabled=true
 
 [org/gnome/desktop/privacy]
 disable-camera=true
-disable-microphone=false
+disable-microphone=true
 
 [org/gnome/desktop/screensaver]
 color-shading-type='solid'
@@ -238,9 +241,12 @@ last-save-directory='file:///home/simon/Pictures'
 
 [org/gnome/gnome-system-monitor]
 current-tab='resources'
+disks-interval=5000
+graph-update-interval=1000
 maximized=false
 show-dependencies=false
 show-whose-processes='user'
+update-interval=3000
 window-state=(942, 982, 26, 23)
 
 [org/gnome/gnome-system-monitor/disktreenew]
@@ -282,7 +288,7 @@ ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
-night-light-last-coordinates=(53.069498560115186, 8.8895999999999997)
+night-light-last-coordinates=(53.042500719942403, 8.8895999999999997)
 
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot=['Print']
@@ -311,8 +317,8 @@ hinting='slight'
 
 [org/gnome/shell]
 command-history=['ls -la']
-disabled-extensions=['windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'pop-shell@system76.com']
+disabled-extensions=['windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'pop-shell@system76.com']
 favorite-apps=@as []
 
 [org/gnome/shell/extensions/pop-shell]
@@ -337,7 +343,7 @@ toggle-overview=@as []
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1608890118
+check-timestamp=int64 1609305163
 
 [org/gnome/system/location]
 enabled=true
