@@ -6,7 +6,7 @@ cd $HOME/dotfiles
 sudo pacman -Syyu --noconfirm
 yay -Syyu --noconfirm
 
-sudo pacman -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl git firefox-developer-edition grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gnome gnome-tweaks rustup noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra cups
+sudo pacman -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl git firefox-developer-edition grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gnome gnome-tweaks rustup noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra cups bluez bluez-utils
 
 yay -S --noconfirm gnome-shell-extension-pop-shell yay neovim-nightly visual-studio-code-bin
 
@@ -25,6 +25,7 @@ rustup default stable
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable gdm.service
 sudo systemctl enable cups.service
+sudo systemctl enable bluetooth.service
 
 sudo ln -sf /usr/bin/nvim /usr/bin/vim
 sudo ln -sf /usr/bin/nvim /usr/bin/vi
