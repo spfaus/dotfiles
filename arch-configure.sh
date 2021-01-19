@@ -6,7 +6,7 @@ cd $HOME/dotfiles
 sudo pacman -Syyu --noconfirm
 yay -Syyu --noconfirm
 
-sudo pacman -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl git neovim firefox-developer-edition grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gnome gnome-tweaks rustup noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra cups bluez bluez-utils
+sudo pacman -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl git neovim chromium grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gnome gnome-tweaks rustup noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra cups bluez bluez-utils
 
 yay -S --noconfirm gnome-shell-extension-pop-shell yay visual-studio-code-bin
 
