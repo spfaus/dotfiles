@@ -13,10 +13,11 @@ window-position=[26, 23]
 window-size=[930, 958]
 
 [org/gnome/calendar]
-active-view='month'
+active-view='week'
+weather-settings=(false, true, '', @mv nothing)
 window-maximized=false
 window-position=(26, 23)
-window-size=(1896, 982)
+window-size=(1904, 990)
 
 [org/gnome/cheese]
 burst-delay=1000
@@ -30,12 +31,12 @@ video-y-resolution=480
 world-clocks=@aa{sv} []
 
 [org/gnome/clocks/state/window]
-panel-id='world'
-size=(930, 1005)
+panel-id='alarm'
+size=(942, 1029)
 state=87168
 
 [org/gnome/control-center]
-last-panel='wifi'
+last-panel='display'
 
 [org/gnome/desktop/a11y/applications]
 screen-reader-enabled=false
@@ -82,8 +83,11 @@ show-battery-percentage=true
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['firefox-developer-edition', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-baobab', 'discord', 'visual-studio-code', 'org-gnome-software']
+application-children=['firefox-developer-edition', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-baobab', 'discord', 'visual-studio-code', 'org-gnome-software', 'org-gnome-evolution-alarm-notify']
 show-in-lock-screen=false
+
+[org/gnome/desktop/notifications/application/chromium]
+application-id='chromium.desktop'
 
 [org/gnome/desktop/notifications/application/discord]
 application-id='discord.desktop'
@@ -103,6 +107,9 @@ application-id='gnome-power-panel.desktop'
 [org/gnome/desktop/notifications/application/org-gnome-baobab]
 application-id='org.gnome.baobab.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-evolution-alarm-notify]
+application-id='org.gnome.Evolution-alarm-notify.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
 
@@ -119,6 +126,7 @@ application-id='visual-studio-code.desktop'
 accel-profile='default'
 
 [org/gnome/desktop/peripherals/touchpad]
+send-events='enabled'
 tap-to-click=true
 two-finger-scrolling-enabled=true
 
@@ -247,7 +255,7 @@ maximized=false
 show-dependencies=false
 show-whose-processes='user'
 update-interval=3000
-window-state=(942, 982, 26, 23)
+window-state=(948, 990, 26, 23)
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-6-visible=true
@@ -272,7 +280,7 @@ default-folder-viewer='icon-view'
 search-filter-time-type='last_modified'
 
 [org/gnome/nautilus/window-state]
-initial-size=(942, 982)
+initial-size=(948, 1017)
 maximized=false
 
 [org/gnome/nm-applet/eap/224a10c4-db0e-4b6c-80c7-0802dd7ef3bf]
@@ -288,7 +296,12 @@ ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
+night-light-enabled=true
 night-light-last-coordinates=(53.042500719942403, 8.8895999999999997)
+night-light-schedule-automatic=false
+night-light-schedule-from=18.0
+night-light-schedule-to=4.0
+night-light-temperature=uint32 1740
 
 [org/gnome/settings-daemon/plugins/media-keys]
 area-screenshot=['Print']
@@ -320,11 +333,12 @@ command-history=['ls -la']
 disabled-extensions=['windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'pop-shell@system76.com']
 favorite-apps=@as []
+had-bluetooth-devices-setup=true
 
 [org/gnome/shell/extensions/pop-shell]
 active-hint=true
-gap-inner=uint32 3
-gap-outer=uint32 3
+gap-inner=uint32 2
+gap-outer=uint32 2
 hint-color-rgba='rgb(21,83,158)'
 log-level=uint32 2
 show-title=false
@@ -343,10 +357,10 @@ toggle-overview=@as []
 locations=@av []
 
 [org/gnome/software]
-check-timestamp=int64 1609305163
+check-timestamp=int64 1612328685
 
 [org/gnome/system/location]
-enabled=true
+enabled=false
 
 [org/gnome/terminal/legacy/profiles:]
 default='b1dcc9dd-5262-4d8d-a863-c897e6d979b9'
@@ -364,6 +378,7 @@ cursor-blink-mode='on'
 cursor-colors-set=false
 cursor-foreground-color='rgb(255,255,255)'
 cursor-shape='ibeam'
+font='Hasklig 12'
 foreground-color='rgb(245,245,245)'
 highlight-colors-set=false
 login-shell=false
@@ -371,7 +386,7 @@ palette=['rgb(36,36,36)', 'rgb(218,40,40)', 'rgb(41,198,41)', 'rgb(218,189,25)',
 scroll-on-keystroke=true
 scrollbar-policy='never'
 use-custom-command=false
-use-system-font=true
+use-system-font=false
 use-theme-colors=false
 visible-name='Custom'
 
@@ -390,7 +405,7 @@ sort-column='name'
 sort-directories-first=false
 sort-order='ascending'
 type-format='category'
-window-position=(359, 1159)
+window-position=(0, 66)
 window-size=(1203, 902)
 
 [system/proxy]
