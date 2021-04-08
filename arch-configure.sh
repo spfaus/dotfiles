@@ -1,4 +1,7 @@
-#!/bin/bash set -ex cd $HOME/dotfiles
+#!/bin/bash
+set -ex
+
+cd $HOME/dotfiles
 
 yay -Syyu --noconfirm
 
