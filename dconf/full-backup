@@ -14,22 +14,10 @@ window-size=[930, 958]
 
 [org/gnome/calendar]
 active-view='week'
-weather-settings=(false, true, '', @mv nothing)
+weather-settings=(true, true, '', @mv nothing)
 window-maximized=false
-window-position=(8, 35)
-window-size=(1904, 990)
-
-[org/gnome/cheese]
-burst-delay=1000
-camera='HP TrueVision HD Camera: HP Tru'
-photo-x-resolution=640
-photo-y-resolution=480
-video-x-resolution=640
-video-y-resolution=480
-
-[org/gnome/clocks]
-timers=@aa{sv} []
-world-clocks=@aa{sv} []
+window-position=(964, 40)
+window-size=(948, 1032)
 
 [org/gnome/clocks/state/window]
 panel-id='alarm'
@@ -59,75 +47,38 @@ translate=true
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/gnome/Leaf.jpg'
+picture-uri='file:///usr/share/backgrounds/gnome/Loveles.jpg'
 primary-color='#ffffff'
 secondary-color='#000000'
 
 [org/gnome/desktop/calendar]
-show-weekdate=false
+show-weekdate=true
 
 [org/gnome/desktop/datetime]
 automatic-timezone=true
 
 [org/gnome/desktop/input-sources]
+per-window=false
+show-all-sources=false
 sources=[('xkb', 'de')]
 xkb-options=['lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
 clock-show-weekday=true
 document-font-name='Cantarell 11'
+enable-animations=true
+font-antialiasing='grayscale'
+font-hinting='slight'
 font-name='Cantarell 11'
 gtk-im-module='gtk-im-context-simple'
 gtk-theme='Adwaita-dark'
+locate-pointer=false
 monospace-font-name='Source Code Pro Medium 11'
 show-battery-percentage=true
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['firefox-developer-edition', 'gnome-network-panel', 'gnome-power-panel', 'org-gnome-baobab', 'discord', 'visual-studio-code', 'org-gnome-software', 'org-gnome-evolution-alarm-notify']
 show-in-lock-screen=false
-
-[org/gnome/desktop/notifications/application/chromium]
-application-id='chromium.desktop'
-
-[org/gnome/desktop/notifications/application/discord]
-application-id='discord.desktop'
-
-[org/gnome/desktop/notifications/application/filezilla]
-application-id='filezilla.desktop'
-
-[org/gnome/desktop/notifications/application/firefox-developer-edition]
-application-id='firefox-developer-edition.desktop'
-
-[org/gnome/desktop/notifications/application/gnome-network-panel]
-application-id='gnome-network-panel.desktop'
-
-[org/gnome/desktop/notifications/application/gnome-power-panel]
-application-id='gnome-power-panel.desktop'
-
-[org/gnome/desktop/notifications/application/org-gnome-baobab]
-application-id='org.gnome.baobab.desktop'
-
-[org/gnome/desktop/notifications/application/org-gnome-calendar]
-application-id='org.gnome.Calendar.desktop'
-
-[org/gnome/desktop/notifications/application/org-gnome-evolution-alarm-notify]
-application-id='org.gnome.Evolution-alarm-notify.desktop'
-
-[org/gnome/desktop/notifications/application/org-gnome-nautilus]
-application-id='org.gnome.Nautilus.desktop'
-
-[org/gnome/desktop/notifications/application/org-gnome-software]
-application-id='org.gnome.Software.desktop'
-
-[org/gnome/desktop/notifications/application/steam]
-application-id='steam.desktop'
-
-[org/gnome/desktop/notifications/application/thunderbird]
-application-id='thunderbird.desktop'
-
-[org/gnome/desktop/notifications/application/visual-studio-code]
-application-id='visual-studio-code.desktop'
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='default'
@@ -141,13 +92,17 @@ two-finger-scrolling-enabled=true
 [org/gnome/desktop/privacy]
 disable-camera=true
 disable-microphone=true
+old-files-age=uint32 7
+recent-files-max-age=7
+remove-old-temp-files=true
+remove-old-trash-files=true
 
 [org/gnome/desktop/screensaver]
 color-shading-type='solid'
 lock-delay=uint32 0
 lock-enabled=true
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/gnome/Leaf.jpg'
+picture-uri='file:///usr/share/backgrounds/gnome/Loveles.jpg'
 primary-color='#ffffff'
 secondary-color='#000000'
 
@@ -157,6 +112,9 @@ sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gn
 
 [org/gnome/desktop/session]
 idle-delay=uint32 300
+
+[org/gnome/desktop/sound]
+allow-volume-above-100-percent=false
 
 [org/gnome/desktop/wm/keybindings]
 activate-window-menu=@as []
@@ -181,6 +139,8 @@ move-to-workspace-3=@as []
 move-to-workspace-4=@as []
 move-to-workspace-down=['<Shift><Super>u']
 move-to-workspace-last=@as []
+move-to-workspace-left=['<Shift><Super>j']
+move-to-workspace-right=['<Shift><Super>k']
 move-to-workspace-up=['<Shift><Super>i']
 panel-main-menu=@as []
 panel-run-dialog=@as []
@@ -198,6 +158,8 @@ switch-to-workspace-3=@as []
 switch-to-workspace-4=@as []
 switch-to-workspace-down=['<Super>u']
 switch-to-workspace-last=@as []
+switch-to-workspace-left=['<Super>j']
+switch-to-workspace-right=['<Super>k']
 switch-to-workspace-up=['<Super>i']
 toggle-fullscreen=@as []
 toggle-maximized=['<Super>m']
@@ -213,6 +175,11 @@ workspace-names=@as []
 [org/gnome/eog/view]
 background-color='rgb(0,0,0)'
 use-background-color=true
+
+[org/gnome/epiphany/state]
+is-maximized=false
+window-position=(-1, -1)
+window-size=(1024, 768)
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -243,11 +210,6 @@ window-width=942
 [org/gnome/gedit/plugins]
 active-plugins=['sort', 'modelines', 'filebrowser', 'docinfo', 'spell']
 
-[org/gnome/gedit/plugins/filebrowser]
-root='file:///'
-tree-view=true
-virtual-root='file:///home/spfaus/projects/dschinni-backup'
-
 [org/gnome/gedit/preferences/ui]
 show-tabs-mode='auto'
 
@@ -260,7 +222,6 @@ state=87168
 
 [org/gnome/gnome-screenshot]
 include-pointer=false
-last-save-directory='file:///home/simon/Pictures'
 
 [org/gnome/gnome-system-monitor]
 current-tab='resources'
@@ -313,7 +274,6 @@ ignore-phase2-ca-cert=false
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=true
-night-light-last-coordinates=(53.042500719942403, 8.8895999999999997)
 night-light-schedule-automatic=true
 night-light-schedule-from=18.0
 night-light-schedule-to=4.0
@@ -340,28 +300,33 @@ power-button-action='interactive'
 sleep-inactive-ac-type='nothing'
 sleep-inactive-battery-type='nothing'
 
-[org/gnome/settings-daemon/plugins/xsettings]
-antialiasing='grayscale'
-hinting='slight'
-
 [org/gnome/shell]
+app-picker-layout=[{'org.gnome.Contacts.desktop': <{'position': <0>}>, 'org.gnome.Weather.desktop': <{'position': <1>}>, 'org.gnome.clocks.desktop': <{'position': <2>}>, 'org.gnome.Maps.desktop': <{'position': <3>}>, 'org.gnome.Books.desktop': <{'position': <4>}>, 'org.gnome.Photos.desktop': <{'position': <5>}>, 'org.gnome.Totem.desktop': <{'position': <6>}>, 'bssh.desktop': <{'position': <7>}>, 'org.gnome.gedit.desktop': <{'position': <8>}>, 'bvnc.desktop': <{'position': <9>}>, 'avahi-discover.desktop': <{'position': <10>}>, 'gnome-control-center.desktop': <{'position': <11>}>, 'chromium.desktop': <{'position': <12>}>, 'org.gnome.Boxes.desktop': <{'position': <13>}>, 'org.gnome.Documents.desktop': <{'position': <14>}>, 'Utilities': <{'position': <15>}>, 'org.gnome.Extensions.desktop': <{'position': <16>}>, 'filezilla.desktop': <{'position': <17>}>, 'org.gnome.Cheese.desktop': <{'position': <18>}>}, {'godot.desktop': <{'position': <0>}>, 'org.gtk.Demo4.desktop': <{'position': <1>}>, 'lstopo.desktop': <{'position': <2>}>, 'org.gtk.IconBrowser4.desktop': <{'position': <3>}>, 'cups.desktop': <{'position': <4>}>, 'nvim.desktop': <{'position': <5>}>, 'org.gtk.PrintEditor4.desktop': <{'position': <6>}>, 'qv4l2.desktop': <{'position': <7>}>, 'qvidcap.desktop': <{'position': <8>}>, 'slack.desktop': <{'position': <9>}>, 'thunderbird.desktop': <{'position': <10>}>, 'visual-studio-code.desktop': <{'position': <11>}>, 'org.gtk.WidgetFactory4.desktop': <{'position': <12>}>, 'org.gnome.Calendar.desktop': <{'position': <13>}>, 'org.gnome.Nautilus.desktop': <{'position': <14>}>, 'org.gnome.Music.desktop': <{'position': <15>}>, 'org.gnome.Software.desktop': <{'position': <16>}>, 'org.gnome.Epiphany.desktop': <{'position': <17>}>}]
 command-history=['ls -la']
 disable-user-extensions=false
 disabled-extensions=['windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'pop-shell@system76.com']
 favorite-apps=@as []
 had-bluetooth-devices-setup=true
+welcome-dialog-last-shown-version='40.0'
 
 [org/gnome/shell/extensions/pop-shell]
+activate-launcher=@as []
 active-hint=true
+focus-down=@as []
+focus-up=@as []
 gap-inner=uint32 2
 gap-outer=uint32 2
 hint-color-rgba='rgb(21,83,158)'
 log-level=uint32 2
+pop-workspace-down=@as []
+pop-workspace-up=@as []
 show-title=false
 smart-gaps=false
 snap-to-grid=true
 tile-by-default=true
+toggle-floating=@as []
+toggle-tiling=@as []
 
 [org/gnome/shell/keybindings]
 focus-active-notification=@as []
@@ -373,12 +338,8 @@ toggle-overview=@as []
 [org/gnome/shell/world-clocks]
 locations=@av []
 
-[org/gnome/software]
-check-timestamp=int64 1617040831
-first-run=false
-
 [org/gnome/system/location]
-enabled=false
+enabled=true
 
 [org/gnome/terminal/legacy/profiles:]
 default='b1dcc9dd-5262-4d8d-a863-c897e6d979b9'
@@ -408,6 +369,9 @@ use-system-font=false
 use-theme-colors=false
 visible-name='Custom'
 
+[org/gnome/tweaks]
+show-extensions-notice=false
+
 [org/gtk/settings/color-chooser]
 custom-colors=[(0.31372549019607843, 0.31372549019607843, 0.31372549019607843, 1.0), (0.28235294117647058, 0.29411764705882354, 0.33333333333333331, 1.0), (0.14000000000000001, 0.14000000000000001, 0.14000000000000001, 1.0), (0.28235294117647058, 0.29411764705882359, 0.33333333333333331, 1.0), (0.086274509803921567, 0.098039215686274508, 0.13725490196078433, 1.0), (0.33333333333333331, 0.33333333333333331, 0.33333333333333331, 1.0), (0.086274509803921581, 0.098039215686274481, 0.13725490196078433, 1.0), (0.086274509803921581, 0.098039215686274508, 0.13725490196078433, 1.0)]
 selected-color=(true, 0.31372549019607843, 0.31372549019607843, 0.31372549019607843, 1.0)
@@ -428,15 +392,3 @@ window-size=(1203, 902)
 
 [system/proxy]
 mode='none'
-
-[system/proxy/http]
-host='165.227.35.11'
-port=80
-
-[system/proxy/https]
-host='64.235.204.107'
-port=3128
-
-[system/proxy/socks]
-host='198.50.177.44'
-port=44699
