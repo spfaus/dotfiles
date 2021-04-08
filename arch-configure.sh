@@ -18,8 +18,8 @@ sudo chown -R root:root ./root
 for file in $(find $HOME/dotfiles/root -type f); do sudo mkdir -p $(dirname $(echo $file | sed -r "s/\/home\/$USER\/dotfiles\/root//")) && sudo ln -sf $file $(echo $file | sed -r "s/\/home\/$USER\/dotfiles\/root//"); done
 
 rustup default stable
-
-# sudo modprobe btusb
+rustup update
+cargo install cargo-generate cargo-watch
 
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable gdm.service
