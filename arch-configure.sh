@@ -5,7 +5,7 @@ cd $HOME/dotfiles
 
 yay -Syyu --noconfirm
 
-yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl git chromium grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gnome gnome-tweaks rustup noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra cups bluez bluez-utils filezilla thunderbird gnome-shell-extension-pop-shell-git yay visual-studio-code-bin slack-desktop otf-hasklig neovim-nightly-bin godot clang
+yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl git chromium grub efibootmgr amd-ucode dkms linux-headers xorg xorg-server gnome gnome-tweaks rustup noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra cups bluez bluez-utils filezilla thunderbird gnome-shell-extension-pop-shell-git yay visual-studio-code-bin slack-desktop otf-hasklig neovim-nightly-bin godot clang phpstorm-jre
 
 # Load all dconf settings
 dconf load / < ./dconf/full-backup
