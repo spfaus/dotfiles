@@ -1,10 +1,6 @@
 [org/freedesktop/tracker/miner/files]
 index-recursive-directories=['&DESKTOP', '&DOCUMENTS', '&MUSIC', '&PICTURES', '&VIDEOS', '&DOWNLOAD']
 
-[org/gnome/calendar]
-active-view='week'
-weather-settings=(true, true, '', @mv nothing)
-
 [org/gnome/desktop/a11y/applications]
 screen-reader-enabled=false
 
@@ -14,9 +10,6 @@ picture-options='zoom'
 picture-uri='file:///usr/share/backgrounds/gnome/Loveles.jpg'
 primary-color='#ffffff'
 secondary-color='#000000'
-
-[org/gnome/desktop/calendar]
-show-weekdate=true
 
 [org/gnome/desktop/datetime]
 automatic-timezone=true
