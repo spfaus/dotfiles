@@ -4,7 +4,7 @@ set -ex
 cd $HOME/dotfiles
 
 sudo pacman -Sy --noconfirm git reflector
-sudo reflector --verbose --country Germany --latest 50 --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --verbose --country Germany --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
