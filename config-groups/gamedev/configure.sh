@@ -1,4 +1,4 @@
 #!/bin/bash
 set -ex
 
-yay -S --noconfirm godot aseprite krita blender
+yay -Sy --noconfirm godot aseprite krita blender

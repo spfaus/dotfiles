@@ -1,7 +1,8 @@
 #!/bin/bash
 set -ex
 
-yay -S --noconfirm rustup clang
+yay -Rs --noconfirm rust # Conflicts with rustup
+yay -Sy --noconfirm rustup clang
 
 rustup default stable
 rustup update
