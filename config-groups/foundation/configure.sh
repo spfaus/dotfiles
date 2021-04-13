@@ -6,7 +6,7 @@ yay -Syyu --noconfirm
 yay -Sy --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl rsync cups bluez bluez-utils git chromium grub efibootmgr dkms linux-headers xorg xorg-server gnome gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra gnome-shell-extension-pop-shell-git yay visual-studio-code-bin otf-hasklig neovim-nightly-bin
 
 # Load all dconf settings
-dconf load / < $HOME/dotfiles/config-groups/foundation/dconf/full-backup
+# dconf load / < $HOME/dotfiles/config-groups/foundation/dconf/full-backup
 
 # Link all user config files
 cp -frl $HOME/dotfiles/config-groups/foundation/home/. $HOME/
