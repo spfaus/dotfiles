@@ -9,11 +9,11 @@ yay -Sy --noconfirm base base-devel linux linux-firmware reflector sudo man-db m
 # dconf load / < $HOME/dotfiles/config-groups/foundation/dconf/full-backup
 
 # Link all user config files
-cp -afs $HOME/dotfiles/config-groups/foundation/home/. $HOME/
+cp -as --remove-destination $HOME/dotfiles/config-groups/foundation/home/. $HOME/
 
 # Link all root config files and change owner to root
 sudo chown -R root:root $HOME/dotfiles/config-groups/foundation/root/
-sudo cp -afs $HOME/dotfiles/config-groups/foundation/root/. /
+sudo cp -as --remove-destination $HOME/dotfiles/config-groups/foundation/root/. /
 
 sudo systemctl enable reflector.service
 sudo systemctl enable NetworkManager.service
