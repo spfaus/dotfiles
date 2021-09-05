@@ -3,7 +3,11 @@ set -ex
 
 yay -Syyu --noconfirm
 
-yay -Sy --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl rsync cups bluez bluez-utils git firefox grub efibootmgr dkms linux-headers xorg xorg-server gnome gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra gnome-shell-extension-pop-shell-git yay visual-studio-code-bin otf-hasklig neovim signal-desktop ntfs-3g
+yay -Sy --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl wget rsync cups bluez bluez-utils git firefox grub efibootmgr dkms linux-headers xorg xorg-server gnome gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra gnome-shell-extension-pop-shell-git yay visual-studio-code-bin otf-hasklig neovim ntfs-3g rustup clang
+
+rustup default stable
+rustup update
+cargo install cargo-generate cargo-watch
 
 # Load all dconf settings
 # dconf load / < $HOME/dotfiles/config-groups/foundation/dconf/full-backup
