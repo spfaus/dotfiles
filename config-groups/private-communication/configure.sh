@@ -1,4 +1,4 @@
 #!/bin/bash
 set -ex
 
-yay -Sy --noconfirm skypeforlinux-stable-bin discord
+yay -Sy --noconfirm skypeforlinux-stable-bin discord signal-desktop
