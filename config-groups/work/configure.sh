@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-yay -Sy --noconfirm phpstorm-jre phpstorm filezilla thunderbird slack-desktop docker docker-compose docker-machine chromium
+yay -S --noconfirm phpstorm-jre phpstorm filezilla thunderbird slack-desktop docker docker-compose docker-machine chromium
 
 sudo systemctl enable docker.service
 sudo gpasswd -a $USER docker
