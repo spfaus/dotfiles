@@ -35,3 +35,5 @@ sudo ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
 sudo locale-gen
+
+yay -Sy
