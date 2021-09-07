@@ -1,6 +1,8 @@
 #!/bin/bash
 set -ex
 
+sudo reflector --verbose --country Germany --latest 50 --sort rate --save /etc/pacman.d/mirrorlist
+
 yay -Syyu --noconfirm
 
 yay -S --noconfirm rustup clang
@@ -21,7 +23,6 @@ cp -as --remove-destination $HOME/dotfiles/config-groups/foundation/home/. $HOME
 sudo chown -R root:root $HOME/dotfiles/config-groups/foundation/root/
 sudo cp -as --remove-destination $HOME/dotfiles/config-groups/foundation/root/. /
 
-sudo systemctl enable reflector.service
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable gdm.service
 sudo systemctl enable cups.service
