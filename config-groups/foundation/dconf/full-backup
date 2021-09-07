@@ -1,9 +1,6 @@
 [org/freedesktop/tracker/miner/files]
 index-recursive-directories=['&DESKTOP', '&DOCUMENTS', '&MUSIC', '&PICTURES', '&VIDEOS', '&DOWNLOAD']
 
-[org/gnome/desktop/a11y/applications]
-screen-reader-enabled=false
-
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
@@ -39,7 +36,7 @@ show-in-lock-screen=false
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='default'
-speed=1.0
+speed=-0.42647058823529416
 
 [org/gnome/desktop/peripherals/touchpad]
 send-events='enabled'
@@ -129,15 +126,19 @@ num-workspaces=4
 titlebar-font='Cantarell Bold 11'
 workspace-names=@as []
 
-[org/gnome/eog/view]
-background-color='rgb(0,0,0)'
-use-background-color=true
-
-[org/gnome/evolution]
-default-calendar='system-calendar'
-
 [org/gnome/gnome-screenshot]
 include-pointer=false
+
+[org/gnome/gnome-system-monitor]
+current-tab='resources'
+maximized=false
+network-total-in-bits=false
+show-dependencies=false
+show-whose-processes='user'
+
+[org/gnome/gnome-system-monitor/disktreenew]
+col-6-visible=true
+col-6-width=0
 
 [org/gnome/mutter]
 attach-modal-dialogs=true
@@ -153,10 +154,17 @@ toggle-tiled-right=@as []
 [org/gnome/mutter/wayland/keybindings]
 restore-shortcuts=@as []
 
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+search-filter-time-type='last_modified'
+
+[org/gnome/nautilus/window-state]
+maximized=false
+
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=true
-night-light-schedule-automatic=true
-night-light-schedule-from=18.0
+night-light-schedule-automatic=false
+night-light-schedule-from=21.0
 night-light-schedule-to=4.0
 night-light-temperature=uint32 2700
 
@@ -168,7 +176,7 @@ logout=@as []
 magnifier=@as []
 magnifier-zoom-in=@as []
 magnifier-zoom-out=@as []
-screencast=['<Shift>Print']
+screencast=['<Super>Print']
 screenreader=@as []
 screensaver=['<Super>Escape']
 screenshot=@as []
@@ -186,8 +194,6 @@ disable-user-extensions=false
 disabled-extensions=['windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'pop-shell@system76.com']
 favorite-apps=@as []
-had-bluetooth-devices-setup=true
-welcome-dialog-last-shown-version='40.0'
 
 [org/gnome/shell/extensions/pop-shell]
 activate-launcher=@as []
@@ -212,9 +218,6 @@ open-application-menu=@as []
 toggle-application-view=@as []
 toggle-message-tray=@as []
 toggle-overview=@as []
-
-[org/gnome/shell/world-clocks]
-locations=@av []
 
 [org/gnome/system/location]
 enabled=true
@@ -250,20 +253,16 @@ visible-name='Custom'
 [org/gnome/tweaks]
 show-extensions-notice=false
 
-[org/gtk/settings/color-chooser]
-custom-colors=[(0.31372549019607843, 0.31372549019607843, 0.31372549019607843, 1.0), (0.28235294117647058, 0.29411764705882354, 0.33333333333333331, 1.0), (0.14000000000000001, 0.14000000000000001, 0.14000000000000001, 1.0), (0.28235294117647058, 0.29411764705882359, 0.33333333333333331, 1.0), (0.086274509803921567, 0.098039215686274508, 0.13725490196078433, 1.0), (0.33333333333333331, 0.33333333333333331, 0.33333333333333331, 1.0), (0.086274509803921581, 0.098039215686274481, 0.13725490196078433, 1.0), (0.086274509803921581, 0.098039215686274508, 0.13725490196078433, 1.0)]
-selected-color=(true, 0.31372549019607843, 0.31372549019607843, 0.31372549019607843, 1.0)
-
 [org/gtk/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
 show-hidden=true
 show-size-column=true
 show-type-column=true
+sidebar-width=157
 sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-
-[system/proxy]
-mode='none'
+window-position=(663, 65)
+window-size=(1231, 902)
