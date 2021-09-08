@@ -16,4 +16,5 @@
     "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
     "editor.formatOnSave": true,
     "editor.accessibilitySupport": "off",
+    "workbench.colorTheme": "Default Dark+",
 }
