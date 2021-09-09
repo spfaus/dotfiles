@@ -17,4 +17,5 @@
     "editor.formatOnSave": true,
     "editor.accessibilitySupport": "off",
     "workbench.colorTheme": "Default Dark+",
+    "git.autofetch": true,
 }
