@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -e
 
 yay -S --noconfirm rtl8821ce-dkms-git
 

@@ -1,4 +1,4 @@
 #!/bin/bash
-set -ex
+set -e
 
 yay -S --noconfirm amd-ucode
