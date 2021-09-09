@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -e
 
 $HOME/dotfiles/config-groups/foundation/configure.sh
 

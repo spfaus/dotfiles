@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -e
 
 sudo reflector --verbose --country Germany --latest 50 --sort rate --save /etc/pacman.d/mirrorlist
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -e
 
 yay -S --noconfirm phpstorm-jre phpstorm filezilla thunderbird slack-desktop docker docker-compose docker-machine chromium vpnc networkmanager-vpnc
 
