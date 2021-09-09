@@ -3,7 +3,7 @@ set -ex
 
 cd $HOME/dotfiles
 
-# Check if local dotfile repo is up to date
+# Use local or remote state for configuration
 echo "Do you wish to discard local, checkout master and pull remote dotfile changes before running configuration?"
 select yn in "Yes" "No"; do
     case $yn in
