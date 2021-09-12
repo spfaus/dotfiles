@@ -13,7 +13,10 @@ select yn in "Yes" "No"; do
 done
 
 # Start configuration script based on device
-read -p "Enter device name (hp14s, spfaus-honor, simon-desktop): " DEVICE_NAME
+echo "Device configurations found:"
+find ./devices/* -type d -printf "%f "
+echo ''
+read -p "Enter device name: " DEVICE_NAME
 type $HOME/dotfiles/devices/$DEVICE_NAME/configure.sh && $HOME/dotfiles/devices/$DEVICE_NAME/configure.sh
 
 # Optional reboot
