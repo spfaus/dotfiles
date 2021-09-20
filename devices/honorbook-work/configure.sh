@@ -1,7 +1,0 @@
-#!/bin/bash
-set -e
-
-$HOME/dotfiles/config-groups/foundation/configure.sh
-
-$HOME/dotfiles/config-groups/amd-processor/configure.sh
-$HOME/dotfiles/config-groups/work/configure.sh

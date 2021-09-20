@@ -12,12 +12,35 @@ select yn in "Yes" "No"; do
     esac
 done
 
-# Start configuration script based on device
-echo "Device configurations found:"
+# Get user config-group selection
 find ./devices/* -type d -printf "%f "
-echo ''
-read -p "Enter device name: " DEVICE_NAME
-type $HOME/dotfiles/devices/$DEVICE_NAME/configure.sh && $HOME/dotfiles/devices/$DEVICE_NAME/configure.sh
+
+#options=("AAA" "BBB" "CCC" "DDD")
+options=($(find ./config-groups/* -maxdepth 0 -type d -printf "%f "))
+
+menu() {
+    echo "Avaliable config-groups:"
+    for i in ${!options[@]}; do 
+        printf "%3d%s) %s\n" $((i+1)) "${choices[i]:- }" "${options[i]}"
+    done
+    if [[ "$selection" ]]; then echo "$selection"; fi
+}
+
+prompt="Enter one or more options (space-separated) to toggle. Press ENTER without input to continue with current selection: "
+while menu && read -rp "$prompt" nums && [[ "$nums" ]]; do 
+    while read num; do
+        [[ "$num" != *[![:digit:]]* ]] &&
+        (( num > 0 && num <= ${#options[@]} )) ||
+        { selection="Invalid option: $num"; continue; }
+        ((num--))
+        [[ "${choices[num]}" ]] && choices[num]="" || choices[num]="+"
+    done < <(echo $nums |sed "s/ /\n/g")
+done
+
+# Execute configuration scripts based on user selection
+for i in ${!options[@]}; do 
+    [[ "${choices[i]}" ]] && ./config-groups/${options[i]}/configure.sh;
+done
 
 # Optional reboot
 echo "Reboot now?"
