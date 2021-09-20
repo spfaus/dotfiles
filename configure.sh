@@ -13,9 +13,6 @@ select yn in "Yes" "No"; do
 done
 
 # Get user config-group selection
-find ./devices/* -type d -printf "%f "
-
-#options=("AAA" "BBB" "CCC" "DDD")
 options=($(find ./config-groups/* -maxdepth 0 -type d -printf "%f "))
 
 menu() {
