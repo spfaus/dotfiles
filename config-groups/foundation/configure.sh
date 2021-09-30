@@ -30,7 +30,7 @@ sudo systemctl enable bluetooth.service
 
 sudo ln -sf /usr/bin/nvim /usr/bin/vim
 sudo ln -sf /usr/bin/nvim /usr/bin/vi
-sudo ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+sudo ln -sf /usr/share/zoneinfo/America/Toronto /etc/localtime
 
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
