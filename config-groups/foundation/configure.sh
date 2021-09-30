@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-sudo reflector --verbose --country Germany --latest 50 --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --verbose --country Canada --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 
 yay -Syyu --noconfirm
 
