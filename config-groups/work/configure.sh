@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-yay -S --noconfirm phpstorm-jre phpstorm slack-desktop vpnc networkmanager-vpnc docker docker-compose docker-machine
+yay -S --noconfirm phpstorm-jre phpstorm slack-desktop vpnc networkmanager-vpnc docker docker-compose docker-machine thunderbird filezilla
 
 sudo systemctl enable docker.service
 sudo gpasswd -a $USER docker
