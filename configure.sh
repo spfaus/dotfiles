@@ -7,7 +7,7 @@ cd $HOME/dotfiles
 echo "Do you wish to discard local changes, checkout master, and pull from remote before running configuration?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) git reset HEAD --hard && git checkout master && git reset HEAD --hard && git pull; break;;
+        Yes ) sudo git reset HEAD --hard && git checkout master && git reset HEAD --hard && git pull; break;;
         No ) break;;
     esac
 done
