@@ -11,7 +11,7 @@ rustup default stable
 rustup update
 cargo install cargo-generate cargo-watch
 
-yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl wget rsync cups bluez bluez-utils git grub efibootmgr dkms linux-headers xorg xorg-server gnome gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra gnome-shell-extension-pop-shell-git yay visual-studio-code-bin otf-hasklig neovim ntfs-3g filezilla thunderbird
+yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl wget rsync cups bluez bluez-utils git grub efibootmgr dkms linux-headers xorg xorg-server gnome gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra gnome-shell-extension-pop-shell-git yay visual-studio-code-bin otf-hasklig neovim ntfs-3g chromium
 
 # Load all dconf settings
 dconf load / < $HOME/dotfiles/config-groups/foundation/dconf/full-backup
