@@ -18,4 +18,5 @@
     "editor.accessibilitySupport": "off",
     "workbench.colorTheme": "Default Dark+",
     "git.autofetch": true,
+    "rust-client.engine": "rust-analyzer",
 }
