@@ -16,7 +16,7 @@
     "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
     "editor.formatOnSave": true,
     "editor.accessibilitySupport": "off",
-    "workbench.colorTheme": "Default Dark+",
     "git.autofetch": true,
     "rust-client.engine": "rust-analyzer",
+    "workbench.colorTheme": "Theme",
 }

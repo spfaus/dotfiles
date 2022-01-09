@@ -4,9 +4,12 @@ index-recursive-directories=['&DESKTOP', '&DOCUMENTS', '&MUSIC', '&PICTURES', '&
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/gnome/Loveles.jpg'
-primary-color='#ffffff'
+picture-uri='file:///usr/share/backgrounds/gnome/adwaita-timed.xml'
+primary-color='#3465a4'
 secondary-color='#000000'
+
+[org/gnome/desktop/calendar]
+show-weekdate=false
 
 [org/gnome/desktop/datetime]
 automatic-timezone=true
@@ -19,6 +22,8 @@ xkb-options=['lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
 clock-show-weekday=true
+cursor-size=24
+cursor-theme='breeze_cursors'
 document-font-name='Cantarell 11'
 enable-animations=true
 font-antialiasing='grayscale'
@@ -26,9 +31,11 @@ font-hinting='slight'
 font-name='Cantarell 11'
 gtk-im-module='gtk-im-context-simple'
 gtk-theme='Adwaita-dark'
+icon-theme='breeze-dark'
 locate-pointer=false
 monospace-font-name='Source Code Pro Medium 11'
 show-battery-percentage=true
+toolbar-style='text'
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
@@ -39,6 +46,7 @@ accel-profile='default'
 speed=-0.42647058823529416
 
 [org/gnome/desktop/peripherals/touchpad]
+click-method='fingers'
 send-events='enabled'
 tap-to-click=true
 two-finger-scrolling-enabled=true
@@ -56,8 +64,8 @@ color-shading-type='solid'
 lock-delay=uint32 0
 lock-enabled=true
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/gnome/Loveles.jpg'
-primary-color='#ffffff'
+picture-uri='file:///usr/share/backgrounds/gnome/adwaita-timed.xml'
+primary-color='#3465a4'
 secondary-color='#000000'
 
 [org/gnome/desktop/search-providers]
@@ -126,12 +134,36 @@ num-workspaces=4
 titlebar-font='Cantarell Bold 11'
 workspace-names=@as []
 
+[org/gnome/eog/view]
+background-color='rgb(0,0,0)'
+use-background-color=true
+
+[org/gnome/epiphany]
+ask-for-default=false
+
+[org/gnome/evolution-data-server]
+migrated=true
+network-monitor-gio-name=''
+
+[org/gnome/file-roller/dialogs/extract]
+recreate-folders=true
+skip-newer=false
+
+[org/gnome/file-roller/listing]
+list-mode='as-folder'
+name-column-width=250
+show-path=false
+sort-method='name'
+sort-type='ascending'
+
+[org/gnome/file-roller/ui]
+sidebar-width=200
+
 [org/gnome/gnome-screenshot]
+delay=2
 include-pointer=false
 
 [org/gnome/gnome-system-monitor]
-current-tab='resources'
-maximized=false
 network-total-in-bits=false
 show-dependencies=false
 show-whose-processes='user'
@@ -154,18 +186,19 @@ toggle-tiled-right=@as []
 [org/gnome/mutter/wayland/keybindings]
 restore-shortcuts=@as []
 
+[org/gnome/nautilus/compression]
+default-compression-format='zip'
+
 [org/gnome/nautilus/preferences]
 default-folder-viewer='icon-view'
 search-filter-time-type='last_modified'
-
-[org/gnome/nautilus/window-state]
-maximized=false
+search-view='list-view'
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=true
 night-light-schedule-automatic=false
 night-light-schedule-from=21.0
-night-light-schedule-to=4.0
+night-light-schedule-to=5.0
 night-light-temperature=uint32 2700
 
 [org/gnome/settings-daemon/plugins/media-keys]
@@ -186,6 +219,7 @@ window-screenshot-clip=@as []
 
 [org/gnome/settings-daemon/plugins/power]
 power-button-action='interactive'
+power-saver-profile-on-low-battery=false
 sleep-inactive-ac-type='nothing'
 sleep-inactive-battery-type='nothing'
 
@@ -220,7 +254,7 @@ toggle-message-tray=@as []
 toggle-overview=@as []
 
 [org/gnome/system/location]
-enabled=true
+enabled=false
 
 [org/gnome/terminal/legacy/profiles:]
 default='b1dcc9dd-5262-4d8d-a863-c897e6d979b9'
@@ -264,5 +298,3 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(663, 65)
-window-size=(1231, 902)
