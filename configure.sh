@@ -3,6 +3,30 @@ set -e
 
 cd $HOME/dotfiles
 
+sudo pacman -Sy
+
+if [ ! -x /usr/bin/rsync ] ; then
+	sudo pacman -S --noconfirm rsync
+fi
+
+if [ ! -x /usr/bin/reflector ] ; then
+        sudo pacman -S --noconfirm reflector
+fi
+
+if [ ! -x /usr/bin/git ] ; then
+        sudo pacman -S --noconfirm git
+fi
+
+sudo reflector --verbose --country Canada --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
+
+if [ ! -x /usr/bin/yay ] ; then
+	git clone https://aur.archlinux.org/yay.git
+	cd yay
+	makepkg -sic --noconfirm
+	cd ..
+	rm -rf yay
+fi
+
 # Use local or remote state for configuration
 git status
 echo "Do you wish to discard local changes, checkout master, and pull from remote before running configuration?"
@@ -13,32 +37,45 @@ select yn in "Yes" "No"; do
     esac
 done
 
-# Get user config-group selection
-options=($(find ./config-groups/* -maxdepth 0 -type d -printf "%f "))
+# Configure
+yay -Syyuu --noconfirm
 
-menu() {
-    echo "Avaliable config-groups:"
-    for i in ${!options[@]}; do 
-        printf "%3d%s) %s\n" $((i+1)) "${choices[i]:- }" "${options[i]}"
-    done
-    if [[ "$selection" ]]; then echo "$selection"; fi
-}
+yay -S --noconfirm rustup clang
 
-prompt="Enter one or more options (space-separated) to toggle. Press ENTER without input to continue with current selection: "
-while menu && read -rp "$prompt" nums && [[ "$nums" ]]; do 
-    while read num; do
-        [[ "$num" != *[![:digit:]]* ]] &&
-        (( num > 0 && num <= ${#options[@]} )) ||
-        { selection="Invalid option: $num"; continue; }
-        ((num--))
-        [[ "${choices[num]}" ]] && choices[num]="" || choices[num]="+"
-    done < <(echo $nums |sed "s/ /\n/g")
-done
+rustup default stable
+rustup update
+cargo install cargo-generate cargo-watch cargo-edit
 
-# Execute configuration scripts based on user selection
-for i in ${!options[@]}; do 
-    [[ "${choices[i]}" ]] && ./config-groups/${options[i]}/configure.sh;
-done
+yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers xorg xorg-server gnome gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra gnome-shell-extension-pop-shell-git yay neovim ntfs-3g chromium vundle-git nodejs yarn amd-ucode discord
+                                                                                                                                                                                   
+# Load all dconf settings                                                                                                                                                          
+dconf load / < $HOME/dotfiles/dconf/full-backup
+
+# Link all user config files
+cp -as --remove-destination $HOME/dotfiles/home/. $HOME/
+
+# Link all root config files and change owner to root
+sudo chown -R root:root $HOME/dotfiles/root/
+sudo cp -as --remove-destination $HOME/dotfiles/root/. /
+
+sudo systemctl enable NetworkManager.service
+sudo systemctl enable gdm.service
+
+sudo ln -sf /usr/bin/nvim /usr/bin/vim
+sudo ln -sf /usr/bin/nvim /usr/bin/vi
+sudo ln -sf /usr/share/zoneinfo/America/Toronto /etc/localtime
+
+sudo timedatectl set-ntp true
+sudo hwclock --systohc
+sudo locale-gen
+
+nvim +PluginInstall +qall
+cd $HOME/.vim/bundle/coc.nvim/
+yarn install
+cd $HOME/dotfiles/
+nvim +"CocInstall coc-rust-analyzer" +qall
+
+yay -Sy
 
 # Optional reboot
 echo "Reboot now?"
