@@ -4,6 +4,7 @@ set -e
 cd $HOME/dotfiles
 
 # Use local or remote state for configuration
+git status
 echo "Do you wish to discard local changes, checkout master, and pull from remote before running configuration?"
 select yn in "Yes" "No"; do
     case $yn in
