@@ -10,11 +10,11 @@ if [ ! -x /usr/bin/rsync ] ; then
 fi
 
 if [ ! -x /usr/bin/reflector ] ; then
-        sudo pacman -S --noconfirm reflector
+	sudo pacman -S --noconfirm reflector
 fi
 
 if [ ! -x /usr/bin/git ] ; then
-        sudo pacman -S --noconfirm git
+	sudo pacman -S --noconfirm git
 fi
 
 sudo reflector --verbose --country Canada --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
@@ -31,10 +31,10 @@ fi
 git status
 echo "Do you wish to discard local changes, checkout master, and pull from remote before running configuration?"
 select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) sudo git reset HEAD --hard && git checkout master && git reset HEAD --hard && git pull; break;;
-        No ) break;;
-    esac
+	case $yn in
+		Yes ) sudo git reset HEAD --hard && git checkout master && git reset HEAD --hard && git pull; break;;
+		No ) break;;
+	esac
 done
 
 # Configure
@@ -47,7 +47,7 @@ rustup update
 cargo install cargo-generate cargo-watch cargo-edit
 
 yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers xorg xorg-server gnome gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra gnome-shell-extension-pop-shell-git yay neovim ntfs-3g chromium vundle-git nodejs yarn amd-ucode discord
-                                                                                                                                                                                   
+
 # Load all dconf settings                                                                                                                                                          
 dconf load / < $HOME/dotfiles/dconf/full-backup
 
@@ -80,8 +80,8 @@ yay -Sy
 # Optional reboot
 echo "Reboot now?"
 select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) reboot; break;;
-        No ) break;;
-    esac
+	case $yn in
+		Yes ) reboot; break;;
+		No ) break;;
+	esac
 done
