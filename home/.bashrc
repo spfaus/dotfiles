@@ -100,3 +100,5 @@ PS1="$color_grey_black \u@\h $color_blue_white$separator$color_blue_white \W $co
 PS1="$PS1$color_reset "
 
 PS2="$color_blue_white-$color_black_blue$separator$color_reset"
+
+exec fish
