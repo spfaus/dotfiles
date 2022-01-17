@@ -1,93 +1,12 @@
-[org/freedesktop/tracker/miner/files]
-index-recursive-directories=['&DESKTOP', '&DOCUMENTS', '&MUSIC', '&PICTURES', '&VIDEOS', '&DOWNLOAD']
-
-[org/gnome/GWeather]
-temperature-unit='centigrade'
-
-[org/gnome/Music]
-window-maximized=false
-window-position=[26, 23]
-window-size=[2544, 1032]
-
-[org/gnome/Totem]
-active-plugins=['rotation', 'screenshot', 'open-directory', 'recent', 'media-player-keys', 'save-file', 'vimeo', 'movie-properties', 'autoload-subtitles', 'screensaver', 'skipto', 'variable-rate', 'apple-trailers']
-subtitle-encoding='UTF-8'
-
-[org/gnome/baobab/ui]
-window-size=(2544, 1032)
-window-state=87168
-
-[org/gnome/books]
-window-maximized=false
-window-position=[26, 23]
-window-size=[630, 985]
-
-[org/gnome/calculator]
-accuracy=9
-angle-units='degrees'
-base=10
-button-mode='basic'
-number-format='automatic'
-show-thousands=false
-show-zeroes=false
-source-currency=''
-source-units='degree'
-target-currency=''
-target-units='radian'
-window-position=(26, 23)
-word-size=64
-
-[org/gnome/calendar]
-active-view='month'
-window-maximized=false
-window-position=(26, 23)
-window-size=(630, 1032)
-
-[org/gnome/cheese]
-burst-delay=1000
-camera='Video Capture 3'
-photo-x-resolution=1280
-photo-y-resolution=720
-video-x-resolution=1280
-video-y-resolution=720
-
-[org/gnome/clocks]
-world-clocks=[{'location': <(uint32 2, <('Bremen', 'EDDW', true, [(0.92589716818299184, 0.15358897417550102)], [(0.92647893878255916, 0.15358897417550102)])>)>}]
-
-[org/gnome/clocks/state/window]
-panel-id='alarm'
-size=(630, 1032)
-state=87168
-
-[org/gnome/control-center]
-last-panel='background'
-
 [org/gnome/desktop/a11y/applications]
 screen-reader-enabled=false
 
-[org/gnome/desktop/app-folders]
-folder-children=['Utilities', 'YaST']
-
-[org/gnome/desktop/app-folders/folders/Utilities]
-apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop']
-categories=['X-GNOME-Utilities']
-name='X-GNOME-Utilities.directory'
-translate=true
-
-[org/gnome/desktop/app-folders/folders/YaST]
-categories=['X-SuSE-YaST']
-name='suse-yast.directory'
-translate=true
+[org/gnome/desktop/applications/terminal]
+exec='alacritty'
 
 [org/gnome/desktop/background]
-color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/gnome/adwaita-timed.xml'
-primary-color='#3465a4'
-secondary-color='#000000'
-
-[org/gnome/desktop/calendar]
-show-weekdate=false
+picture-uri='file:///usr/share/backgrounds/gnome/adwaita-night.png'
 
 [org/gnome/desktop/datetime]
 automatic-timezone=true
@@ -99,47 +18,27 @@ sources=[('xkb', 'de')]
 xkb-options=['lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
+clock-show-seconds=false
 clock-show-weekday=true
 cursor-size=24
-cursor-theme='breeze_cursors'
+cursor-theme='Adwaita'
 document-font-name='Cantarell 11'
 enable-animations=true
+enable-hot-corners=false
 font-antialiasing='grayscale'
 font-hinting='slight'
 font-name='Cantarell 11'
 gtk-im-module='gtk-im-context-simple'
 gtk-theme='Adwaita-dark'
-icon-theme='breeze-dark'
+icon-theme='Adwaita'
 locate-pointer=false
-monospace-font-name='Source Code Pro Medium 11'
+monospace-font-name='Source Code Pro Semi-Bold 11'
 show-battery-percentage=true
 toolbar-style='text'
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['discord', 'org-gnome-nautilus', 'gnome-power-panel', 'org-gnome-clocks', 'gnome-network-panel', 'org-kde-drkonqi', 'spotify']
 show-in-lock-screen=false
-
-[org/gnome/desktop/notifications/application/discord]
-application-id='discord.desktop'
-
-[org/gnome/desktop/notifications/application/gnome-network-panel]
-application-id='gnome-network-panel.desktop'
-
-[org/gnome/desktop/notifications/application/gnome-power-panel]
-application-id='gnome-power-panel.desktop'
-
-[org/gnome/desktop/notifications/application/org-gnome-clocks]
-application-id='org.gnome.clocks.desktop'
-
-[org/gnome/desktop/notifications/application/org-gnome-nautilus]
-application-id='org.gnome.Nautilus.desktop'
-
-[org/gnome/desktop/notifications/application/org-kde-drkonqi]
-application-id='org.kde.drkonqi.desktop'
-
-[org/gnome/desktop/notifications/application/spotify]
-application-id='spotify.desktop'
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='default'
@@ -155,26 +54,19 @@ two-finger-scrolling-enabled=true
 disable-camera=true
 disable-microphone=true
 old-files-age=uint32 7
-recent-files-max-age=7
+recent-files-max-age=30
+remember-recent-files=true
 remove-old-temp-files=true
 remove-old-trash-files=true
 
-[org/gnome/desktop/remote-desktop/vnc]
-auth-method='prompt'
-view-only=true
-
 [org/gnome/desktop/screensaver]
-color-shading-type='solid'
 lock-delay=uint32 0
 lock-enabled=true
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/gnome/adwaita-timed.xml'
-primary-color='#3465a4'
-secondary-color='#000000'
+picture-uri='file:///usr/share/backgrounds/gnome/adwaita-night.png'
 
 [org/gnome/desktop/search-providers]
 disabled=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Boxes.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Photos.desktop', 'org.gnome.Software.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Epiphany.desktop', 'org.gnome.Calculator.desktop']
-sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
 
 [org/gnome/desktop/session]
 idle-delay=uint32 300
@@ -234,77 +126,8 @@ unmaximize=@as []
 [org/gnome/desktop/wm/preferences]
 action-middle-click-titlebar='minimize'
 button-layout='appmenu:close'
-num-workspaces=4
 titlebar-font='Cantarell Bold 11'
 workspace-names=@as []
-
-[org/gnome/eog/view]
-background-color='rgb(0,0,0)'
-use-background-color=true
-
-[org/gnome/epiphany]
-ask-for-default=false
-
-[org/gnome/epiphany/state]
-is-maximized=false
-window-position=(-1, -1)
-window-size=(1024, 768)
-
-[org/gnome/evolution-data-server]
-migrated=true
-network-monitor-gio-name=''
-
-[org/gnome/file-roller/dialogs/extract]
-recreate-folders=true
-skip-newer=false
-
-[org/gnome/file-roller/listing]
-list-mode='as-folder'
-name-column-width=250
-show-path=false
-sort-method='name'
-sort-type='ascending'
-
-[org/gnome/file-roller/ui]
-sidebar-width=200
-window-height=465
-window-width=948
-
-[org/gnome/gedit/plugins]
-active-plugins=['modelines', 'spell', 'sort', 'filebrowser', 'docinfo']
-
-[org/gnome/gedit/preferences/ui]
-show-tabs-mode='auto'
-
-[org/gnome/gedit/state/window]
-bottom-panel-size=140
-side-panel-active-page='GeditWindowDocumentsPanel'
-side-panel-size=200
-size=(630, 985)
-state=87168
-
-[org/gnome/gnome-screenshot]
-delay=2
-include-pointer=false
-last-save-directory='file:///home/simon/Pictures'
-
-[org/gnome/gnome-system-monitor]
-current-tab='disks'
-maximized=false
-network-total-in-bits=false
-show-dependencies=false
-show-whose-processes='user'
-window-state=(2544, 1032, 8, 40)
-
-[org/gnome/gnome-system-monitor/disktreenew]
-col-6-visible=true
-col-6-width=0
-
-[org/gnome/libgnomekbd/preview]
-height=832
-width=1944
-x=320
-y=135
 
 [org/gnome/mutter]
 attach-modal-dialogs=true
@@ -319,23 +142,6 @@ toggle-tiled-right=@as []
 
 [org/gnome/mutter/wayland/keybindings]
 restore-shortcuts=@as []
-
-[org/gnome/nautilus/compression]
-default-compression-format='zip'
-
-[org/gnome/nautilus/preferences]
-default-folder-viewer='icon-view'
-search-filter-time-type='last_modified'
-search-view='list-view'
-
-[org/gnome/nautilus/window-state]
-initial-size=(1268, 1032)
-maximized=false
-
-[org/gnome/photos]
-window-maximized=false
-window-position=[26, 23]
-window-size=[784, 1032]
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=true
@@ -362,7 +168,7 @@ window-screenshot-clip=@as []
 
 [org/gnome/settings-daemon/plugins/power]
 power-button-action='interactive'
-power-saver-profile-on-low-battery=false
+power-saver-profile-on-low-battery=true
 sleep-inactive-ac-type='nothing'
 sleep-inactive-battery-type='nothing'
 
@@ -374,20 +180,19 @@ disable-user-extensions=false
 disabled-extensions=['windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
 enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'pop-shell@system76.com']
 favorite-apps=@as []
-had-bluetooth-devices-setup=true
-welcome-dialog-last-shown-version='41.1'
 
 [org/gnome/shell/extensions/pop-shell]
 activate-launcher=@as []
 active-hint=true
-focus-down=@as []
-focus-up=@as []
+focus-down=['<Super>Down']
+focus-up=['<Super>Up']
 gap-inner=uint32 2
 gap-outer=uint32 2
 hint-color-rgba='rgb(21,83,158)'
-log-level=uint32 2
+log-level=uint32 1
 pop-workspace-down=@as []
 pop-workspace-up=@as []
+show-skip-taskbar=true
 show-title=false
 smart-gaps=false
 snap-to-grid=true
@@ -401,67 +206,14 @@ toggle-application-view=@as []
 toggle-message-tray=@as []
 toggle-overview=@as []
 
-[org/gnome/shell/weather]
-automatic-location=true
-
-[org/gnome/shell/world-clocks]
-locations=[<(uint32 2, <('Bremen', 'EDDW', true, [(0.92589716818299184, 0.15358897417550102)], [(0.92647893878255916, 0.15358897417550102)])>)>]
-
-[org/gnome/software]
-check-timestamp=int64 1642258566
-first-run=false
-
 [org/gnome/system/location]
 enabled=false
-
-[org/gnome/terminal/legacy/profiles:]
-default='b1dcc9dd-5262-4d8d-a863-c897e6d979b9'
-list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9']
-
-[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
-audible-bell=true
-background-color='rgb(22,25,35)'
-bold-color='rgb(255,255,255)'
-bold-color-same-as-fg=true
-bold-is-bright=false
-cell-width-scale=1.0
-cursor-background-color='rgb(0,0,0)'
-cursor-blink-mode='on'
-cursor-colors-set=false
-cursor-foreground-color='rgb(255,255,255)'
-cursor-shape='ibeam'
-font='Source Code Pro 12'
-foreground-color='rgb(245,245,245)'
-highlight-colors-set=false
-login-shell=false
-palette=['rgb(36,36,36)', 'rgb(218,40,40)', 'rgb(41,198,41)', 'rgb(218,189,25)', 'rgb(21,83,158)', 'rgb(205,26,205)', 'rgb(30,207,207)', 'rgb(245,245,245)', 'rgb(80,80,80)', 'rgb(255,90,90)', 'rgb(91,248,91)', 'rgb(255,239,75)', 'rgb(71,133,208)', 'rgb(255,76,255)', 'rgb(80,255,255)', 'rgb(255,255,255)']
-scroll-on-keystroke=true
-scrollbar-policy='never'
-use-custom-command=false
-use-system-font=false
-use-theme-colors=false
-visible-name='Custom'
 
 [org/gnome/tweaks]
 show-extensions-notice=false
 
-[org/gtk/settings/color-chooser]
-custom-colors=[(0.082352941176470587, 0.32549019607843138, 0.61960784313725492, 1.0), (0.082352941176470615, 0.32549019607843171, 0.61960784313725492, 1.0), (0.0, 0.45098039215686275, 1.0, 1.0), (0.0, 0.452554744525548, 1.0, 1.0), (1.0, 0.0, 0.0, 1.0), (0.0, 0.93725490196078431, 1.0, 1.0), (0.0, 0.93918918918918948, 1.0, 1.0), (0.13333333333333333, 1.0, 0.0, 1.0)]
-selected-color=(true, 0.082352941176470587, 0.32549019607843138, 0.61960784313725492, 1.0)
-
 [org/gtk/settings/file-chooser]
-date-format='regular'
-location-mode='path-bar'
 show-hidden=true
-show-size-column=true
-show-type-column=true
-sidebar-width=157
-sort-column='name'
-sort-directories-first=true
-sort-order='ascending'
-type-format='category'
-window-position=(665, 82)
-window-size=(1231, 902)
 
 [system/locale]
-region='en_US.UTF-8'
+region='en_CA.UTF-8'
