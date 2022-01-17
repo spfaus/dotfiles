@@ -153,7 +153,7 @@
 #en_AU ISO-8859-1  
 #en_BW.UTF-8 UTF-8  
 #en_BW ISO-8859-1  
-#en_CA.UTF-8 UTF-8  
+en_CA.UTF-8 UTF-8  
 #en_CA ISO-8859-1  
 #en_DK.UTF-8 UTF-8  
 #en_DK ISO-8859-1  
@@ -174,7 +174,7 @@
 #en_SC.UTF-8 UTF-8  
 #en_SG.UTF-8 UTF-8  
 #en_SG ISO-8859-1  
-en_US.UTF-8 UTF-8  
+#en_US.UTF-8 UTF-8  
 #en_US ISO-8859-1  
 #en_ZA.UTF-8 UTF-8  
 #en_ZA ISO-8859-1  
