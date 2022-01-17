@@ -70,13 +70,11 @@ sudo timedatectl set-ntp true
 sudo hwclock --systohc
 sudo locale-gen
 
-env SHELL=(which sh) nvim +PluginInstall +PluginClean +PluginUpdate +UpdateRemotePlugins +qall
+nvim +PluginInstall +PluginClean +PluginUpdate +UpdateRemotePlugins +qall
 cd $HOME/.vim/bundle/coc.nvim/
 yarn install
 cd $HOME/dotfiles/
-env SHELL=(which sh) nvim +"CocInstall coc-rust-analyzer" +qall
-
-set -U fish_greeting # Disable default fish greeting on startup
+nvim +"CocInstall coc-rust-analyzer" +qall
 
 yay -Sy
 yay -Rs $(yay -Qdtq) --noconfirm # Delete orphans
