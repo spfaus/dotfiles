@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -ex
 
 cd $HOME/dotfiles
 
@@ -46,7 +46,7 @@ rustup default stable
 rustup update
 cargo install cargo-generate cargo-watch cargo-edit
 
-yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers xorg xorg-server gnome gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra gnome-shell-extension-pop-shell-git yay neovim ntfs-3g chromium vundle-git nodejs yarn amd-ucode discord fish alacritty
+yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers xorg xorg-server gnome gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra gnome-shell-extension-pop-shell-git yay neovim ntfs-3g chromium vundle-git nodejs yarn amd-ucode discord fish alacritty ripgrep
 
 # Load all dconf settings                                                                                                                                                          
 dconf load / < $HOME/dotfiles/dconf/full-backup
@@ -69,13 +69,16 @@ sudo timedatectl set-ntp true
 sudo hwclock --systohc
 sudo locale-gen
 
-nvim +PluginInstall +qall
+env SHELL=(which sh) nvim +PluginInstall +PluginClean +PluginUpdate +UpdateRemotePlugins +qall
 cd $HOME/.vim/bundle/coc.nvim/
 yarn install
 cd $HOME/dotfiles/
-nvim +"CocInstall coc-rust-analyzer" +qall
+env SHELL=(which sh) nvim +"CocInstall coc-rust-analyzer" +qall
+
+set -U fish_greeting # Disable default fish greeting on startup
 
 yay -Sy
+yay -Rs $(yay -Qdtq) --noconfirm # Delete orphans
 
 # Optional reboot
 echo "Reboot now?"
