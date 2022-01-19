@@ -1,3 +1,5 @@
+source $HOME/.config/nvim/default-configs/sensible.vim
+
 " https://github.com/VundleVim/Vundle.vim
 set nocompatible              " required
 filetype off                  " required
@@ -42,29 +44,32 @@ let $FZF_DEFAULT_COMMAND="rg --files --hidden --ignore-case --iglob !.git"
 " Permanent undo
 set undodir=~/.vim/undodir
 set undofile
+set noswapfile
+set nobackup
 
-set exrc
-set relativenumber
-set nu
-set nohlsearch
-set hidden
-set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
-set nowrap
-set ignorecase smartcase
-set noswapfile
-set nobackup
-set incsearch
-set notermguicolors
-set scrolloff=8
-set noshowmode
+
 set completeopt=menuone,menu,noinsert,noselect
+
+set exrc
+set updatetime=100
+set noerrorbells
+set hidden
+set notermguicolors
+set noshowmode
+set scrolloff=8
+set nowrap
 set signcolumn=number
 set cmdheight=2
-set updatetime=50
+set relativenumber
+set nu
+
+set ignorecase smartcase
+set incsearch
+set hlsearch
 
 colorscheme default
 
