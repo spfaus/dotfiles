@@ -17,16 +17,6 @@ if [ ! -x /usr/bin/git ] ; then
 	sudo pacman -S --noconfirm git
 fi
 
-sudo reflector --verbose --country Canada --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
-
-if [ ! -x /usr/bin/yay ] ; then
-	git clone https://aur.archlinux.org/yay.git
-	cd yay
-	makepkg -sic --noconfirm
-	cd ..
-	rm -rf yay
-fi
-
 # Use local or remote state for configuration
 git status
 echo "Do you wish to discard local changes, checkout master, and pull from remote before running configuration?"
@@ -36,6 +26,16 @@ select yn in "Yes" "No"; do
 		No ) break;;
 	esac
 done
+
+sudo reflector --verbose --country Canada --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
+
+if [ ! -x /usr/bin/yay ] ; then
+	git clone https://aur.archlinux.org/yay.git
+	cd yay
+	makepkg -sic --noconfirm
+	cd ..
+	rm -rf yay
+fi
 
 # Configure
 yay -Syyuu --noconfirm
