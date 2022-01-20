@@ -70,6 +70,7 @@ sudo timedatectl set-ntp true
 sudo hwclock --systohc
 sudo locale-gen
 
+# TODO: +qall does not work with async operations because it does not wait for them to finish
 nvim +PluginInstall +PluginClean +PluginUpdate +UpdateRemotePlugins +qall
 cd $HOME/.vim/bundle/coc.nvim/
 yarn install
