@@ -125,7 +125,7 @@ unmaximize=@as []
 
 [org/gnome/desktop/wm/preferences]
 action-middle-click-titlebar='minimize'
-button-layout='appmenu:close'
+button-layout=''
 titlebar-font='Cantarell Bold 11'
 workspace-names=@as []
 
