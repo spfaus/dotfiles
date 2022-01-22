@@ -27,12 +27,12 @@ Plugin 'neoclide/coc.nvim'
 " Rust
 Plugin 'rust-lang/rust.vim'
 
+" Practice & good habits
+Plugin 'takac/vim-hardtime'
+
 call vundle#end()
 
 " ======CUSTOM CONFIG======
-" Rust formatting
-let g:rustfmt_autosave = 1
-
 filetype plugin indent on    " required
 set autoindent
 set encoding=utf-8
@@ -84,4 +84,7 @@ set listchars=tab:\┊\ ,trail:·
 set list
 
 " ======PLUGIN CONFIGS======
+let g:rustfmt_autosave = 1
+let g:hardtime_default_on = 1
+
 source $HOME/.config/nvim/plugin-config/coc.vim
