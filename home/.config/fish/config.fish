@@ -1,4 +1,8 @@
-set -U fish_greeting ""
 if status is-interactive
-    fortune -a | lolcat
+    function fish_prompt
+        powerline-shell --shell bare $status
+    end
+    function fish_greeting
+        fortune -a | lolcat
+    end
 end

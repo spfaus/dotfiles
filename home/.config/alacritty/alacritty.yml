@@ -28,7 +28,7 @@ font:
   bold_italic:
     family: Source Code Pro
     style: Bold Italic
-  size: 14
+  size: 12
 
 # Colors (Gruvbox dark)
 colors:
