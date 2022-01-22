@@ -79,7 +79,8 @@ highlight NonText ctermbg=none
 match ErrorMsg '\%>80v.\+'
 
 " Show trailing whitespace and tabs if noexpandtab is set
-set listchars=tab:\↹\ ,trail:·
+set listchars=tab:\┊\ ,trail:·
+"hi Whitespace ctermfg=Grey
 set list
 
 " ======PLUGIN CONFIGS======
