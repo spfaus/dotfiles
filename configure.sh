@@ -57,7 +57,7 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
 yay -Rs --noconfirm baobab cheese epiphany gedit gnome-books gnome-boxes gnome-calendar \
     gnome-characters gnome-clocks gnome-contacts gnome-font-viewer gnome-logs gnome-maps \
     gnome-music gnome-photos gnome-software gnome-system-monitor gnome-terminal \
-    gnome-user-docs gnome-weather orca simple-scan totem gnome-video-effects vino
+    gnome-user-docs gnome-weather orca simple-scan totem gnome-video-effects vino yelp
 
 # Load all dconf settings
 dconf load / < $HOME/dotfiles/dconf/full-backup
