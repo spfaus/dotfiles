@@ -27,7 +27,8 @@ select yn in "Yes" "No"; do
     esac
 done
 
-sudo reflector --verbose --country Canada --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --verbose --country Canada --latest 20 --sort rate \
+    --save /etc/pacman.d/mirrorlist
 
 if [ ! -x /usr/bin/yay ] ; then
     git clone https://aur.archlinux.org/yay.git
@@ -46,7 +47,12 @@ rustup default stable
 rustup update
 cargo install cargo-generate cargo-watch cargo-edit
 
-yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers xorg xorg-server gnome gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra gnome-shell-extension-pop-shell-git yay neovim ntfs-3g chromium vundle-git nodejs yarn amd-ucode discord fish alacritty ripgrep cups fortune-mod lolcat powerline-shell
+yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages \
+    texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers xorg \
+    xorg-server gnome gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
+    noto-fonts-extra gnome-shell-extension-pop-shell-git yay neovim ntfs-3g chromium \
+    vundle-git nodejs yarn amd-ucode discord fish alacritty ripgrep cups fortune-mod \
+    lolcat powerline-shell
 
 # Load all dconf settings
 dconf load / < $HOME/dotfiles/dconf/full-backup
@@ -70,7 +76,6 @@ sudo timedatectl set-ntp true
 sudo hwclock --systohc
 sudo locale-gen
 
-# TODO: +qall does not work with async operations because it does not wait for them to finish
 nvim +PluginInstall +PluginClean +PluginUpdate +UpdateRemotePlugins +qall
 cd $HOME/.vim/bundle/coc.nvim/
 yarn install
@@ -82,7 +87,8 @@ yay -Rs $(yay -Qdtq) --noconfirm # Delete orphans
 
 # Create SSH key if none is found
 if [ ! -f ~/.ssh/id_ed25519 ] ; then
-    ssh-keygen -t ed25519 -C "simon.pfaus@web.de" -N "" -f ~/.ssh/id_ed25519 && echo "Created SSH key"
+    ssh-keygen -t ed25519 -C "simon.pfaus@web.de" -N "" -f ~/.ssh/id_ed25519 && \
+        echo "Created SSH key"
 fi
 
 # Optional reboot

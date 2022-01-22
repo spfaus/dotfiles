@@ -75,8 +75,8 @@ highlight NonText guibg=none
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 
-" Highlight characters over 80 columns
-match ErrorMsg '\%>80v.\+'
+" Highlight characters over 90 columns
+match ErrorMsg '\%>90v.\+'
 
 " Show trailing whitespace and tabs if noexpandtab is set
 set listchars=tab:\┊\ ,trail:·
