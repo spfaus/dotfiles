@@ -1,10 +1,10 @@
+" ======DEFAULTS======
 source $HOME/.config/nvim/default-configs/sensible.vim
 
-" https://github.com/VundleVim/Vundle.vim
+" ======PLUGINS======
 set nocompatible              " required
 filetype off                  " required
 
-"set rtp+=~/.vim/bundle/Vundle.vim (set the runtime path to include Vundle and initialize)
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
@@ -27,10 +27,9 @@ Plugin 'neoclide/coc.nvim'
 " Rust
 Plugin 'rust-lang/rust.vim'
 
+call vundle#end()
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-
+" ======CUSTOM CONFIG======
 " Rust formatting
 let g:rustfmt_autosave = 1
 
@@ -54,11 +53,10 @@ set smartindent
 
 set completeopt=menuone,menu,noinsert,noselect
 
-set exrc
+set noexrc
 set updatetime=100
 set noerrorbells
 set hidden
-set notermguicolors
 set noshowmode
 set scrolloff=8
 set nowrap
@@ -71,12 +69,18 @@ set ignorecase smartcase
 set incsearch
 set hlsearch
 
-colorscheme default
-
+set notermguicolors
 highlight Normal guibg=none
 highlight NonText guibg=none
-
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 
+" Highlight characters over 80 columns
+match ErrorMsg '\%>80v.\+'
+
+" Show trailing whitespace and tabs if noexpandtab is set
+set listchars=tab:\↹\ ,trail:·
+set list
+
+" ======PLUGIN CONFIGS======
 source $HOME/.config/nvim/plugin-config/coc.vim
