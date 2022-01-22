@@ -80,6 +80,11 @@ nvim +"CocInstall coc-rust-analyzer" +qall
 yay -Sy
 yay -Rs $(yay -Qdtq) --noconfirm # Delete orphans
 
+# Create SSH key if none is found
+if [ ! -f ~/.ssh/id_ed25519 ] ; then
+    ssh-keygen -t ed25519 -C "simon.pfaus@web.de" -N "" -f ~/.ssh/id_ed25519 && echo "Created SSH key"
+fi
+
 # Optional reboot
 echo "Reboot now?"
 select yn in "Yes" "No"; do
