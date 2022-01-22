@@ -52,7 +52,12 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     xorg-server gnome gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
     noto-fonts-extra gnome-shell-extension-pop-shell-git yay neovim ntfs-3g chromium \
     vundle-git nodejs yarn amd-ucode discord fish alacritty ripgrep cups fortune-mod \
-    lolcat powerline-shell autojump-rs
+    lolcat powerline-shell autojump-rs htop
+
+yay -Rs --noconfirm baobab cheese epiphany gedit gnome-books gnome-boxes gnome-calendar \
+    gnome-characters gnome-clocks gnome-contacts gnome-font-viewer gnome-logs gnome-maps \
+    gnome-music gnome-photos gnome-software gnome-system-monitor gnome-terminal \
+    gnome-user-docs gnome-weather orca simple-scan totem gnome-video-effects vino
 
 # Load all dconf settings
 dconf load / < $HOME/dotfiles/dconf/full-backup
