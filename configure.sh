@@ -52,7 +52,7 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     xorg-server gnome gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
     noto-fonts-extra gnome-shell-extension-pop-shell-git yay neovim ntfs-3g chromium \
     vundle-git nodejs yarn amd-ucode discord fish alacritty ripgrep cups fortune-mod \
-    lolcat powerline-shell
+    lolcat powerline-shell autojump-rs
 
 # Load all dconf settings
 dconf load / < $HOME/dotfiles/dconf/full-backup
