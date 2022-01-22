@@ -19,7 +19,7 @@ fi
 
 # Use local or remote state for configuration
 git status
-echo "Use local or remote version of git branch? (Remote will discard local)"
+echo "Discard local changes and use remote state of git branch?"
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) sudo git reset HEAD --hard && git pull; break;;
