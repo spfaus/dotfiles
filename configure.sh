@@ -85,7 +85,7 @@ nvim +PluginInstall +PluginClean +PluginUpdate +UpdateRemotePlugins +qall
 cd $HOME/.vim/bundle/coc.nvim/
 yarn install
 cd $HOME/dotfiles/
-nvim +"CocInstall coc-rust-analyzer" +qall
+nvim +"CocInstall -sync coc-rust-analyzer" +qall
 
 yay -Sy
 yay -Rs $(yay -Qdtq) --noconfirm # Delete orphans
