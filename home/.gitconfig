@@ -1,10 +1,10 @@
 [user]
-	name = Simon-A-P
-	email = simon.pfaus@web.de
+    name = spfaus
+    email = simon.pfaus@web.de
 [pull]
-	rebase = false
+    rebase = false
 [filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
