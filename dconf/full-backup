@@ -1,12 +1,13 @@
-[org/gnome/desktop/a11y/applications]
-screen-reader-enabled=false
-
 [org/gnome/desktop/applications/terminal]
 exec='alacritty'
 
 [org/gnome/desktop/background]
+color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/gnome/adwaita-night.png'
+picture-uri='file:///usr/share/backgrounds/gnome/adwaita-timed.xml'
+primary-color='#1d2021'
+secondary-color='#1d2021'
+show-desktop-icons=false
 
 [org/gnome/desktop/datetime]
 automatic-timezone=true
@@ -15,7 +16,6 @@ automatic-timezone=true
 per-window=false
 show-all-sources=false
 sources=[('xkb', 'de')]
-xkb-options=['lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
 clock-show-seconds=false
@@ -60,10 +60,13 @@ remove-old-temp-files=true
 remove-old-trash-files=true
 
 [org/gnome/desktop/screensaver]
+color-shading-type='solid'
 lock-delay=uint32 0
 lock-enabled=true
 picture-options='zoom'
-picture-uri='file:///usr/share/backgrounds/gnome/adwaita-night.png'
+picture-uri='file:///usr/share/backgrounds/gnome/adwaita-timed.xml'
+primary-color='#1d2021'
+secondary-color='#1d2021'
 
 [org/gnome/desktop/search-providers]
 disabled=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Boxes.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Photos.desktop', 'org.gnome.Software.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Epiphany.desktop', 'org.gnome.Calculator.desktop']
@@ -129,6 +132,10 @@ button-layout=''
 titlebar-font='Cantarell Bold 11'
 workspace-names=@as []
 
+[org/gnome/gnome-screenshot]
+delay=2
+include-pointer=false
+
 [org/gnome/mutter]
 attach-modal-dialogs=true
 center-new-windows=true
@@ -171,9 +178,6 @@ power-button-action='interactive'
 power-saver-profile-on-low-battery=true
 sleep-inactive-ac-type='nothing'
 sleep-inactive-battery-type='nothing'
-
-[org/gnome/settings-daemon/plugins/sharing/gnome-remote-desktop]
-enabled-connections=@as []
 
 [org/gnome/shell]
 disable-user-extensions=false
