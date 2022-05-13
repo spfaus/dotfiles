@@ -27,7 +27,7 @@ select yn in "Yes" "No"; do
     esac
 done
 
-sudo reflector --verbose --country Canada --latest 20 --sort rate \
+sudo reflector --verbose --latest 20 --sort rate \
     --save /etc/pacman.d/mirrorlist
 
 if [ ! -x /usr/bin/yay ] ; then
