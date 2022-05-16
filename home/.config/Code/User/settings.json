@@ -3,5 +3,9 @@
     "editor.fontFamily": "'Source Code Pro Semibold'",
     "debug.console.fontFamily": "'Source Code Pro'",
     "scm.inputFontFamily": "editor",
-    "editor.fontSize": 16
+    "editor.fontSize": 16,
+    "editor.formatOnSave": true,
+    "editor.inlineSuggest.enabled": true,
+    "git.autofetch": true,
+    "rust-analyzer.checkOnSave.command": "clippy",
 }
