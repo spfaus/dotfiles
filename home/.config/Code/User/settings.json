@@ -8,4 +8,7 @@
     "editor.inlineSuggest.enabled": true,
     "git.autofetch": true,
     "rust-analyzer.checkOnSave.command": "clippy",
+    "breadcrumbs.enabled": false,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "none",
 }
