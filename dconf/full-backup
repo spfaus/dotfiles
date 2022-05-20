@@ -7,6 +7,8 @@ temperature-unit='centigrade'
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
+picture-uri=''
+picture-uri-dark=''
 primary-color='#000000'
 secondary-color='#000000'
 show-desktop-icons=false
@@ -68,6 +70,7 @@ idle-activation-enabled=false
 lock-delay=uint32 0
 lock-enabled=true
 picture-options='zoom'
+picture-uri=''
 primary-color='#000000'
 secondary-color='#000000'
 
