@@ -43,7 +43,7 @@ yay -Syyuu --noconfirm
 
 yay -S --noconfirm rustup clang
 
-rustup default stable
+rustup default nightly
 rustup update
 cargo install cargo-watch cargo-edit
 
