@@ -50,7 +50,7 @@ cargo install cargo-watch cargo-edit
 yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages \
     texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers xorg \
     xorg-server gnome gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
-    noto-fonts-extra gnome-shell-extension-pop-shell-git yay neovim ntfs-3g brave \
+    noto-fonts-extra gnome-shell-extension-pop-shell-git yay neovim ntfs-3g brave-nightly-bin \
     amd-ucode discord fish alacritty cups fortune-mod bitwarden anki \
     lolcat powerline-shell autojump-rs htop
 
