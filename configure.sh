@@ -51,7 +51,7 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers xorg \
     xorg-server gnome gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
     noto-fonts-extra gnome-shell-extension-pop-shell-git yay neovim ntfs-3g firefox \
-    amd-ucode discord fish alacritty cups fortune-mod bitwarden anki \
+    amd-ucode discord fish alacritty cups fortune-mod bitwarden anki-git \
     lolcat powerline-shell autojump-rs htop
 
 # Load all dconf settings
