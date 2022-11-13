@@ -84,3 +84,5 @@ if [ ! -f ~/.ssh/id_ed25519 ] ; then
     ssh-keygen -t ed25519 -N "" -f ~/.ssh/id_ed25519 && echo "Created SSH key" && eval \
         "$(ssh-agent -s)" && ssh-add ~/.ssh/id_ed25519 && echo "Added new SSH key to ssh-agent"
 fi
+
+echo "------ All done! ------"
