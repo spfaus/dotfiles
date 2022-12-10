@@ -17,15 +17,7 @@ if [ ! -x /usr/bin/git ] ; then
     sudo pacman -S --noconfirm git
 fi
 
-# Use local or remote state for configuration
 git status
-echo "Discard local changes and use remote state of git branch?"
-select yn in "Yes" "No"; do
-    case $yn in
-        Yes ) sudo git reset HEAD --hard && git pull; break;;
-        No ) break;;
-    esac
-done
 
 sudo reflector --verbose --latest 20 --sort rate \
     --save /etc/pacman.d/mirrorlist
