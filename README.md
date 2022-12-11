@@ -7,7 +7,7 @@ Gnome with Pop Shell for tiling functionality on Arch Linux
 
 ## How do I use this?
 I use this as a second step to my [automatic Arch Linux install](https://github.com/spfaus/arch-install) or anytime I wish to update or reset my configuration.  
-Simply clone this repository into its own directory in your $HOME directory: ```cd ~ && git clone https://github.com/spfaus/dotfiles.git```  
+Simply clone this repository into its own directory: ```cd ~ && git clone https://github.com/spfaus/dotfiles.git```  
 Running the contained ```configure.sh``` will do the rest.  
 
 ## Notes
