@@ -1,7 +1,9 @@
 #!/bin/bash
 set -e
 
-cd $HOME/dotfiles
+SCRIPT_DIR=$(dirname "$0")
+
+cd $SCRIPT_DIR
 
 sudo pacman -Sy
 
@@ -47,14 +49,14 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     lolcat powerline-shell autojump-rs htop visual-studio-code-bin
 
 # Load all dconf settings
-dconf load / < $HOME/dotfiles/dconf/full-backup
+dconf load / < $SCRIPT_DIR/dconf/full-backup
 
 # Link all user config files
-cp -as --remove-destination $HOME/dotfiles/home/. $HOME/
+cp -as --remove-destination $SCRIPT_DIR/home/. $HOME/
 
 # Link all root config files and change owner to root
-sudo chown -R root:root $HOME/dotfiles/root/
-sudo cp -as --remove-destination $HOME/dotfiles/root/. /
+sudo chown -R root:root $SCRIPT_DIR/root/
+sudo cp -as --remove-destination $SCRIPT_DIR/root/. /
 
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable gdm.service
