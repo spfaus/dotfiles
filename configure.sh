@@ -48,6 +48,15 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     amd-ucode discord fish cups bitwarden anki-git python-certifi \
     powerline-shell autojump-rs htop visual-studio-code-bin
 
+# Install Visual Studio Code extensions
+code \
+--install-extension rust-lang.rust-analyzer \
+--install-extension bungcip.better-toml \
+--install-extension vadimcn.vscode-lldb \
+--install-extension serayuzgur.crates \
+--install-extension usernamehw.errorlens \
+--install-extension a5huynh.vscode-ron \
+
 # Load all dconf settings
 dconf load / < $SCRIPT_DIR/dconf/full-backup
 
