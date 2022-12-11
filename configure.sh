@@ -21,7 +21,7 @@ fi
 
 git status
 
-sudo reflector --verbose --latest 20 --sort rate \
+sudo reflector --verbose --latest 10 --sort rate \
     --save /etc/pacman.d/mirrorlist
 
 if [ ! -x /usr/bin/yay ] ; then
