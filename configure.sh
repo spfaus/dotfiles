@@ -58,7 +58,7 @@ code \
 --install-extension a5huynh.vscode-ron \
 
 # Set up NordVPN
-groupadd -r nordvpn
+groupadd -rf nordvpn
 gpasswd -a $USER nordvpn
 
 # Load all dconf settings
