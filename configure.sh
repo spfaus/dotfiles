@@ -59,7 +59,7 @@ code \
 
 # Set up NordVPN
 groupadd -rf nordvpn
-gpasswd -a $USER nordvpn
+sudo gpasswd -a $USER nordvpn
 
 # Load all dconf settings
 dconf load / < $SCRIPT_DIR/dconf/full-backup
