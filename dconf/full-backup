@@ -1,0 +1,234 @@
+[org/freedesktop/tracker/miner/files]
+index-recursive-directories=['&DESKTOP', '&DOCUMENTS', '&MUSIC', '&PICTURES', '&VIDEOS', '&DOWNLOAD']
+
+[org/gnome/GWeather]
+temperature-unit='centigrade'
+
+[org/gnome/desktop/background]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri=''
+picture-uri-dark=''
+primary-color='#000000'
+secondary-color='#000000'
+show-desktop-icons=false
+
+[org/gnome/desktop/datetime]
+automatic-timezone=true
+
+[org/gnome/desktop/input-sources]
+per-window=false
+show-all-sources=false
+sources=[('xkb', 'de')]
+xkb-options=['lv3:ralt_switch']
+
+[org/gnome/desktop/interface]
+clock-show-seconds=false
+clock-show-weekday=true
+color-scheme='prefer-dark'
+cursor-size=24
+cursor-theme='Adwaita'
+document-font-name='Cantarell 11'
+enable-animations=true
+enable-hot-corners=false
+font-antialiasing='grayscale'
+font-hinting='slight'
+font-name='Cantarell 11'
+gtk-theme='Adwaita-dark'
+icon-theme='Adwaita'
+locate-pointer=false
+monospace-font-name='Source Code Pro Semi-Bold 11'
+show-battery-percentage=true
+toolbar-style='text'
+toolkit-accessibility=false
+
+[org/gnome/desktop/lockdown]
+disable-lock-screen=false
+
+[org/gnome/desktop/notifications]
+show-banners=true
+show-in-lock-screen=false
+
+[org/gnome/desktop/peripherals/mouse]
+accel-profile='default'
+speed=-0.5
+
+[org/gnome/desktop/peripherals/touchpad]
+click-method='fingers'
+send-events='enabled'
+speed=0.05
+tap-to-click=true
+two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/privacy]
+disable-camera=true
+disable-microphone=true
+
+[org/gnome/desktop/screensaver]
+color-shading-type='solid'
+idle-activation-enabled=false
+lock-delay=uint32 0
+lock-enabled=true
+picture-options='zoom'
+picture-uri=''
+primary-color='#000000'
+secondary-color='#000000'
+
+[org/gnome/desktop/search-providers]
+disable-external=false
+disabled=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Boxes.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Photos.desktop', 'org.gnome.Software.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Epiphany.desktop', 'org.gnome.Calculator.desktop']
+
+[org/gnome/desktop/session]
+idle-delay=uint32 300
+
+[org/gnome/desktop/sound]
+allow-volume-above-100-percent=false
+event-sounds=true
+
+[org/gnome/desktop/wm/keybindings]
+activate-window-menu=@as []
+begin-move=@as []
+begin-resize=@as []
+close=['<Super>q']
+cycle-group=@as []
+cycle-group-backward=@as []
+cycle-panels=@as []
+cycle-panels-backward=@as []
+cycle-windows=@as []
+cycle-windows-backward=@as []
+maximize=@as []
+minimize=@as []
+move-to-monitor-down=@as []
+move-to-monitor-left=@as []
+move-to-monitor-right=@as []
+move-to-monitor-up=@as []
+move-to-workspace-1=@as []
+move-to-workspace-2=@as []
+move-to-workspace-3=@as []
+move-to-workspace-4=@as []
+move-to-workspace-down=['<Shift><Super>u']
+move-to-workspace-last=@as []
+move-to-workspace-left=['<Shift><Super>j']
+move-to-workspace-right=['<Shift><Super>k']
+move-to-workspace-up=['<Shift><Super>i']
+panel-main-menu=@as []
+panel-run-dialog=@as []
+switch-applications=@as []
+switch-applications-backward=@as []
+switch-group=@as []
+switch-group-backward=@as []
+switch-input-source=@as []
+switch-input-source-backward=@as []
+switch-panels=@as []
+switch-panels-backward=@as []
+switch-to-workspace-1=@as []
+switch-to-workspace-2=@as []
+switch-to-workspace-3=@as []
+switch-to-workspace-4=@as []
+switch-to-workspace-down=['<Super>u']
+switch-to-workspace-last=@as []
+switch-to-workspace-left=['<Super>j']
+switch-to-workspace-right=['<Super>k']
+switch-to-workspace-up=['<Super>i']
+toggle-fullscreen=@as []
+toggle-maximized=['<Super>m']
+unmaximize=@as []
+
+[org/gnome/desktop/wm/preferences]
+button-layout=''
+num-workspaces=1
+titlebar-font='Cantarell Bold 11'
+workspace-names=@as []
+
+[org/gnome/mutter]
+attach-modal-dialogs=true
+center-new-windows=true
+dynamic-workspaces=true
+edge-tiling=false
+workspaces-only-on-primary=true
+
+[org/gnome/mutter/keybindings]
+toggle-tiled-left=@as []
+toggle-tiled-right=@as []
+
+[org/gnome/mutter/wayland/keybindings]
+restore-shortcuts=@as []
+
+[org/gnome/nautilus/compression]
+default-compression-format='zip'
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-enabled=true
+night-light-schedule-automatic=false
+night-light-schedule-from=0.0
+night-light-schedule-to=0.0
+night-light-temperature=uint32 3200
+
+[org/gnome/settings-daemon/plugins/media-keys]
+area-screenshot=['Print']
+area-screenshot-clip=@as []
+help=@as []
+logout=@as []
+magnifier=@as []
+magnifier-zoom-in=@as []
+magnifier-zoom-out=@as []
+screencast=['<Super>Print']
+screenreader=@as []
+screensaver=['<Super>Escape']
+screenshot=@as []
+screenshot-clip=@as []
+window-screenshot=@as []
+window-screenshot-clip=@as []
+
+[org/gnome/settings-daemon/plugins/power]
+power-button-action='interactive'
+power-saver-profile-on-low-battery=true
+sleep-inactive-ac-type='nothing'
+sleep-inactive-battery-type='nothing'
+
+[org/gnome/settings-daemon/plugins/sharing/gnome-remote-desktop]
+enabled-connections=@as []
+
+[org/gnome/shell]
+disable-user-extensions=false
+disabled-extensions=['windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'pop-shell@system76.com']
+favorite-apps=@as []
+
+[org/gnome/shell/extensions/pop-shell]
+activate-launcher=@as []
+active-hint=true
+focus-down=['<Super>Down']
+focus-left=['<Super>Left']
+focus-right=['<Super>Right']
+focus-up=['<Super>Up']
+gap-inner=uint32 2
+gap-outer=uint32 2
+hint-color-rgba='rgb(6,84,146)'
+log-level=uint32 1
+pop-monitor-left=['<Shift><Super>KP_Left', '<Shift><Super>h']
+pop-monitor-right=['<Shift><Super>KP_Right', '<Shift><Super>l']
+pop-workspace-down=@as []
+pop-workspace-up=@as []
+show-skip-taskbar=true
+show-title=false
+smart-gaps=false
+snap-to-grid=true
+tile-by-default=true
+toggle-tiling=@as []
+
+[org/gnome/shell/keybindings]
+focus-active-notification=@as []
+open-application-menu=@as []
+toggle-application-view=@as []
+toggle-message-tray=@as []
+toggle-overview=@as []
+
+[org/gnome/system/location]
+enabled=false
+
+[org/gnome/tweaks]
+show-extensions-notice=false
+
+[system/locale]
+region='en_CA.UTF-8'
