@@ -62,14 +62,14 @@ groupadd -rf nordvpn
 sudo gpasswd -a $USER nordvpn
 
 # Load all dconf settings
-dconf load / < $SCRIPT_DIR/dconf/full-backup
+dconf load / < $(pwd)/dconf/full-backup
 
 # Link all user config files
-cp -as --remove-destination $SCRIPT_DIR/home/. $HOME/
+cp -as --remove-destination $(pwd)/home/. $HOME/
 
 # Link all root config files and change owner to root
-sudo chown -R root:root $SCRIPT_DIR/root/
-sudo cp -as --remove-destination $SCRIPT_DIR/root/. /
+sudo chown -R root:root $(pwd)/root/
+sudo cp -as --remove-destination $(pwd)/root/. /
 
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable gdm.service
