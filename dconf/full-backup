@@ -198,6 +198,7 @@ favorite-apps=@as []
 [org/gnome/shell/extensions/pop-shell]
 activate-launcher=@as []
 active-hint=true
+active-hint-border-radius=uint32 12
 focus-down=['<Super>Down']
 focus-left=['<Super>Left']
 focus-right=['<Super>Right']
