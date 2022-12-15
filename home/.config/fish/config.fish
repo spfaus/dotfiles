@@ -3,4 +3,6 @@ if status is-interactive
     function fish_prompt
         powerline-shell --shell bare $status
     end
+    function fish_greeting
+    end
 end
