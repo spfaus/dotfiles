@@ -10,4 +10,5 @@
     "rust-analyzer.checkOnSave.command": "clippy",
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "none",
+    "workbench.colorTheme": "Default Dark+",
 }
