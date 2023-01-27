@@ -83,6 +83,8 @@ sudo timedatectl set-ntp true
 sudo hwclock --systohc
 sudo locale-gen
 
+xdg-mime default org.gnome.Nautilus.desktop inode/directory
+
 yay -Sy
 yay -Rs $(yay -Qdtq) --noconfirm # Delete orphans
 
