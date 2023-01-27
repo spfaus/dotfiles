@@ -1,5 +1,5 @@
 if status is-interactive
-    alias ls="ls -lah"
+    alias ls="ls -lAh --color"
     function fish_prompt
         powerline-shell --shell bare $status
     end
