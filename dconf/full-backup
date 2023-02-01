@@ -197,14 +197,14 @@ favorite-apps=@as []
 
 [org/gnome/shell/extensions/pop-shell]
 activate-launcher=@as []
-active-hint=true
+active-hint=false
 active-hint-border-radius=uint32 12
 focus-down=['<Super>Down']
 focus-left=['<Super>Left']
 focus-right=['<Super>Right']
 focus-up=['<Super>Up']
-gap-inner=uint32 2
-gap-outer=uint32 2
+gap-inner=uint32 0
+gap-outer=uint32 0
 hint-color-rgba='rgb(6,84,146)'
 log-level=uint32 1
 pop-monitor-left=['<Shift><Super>KP_Left', '<Shift><Super>h']
