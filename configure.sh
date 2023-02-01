@@ -40,6 +40,7 @@ yay -S --noconfirm rustup clang
 rustup default nightly
 rustup update
 cargo install cargo-watch
+rustup component add rust-analyzer
 
 yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages \
     texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers xorg \
