@@ -1,0 +1,6 @@
+window, decoration, decoration-overlay, headerbar, .titlebar {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius:0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
