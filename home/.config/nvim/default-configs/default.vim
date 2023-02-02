@@ -38,6 +38,5 @@ set hlsearch
 set notermguicolors
 
 " Show trailing whitespace and tabs if noexpandtab is set
-set listchars=tab:\┊\ ,trail:·
-"hi Whitespace ctermfg=Grey
 set list
+set listchars=tab:\┊\ ,trail:·
