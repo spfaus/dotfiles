@@ -339,15 +339,19 @@ end
 -- Enable the following language servers
 --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
 --
---  Add any additional override configuration in the following tables. They will be passed to
---  the `settings` field of the server config. You must look up that documentation yourself.
+--  Add any additional override configuration in the following tables.
 local servers = {
-  rust_analyzer = {},
+  rust_analyzer = {
+    settings = {},
+    cmd = { 'rustup', 'run', 'nightly', 'rust-analyzer' },
+  },
   sumneko_lua = {
-    Lua = {
-      workspace = { checkThirdParty = false },
-      telemetry = { enable = false },
-      diagnostics = { globals = { 'vim' } },
+    settings = {
+      Lua = {
+        workspace = { checkThirdParty = false },
+        telemetry = { enable = false },
+        diagnostics = { globals = { 'vim' } },
+      },
     },
   },
 }
@@ -374,7 +378,8 @@ mason_lspconfig.setup_handlers {
     require('lspconfig')[server_name].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-      settings = servers[server_name],
+      settings = servers[server_name].settings,
+      cmd = servers[server_name].cmd,
     }
   end,
 }
