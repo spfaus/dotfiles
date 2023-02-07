@@ -149,6 +149,9 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Remap for exiting terminal-mode more easily
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = '[<Esc>] to escape terminal mode' })
 
+-- Clear search
+vim.keymap.set('n', '<leader>cs', ':noh<CR>', { desc = '[<leader>cs] to [c]lear [s]earch' })
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
