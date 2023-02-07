@@ -8,6 +8,9 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 -- Plugin management
+require("packer").init({
+    autoremove = true,
+})
 require('packer').startup(function(use)
   -- Package manager
   use 'wbthomason/packer.nvim'
@@ -116,15 +119,17 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Decrease update time
-vim.o.updatetime = 250
-vim.wo.signcolumn = 'auto'
+vim.o.updatetime = 100
+vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
 vim.cmd [[colorscheme onedark]]
 
 -- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
+vim.o.completeopt = 'menuone,noinsert,noselect'
+-- Avoid showing extra messages when using completion
+vim.opt.shortmess = vim.opt.shortmess + "c"
 
 -- [[ Basic Keymaps ]]
 -- Set <space> as the leader key
@@ -361,7 +366,7 @@ require('lspconfig')['sumneko_lua'].setup {
         Lua = {
             workspace = { checkThirdParty = false },
             telemetry = { enable = false },
-            diagnostics = { globals = { 'vim' } },
+            diagnostics = { globals = { 'vim' } }, -- Recognize vim as global
         },
     },
 }
