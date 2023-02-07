@@ -341,6 +341,16 @@ local on_attach = function(_, bufnr)
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
     vim.lsp.buf.format()
   end, { desc = 'Format current buffer with LSP' })
+
+  -- Autoformat on buffer write
+  local format_sync_grp = vim.api.nvim_create_augroup("Format", {})
+  vim.api.nvim_create_autocmd("BufWritePre", {
+      pattern = "*",
+      callback = function()
+        vim.lsp.buf.format()
+      end,
+      group = format_sync_grp,
+  })
 end
 
 -- Setup neovim lua configuration
@@ -352,20 +362,26 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- Enable the following language servers
 --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
-require('lspconfig')['rust_analyzer'].setup {
+require 'lspconfig'.rust_analyzer.setup({
     capabilities = capabilities,
     on_attach = on_attach,
     settings = {
-        ['rust-analyzer'] = {
+        ["rust-analyzer"] = {
+            imports = {
+                granularity = { enforce = true },
+            },
+            check = {
+                command = "clippy",
+            },
             checkOnSave = {
-                command = 'clippy',
+                command = "clippy",
             },
         },
     },
     cmd = { 'rustup', 'run', 'nightly', 'rust-analyzer' },
-}
+})
 
-require('lspconfig')['sumneko_lua'].setup {
+require 'lspconfig'.sumneko_lua.setup({
     capabilities = capabilities,
     on_attach = on_attach,
     settings = {
@@ -375,7 +391,7 @@ require('lspconfig')['sumneko_lua'].setup {
             diagnostics = { globals = { 'vim' } }, -- Recognize vim as global
         },
     },
-}
+})
 
 -- Turn on lsp status information
 require('fidget').setup()
