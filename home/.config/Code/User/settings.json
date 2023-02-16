@@ -11,4 +11,7 @@
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "none",
     "workbench.colorTheme": "Default Dark+",
+    "rust-analyzer.check.command": "clippy",
+    "rust-analyzer.checkOnSave": true,
+    "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
 }
