@@ -60,6 +60,7 @@ code \
 --install-extension serayuzgur.crates \
 --install-extension usernamehw.errorlens \
 --install-extension a5huynh.vscode-ron \
+--install-extension Gruntfuggly.todo-tree \
 
 # Set up NordVPN
 groupadd -rf nordvpn
