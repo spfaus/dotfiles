@@ -65,6 +65,7 @@ code \
 # Set up NordVPN
 groupadd -rf nordvpn
 sudo gpasswd -a $USER nordvpn
+sudo systemctl enable nordvpnd.service
 
 # Load all dconf settings
 dconf load / < $(pwd)/dconf/full-backup
