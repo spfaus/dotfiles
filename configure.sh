@@ -35,6 +35,8 @@ fi
 # Configure
 yay -Syyuu --noconfirm
 
+sudo pacman -S gnome xorg --noconfirm
+
 yay -S --noconfirm rustup clang
 
 rustup default nightly
@@ -43,8 +45,8 @@ cargo install cargo-watch
 rustup component add rust-analyzer
 
 yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages \
-    texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers xorg \
-    xorg-server gnome gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
+    texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers \
+    xorg-server gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
     noto-fonts-extra gnome-shell-extension-pop-shell-git yay neovim ntfs-3g chromium \
     amd-ucode discord fish cups bitwarden anki \
     powerline-shell autojump-rs htop visual-studio-code-bin nordvpn-bin exercism-bin \
