@@ -19,7 +19,7 @@ automatic-timezone=true
 [org/gnome/desktop/input-sources]
 per-window=false
 show-all-sources=false
-sources=[('xkb', 'de')]
+sources=[('xkb', 'us+altgr-intl')]
 xkb-options=['lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
