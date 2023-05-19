@@ -39,7 +39,7 @@ sudo pacman -S gnome xorg --noconfirm
 
 yay -S --noconfirm rustup clang
 
-rustup default nightly
+rustup default stable
 rustup update
 cargo install cargo-watch
 rustup component add rust-analyzer
