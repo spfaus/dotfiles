@@ -47,7 +47,7 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers \
     xorg-server gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
     noto-fonts-extra gnome-shell-extension-pop-shell-git yay helix ntfs-3g chromium \
-    firefox-developer-edition amd-ucode discord fish cups bitwarden anki \
+    firefox amd-ucode discord fish cups bitwarden anki \
     powerline-shell autojump-rs htop visual-studio-code-bin \
     lua-language-server grub-customizer \
     phpstorm-jre phpstorm \
