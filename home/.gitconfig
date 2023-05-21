@@ -1,6 +1,3 @@
-[user]
-    name = spfaus
-    email = simon.pfaus@web.de
 [pull]
     rebase = false
 [filter "lfs"]
