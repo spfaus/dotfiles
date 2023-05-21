@@ -88,6 +88,8 @@ if [ ! $(getent passwd $USER | awk -F: '{print $NF}') == /usr/bin/fish ] ; then
     chsh -s $(which fish)
 fi
 
+sudo sed -i -e 's/#Color/Color/g' /etc/pacman.conf
+
 sudo systemctl enable docker.service
 sudo usermod -aG docker $USER
 
