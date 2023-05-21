@@ -32,7 +32,6 @@ if [ ! -x /usr/bin/yay ] ; then
     rm -rf yay
 fi
 
-# Configure
 yay -Syyuu --noconfirm
 
 sudo pacman -S gnome xorg --noconfirm
@@ -50,7 +49,13 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     noto-fonts-extra gnome-shell-extension-pop-shell-git yay neovim ntfs-3g chromium \
     firefox-developer-edition amd-ucode discord fish cups bitwarden anki \
     powerline-shell autojump-rs htop visual-studio-code-bin \
-    lua-language-server grub-customizer
+    lua-language-server grub-customizer \
+    phpstorm-jre phpstorm \
+    docker docker-compose docker-machine \
+    slack-desktop \
+    ddev-bin mkcert dialog jq \
+    libreoffice-fresh \
+    php composer \
 
 # Install Visual Studio Code extensions
 code \
@@ -61,6 +66,8 @@ code \
 --install-extension usernamehw.errorlens \
 --install-extension a5huynh.vscode-ron \
 --install-extension Gruntfuggly.todo-tree \
+--install-extension whatwedo.twig \
+--install-extension aswinkumar863.smarty-template-support \
 
 # Load all dconf settings
 dconf load / < $(pwd)/dconf/full-backup
@@ -78,6 +85,14 @@ sudo systemctl enable cups.service
 
 chsh -s $(which fish)
 sudo chsh -s $(which fish)
+
+sudo systemctl enable docker.service
+sudo usermod -aG docker $USER
+
+if [ ! -d ~/shopware-docker ] ; then
+    git clone https://github.com/shyim/shopware-docker.git ~/shopware-docker
+fi
+sudo ln -sf /home/$USER/shopware-docker/swdc /usr/local/bin/swdc
 
 sudo ln -sf /usr/bin/nvim /usr/bin/vim
 sudo ln -sf /usr/bin/nvim /usr/bin/vi
