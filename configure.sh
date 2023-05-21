@@ -49,7 +49,7 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     xorg-server gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
     noto-fonts-extra gnome-shell-extension-pop-shell-git yay neovim ntfs-3g chromium \
     amd-ucode discord fish cups bitwarden anki \
-    powerline-shell autojump-rs htop visual-studio-code-bin nordvpn-bin \
+    powerline-shell autojump-rs htop visual-studio-code-bin \
     lua-language-server
 
 # Install Visual Studio Code extensions
@@ -61,11 +61,6 @@ code \
 --install-extension usernamehw.errorlens \
 --install-extension a5huynh.vscode-ron \
 --install-extension Gruntfuggly.todo-tree \
-
-# Set up NordVPN
-groupadd -rf nordvpn
-sudo gpasswd -a $USER nordvpn
-sudo systemctl enable nordvpnd.service
 
 # Load all dconf settings
 dconf load / < $(pwd)/dconf/full-backup
