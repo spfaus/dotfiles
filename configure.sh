@@ -46,7 +46,7 @@ rustup component add rust-analyzer
 yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages \
     texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers \
     xorg-server gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
-    noto-fonts-extra gnome-shell-extension-pop-shell-git yay neovim ntfs-3g chromium \
+    noto-fonts-extra gnome-shell-extension-pop-shell-git yay helix ntfs-3g chromium \
     firefox-developer-edition amd-ucode discord fish cups bitwarden anki \
     powerline-shell autojump-rs htop visual-studio-code-bin \
     lua-language-server grub-customizer \
@@ -94,8 +94,8 @@ if [ ! -d ~/shopware-docker ] ; then
 fi
 sudo ln -sf /home/$USER/shopware-docker/swdc /usr/local/bin/swdc
 
-sudo ln -sf /usr/bin/nvim /usr/bin/vim
-sudo ln -sf /usr/bin/nvim /usr/bin/vi
+sudo ln -sf /usr/bin/helix /usr/bin/vim
+sudo ln -sf /usr/bin/helix /usr/bin/vi
 sudo ln -sf /usr/share/zoneinfo/America/Toronto /etc/localtime
 
 sudo timedatectl set-ntp true
