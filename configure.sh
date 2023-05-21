@@ -76,6 +76,9 @@ sudo systemctl enable NetworkManager.service
 sudo systemctl enable gdm.service
 sudo systemctl enable cups.service
 
+chsh -s $(which fish)
+sudo chsh -s $(which fish)
+
 sudo ln -sf /usr/bin/nvim /usr/bin/vim
 sudo ln -sf /usr/bin/nvim /usr/bin/vi
 sudo ln -sf /usr/share/zoneinfo/America/Toronto /etc/localtime
