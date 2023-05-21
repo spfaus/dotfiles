@@ -83,8 +83,10 @@ sudo systemctl enable NetworkManager.service
 sudo systemctl enable gdm.service
 sudo systemctl enable cups.service
 
-chsh -s $(which fish)
-sudo chsh -s $(which fish)
+if [ ! $(getent passwd $USER | awk -F: '{print $NF}') == /usr/bin/fish ] ; then
+    sudo chsh -s $(which fish)
+    chsh -s $(which fish)
+fi
 
 sudo systemctl enable docker.service
 sudo usermod -aG docker $USER
