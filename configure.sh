@@ -49,10 +49,8 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     xorg-server gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
     noto-fonts-extra gnome-shell-extension-pop-shell-git yay neovim ntfs-3g chromium \
     amd-ucode discord fish cups bitwarden anki \
-    powerline-shell autojump-rs htop visual-studio-code-bin nordvpn-bin exercism-bin \
+    powerline-shell autojump-rs htop visual-studio-code-bin nordvpn-bin \
     lua-language-server
-
-sudo exercism upgrade # Workaround until exercism package is fixed
 
 # Install Visual Studio Code extensions
 code \
