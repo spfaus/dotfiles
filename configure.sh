@@ -20,6 +20,8 @@ if [ ! -x /usr/bin/git ] ; then
 fi
 
 git remote set-url origin git@github.com:spfaus/dotfiles.git
+git config user.name "spfaus"
+git config user.email "simon.pfaus@web.de"
 git status
 
 sudo reflector --verbose --latest 10 --sort rate \
