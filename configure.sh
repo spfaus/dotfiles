@@ -19,6 +19,7 @@ if [ ! -x /usr/bin/git ] ; then
     sudo pacman -S --noconfirm git
 fi
 
+git remote set-url origin git@github.com:spfaus/dotfiles.git
 git status
 
 sudo reflector --verbose --latest 10 --sort rate \
