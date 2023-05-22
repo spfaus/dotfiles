@@ -108,6 +108,12 @@ sudo locale-gen
 
 xdg-mime default org.gnome.Nautilus.desktop inode/directory
 
+blockedWebsites=(youtube.com twitch.tv reddit.com)
+for t in ${blockedWebsites[@]}; do
+    grep -qxF "127.0.0.1   $t" /etc/hosts || echo "127.0.0.1   $t" | sudo tee -a /etc/hosts
+    grep -qxF "127.0.0.1   www.$t" /etc/hosts || echo "127.0.0.1   www.$t" | sudo tee -a /etc/hosts
+done
+
 yay -Sy
 yay -Rs $(yay -Qdtq) --noconfirm # Delete orphans
 
