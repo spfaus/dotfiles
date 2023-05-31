@@ -70,7 +70,7 @@ code \
 --install-extension usernamehw.errorlens \
 --install-extension a5huynh.vscode-ron \
 --install-extension Gruntfuggly.todo-tree \
---install-extension whatwedo.twig \
+--install-extension mblode.twig-language-2 \
 --install-extension aswinkumar863.smarty-template-support \
 
 # Load all dconf settings
