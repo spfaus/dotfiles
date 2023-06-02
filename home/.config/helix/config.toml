@@ -3,15 +3,15 @@ theme = "dark_plus"
 [editor]
 line-number = "relative"
 mouse = false
-bufferline = "multiple"
+bufferline = "always"
 
 [editor.cursor-shape]
 insert = "bar"
 
 [editor.statusline]
-left = ["mode", "separator"]
+left = ["mode"]
 center = ["diagnostics", "file-name", "file-modification-indicator"]
-right = ["separator", "workspace-diagnostics", "version-control", "spinner"]
+right = ["workspace-diagnostics", "version-control", "spinner"]
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
