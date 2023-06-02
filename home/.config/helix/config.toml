@@ -5,8 +5,22 @@ line-number = "relative"
 mouse = false
 bufferline = "multiple"
 
-[keys.normal]
-esc = ["collapse_selection", "keep_primary_selection"]
-
 [editor.cursor-shape]
 insert = "bar"
+
+[editor.statusline]
+left = ["mode", "separator"]
+center = ["diagnostics", "file-name", "file-modification-indicator"]
+right = ["separator", "workspace-diagnostics", "version-control", "spinner"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.soft-wrap]
+enable = true
+
+[editor.lsp]
+display-inlay-hints = true
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
