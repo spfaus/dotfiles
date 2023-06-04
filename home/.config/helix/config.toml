@@ -4,6 +4,7 @@ theme = "dark_plus"
 line-number = "relative"
 mouse = false
 bufferline = "always"
+rulers = [80]
 
 [editor.cursor-shape]
 insert = "bar"
@@ -15,9 +16,6 @@ right = ["workspace-diagnostics", "version-control", "spinner"]
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
-
-[editor.soft-wrap]
-enable = true
 
 [editor.lsp]
 display-inlay-hints = true
