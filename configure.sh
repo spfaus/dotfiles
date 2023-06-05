@@ -59,7 +59,9 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     ddev-bin mkcert dialog jq \
     libreoffice-fresh \
     php composer \
-    helix lldb xclip xsel wl-clipboard vscode-html-languageserver nodejs-intelephense vscode-css-languageserver typescript-language-server bash-language-server dockerfile-language-server vscode-json-languageserver marksman yaml-language-server
+    helix lldb xclip xsel wl-clipboard vscode-html-languageserver nodejs-intelephense \
+    vscode-css-languageserver typescript-language-server bash-language-server \
+    dockerfile-language-server vscode-json-languageserver marksman yaml-language-server
 
 # Install Visual Studio Code extensions
 code \
