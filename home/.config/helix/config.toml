@@ -10,9 +10,9 @@ rulers = [80]
 insert = "bar"
 
 [editor.statusline]
-left = ["mode"]
+left = ["mode", "spinner"]
 center = ["diagnostics", "file-name", "file-modification-indicator"]
-right = ["workspace-diagnostics", "version-control", "spinner"]
+right = ["workspace-diagnostics", "version-control"]
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
