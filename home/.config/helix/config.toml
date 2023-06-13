@@ -10,15 +10,16 @@ rulers = [80]
 insert = "bar"
 
 [editor.statusline]
-left = ["mode", "spinner"]
-center = ["diagnostics", "file-name", "file-modification-indicator"]
-right = ["workspace-diagnostics", "version-control"]
+left = ["mode"]
+center = ["diagnostics", "workspace-diagnostics"]
+right = ["version-control", "file-modification-indicator", "file-name"]
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
 
 [editor.lsp]
 display-inlay-hints = true
+display-messages = true
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
