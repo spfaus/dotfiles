@@ -59,7 +59,8 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     ddev-bin mkcert dialog jq \
     libreoffice-fresh \
     php composer \
-    helix lldb xclip xsel wl-clipboard
+    helix lldb xclip xsel wl-clipboard \
+    cmake
 
 # Install Visual Studio Code extensions
 code \
