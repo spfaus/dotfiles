@@ -76,7 +76,7 @@ secondary-color='#000000'
 
 [org/gnome/desktop/search-providers]
 disable-external=false
-disabled=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Boxes.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Photos.desktop', 'org.gnome.Software.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Epiphany.desktop', 'org.gnome.Calculator.desktop']
+disabled=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Boxes.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Photos.desktop', 'org.gnome.Software.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.Epiphany.desktop', 'org.gnome.Calculator.desktop', 'firefox.desktop']
 
 [org/gnome/desktop/session]
 idle-delay=uint32 300
