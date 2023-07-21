@@ -50,7 +50,7 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers \
     xorg-server gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
     noto-fonts-extra gnome-shell-extension-pop-shell-git yay ntfs-3g chromium \
-    firefox amd-ucode discord fish cups bitwarden anki \
+    firefox amd-ucode discord fish cups bitwarden anki neovim \
     powerline-shell autojump-rs htop visual-studio-code-bin \
     lua-language-server grub-customizer \
     phpstorm-jre phpstorm \
@@ -59,8 +59,7 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     ddev-bin mkcert dialog jq \
     libreoffice-fresh \
     php composer \
-    helix lldb xclip xsel wl-clipboard \
-    cmake
+    lldb cmake
 
 # Install Visual Studio Code extensions
 code \
@@ -102,8 +101,8 @@ if [ ! -d ~/shopware-docker ] ; then
 fi
 sudo ln -sf /home/$USER/shopware-docker/swdc /usr/local/bin/swdc
 
-sudo ln -sf /usr/bin/helix /usr/bin/vim
-sudo ln -sf /usr/bin/helix /usr/bin/vi
+sudo ln -sf /usr/bin/nvim /usr/bin/vim
+sudo ln -sf /usr/bin/nvim /usr/bin/vi
 sudo ln -sf /usr/share/zoneinfo/America/Toronto /etc/localtime
 
 sudo timedatectl set-ntp true
