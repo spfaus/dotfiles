@@ -58,7 +58,7 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     slack-desktop \
     ddev-bin mkcert dialog jq \
     libreoffice-fresh \
-    php composer \
+    php composer mysql \
     lldb cmake
 
 # Install Visual Studio Code extensions
