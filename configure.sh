@@ -59,7 +59,8 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     ddev-bin mkcert dialog jq \
     libreoffice-fresh \
     php composer mysql \
-    lldb cmake
+    lldb cmake \
+    nordvpn-bin
 
 # Install Visual Studio Code extensions
 code \
@@ -71,6 +72,11 @@ code \
 --install-extension Gruntfuggly.todo-tree \
 --install-extension mblode.twig-language-2 \
 --install-extension aswinkumar863.smarty-template-support \
+
+# Set up NordVPN
+groupadd -rf nordvpn
+sudo gpasswd -a $USER nordvpn
+sudo systemctl enable nordvpnd.service
 
 # Load all dconf settings
 dconf load / < $(pwd)/dconf/full-backup
