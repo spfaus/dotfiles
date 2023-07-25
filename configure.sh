@@ -65,7 +65,7 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
 # Install Visual Studio Code extensions
 code \
 --install-extension rust-lang.rust-analyzer \
---install-extension bungcip.better-toml \
+--install-extension tamasfe.even-better-toml \
 --install-extension vadimcn.vscode-lldb \
 --install-extension usernamehw.errorlens \
 --install-extension a5huynh.vscode-ron \
