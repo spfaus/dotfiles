@@ -6,6 +6,7 @@ if status is-interactive
     export SHELL="/usr/bin/fish"
     export VISUAL="/usr/bin/nvim"
     export EDITOR="/usr/bin/nvim"
+    export RUST_BACKTRACE=1
     function fish_prompt
         powerline-shell --shell bare $status
     end
