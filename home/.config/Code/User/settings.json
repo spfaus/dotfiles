@@ -1,7 +1,7 @@
 {
-  "editor.codeLensFontFamily": "'Source Code Pro'",
-  "editor.fontFamily": "'Source Code Pro Semibold'",
-  "debug.console.fontFamily": "'Source Code Pro'",
+  "editor.codeLensFontFamily": "'JetBrainsMono Nerd Font'",
+  "editor.fontFamily": "'JetBrainsMono Nerd Font'",
+  "debug.console.fontFamily": "'JetBrainsMono Nerd Font'",
   "scm.inputFontFamily": "editor",
   "editor.fontSize": 16,
   "editor.formatOnSave": false,
@@ -16,4 +16,5 @@
   "[rust]": {
     "editor.formatOnSave": true
   },
+  "editor.fontLigatures": true
 }
