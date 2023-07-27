@@ -3,7 +3,6 @@
   "editor.fontFamily": "'JetBrainsMono Nerd Font'",
   "debug.console.fontFamily": "'JetBrainsMono Nerd Font'",
   "scm.inputFontFamily": "editor",
-  "editor.fontSize": 16,
   "editor.formatOnSave": false,
   "editor.inlineSuggest.enabled": true,
   "git.autofetch": true,
