@@ -15,5 +15,6 @@
   "[rust]": {
     "editor.formatOnSave": true
   },
-  "editor.fontLigatures": true
+  "editor.fontLigatures": true,
+  "files.trimTrailingWhitespace": true
 }
