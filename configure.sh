@@ -60,7 +60,8 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     libreoffice-fresh \
     php composer mysql \
     lldb cmake \
-    nordvpn-bin
+    nordvpn-bin \
+    dbeaver
 
 # Install Visual Studio Code extensions
 code \
