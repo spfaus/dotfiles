@@ -17,5 +17,6 @@
   },
   "editor.fontLigatures": true,
   "files.trimTrailingWhitespace": true,
-  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.))\\s*($TAGS)|todo!"
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.))\\s*($TAGS)|todo!",
+  "redhat.telemetry.enabled": false
 }
