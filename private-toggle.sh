@@ -11,5 +11,5 @@ else
     rm $TOGGLE
     git config --global user.name "Simon Alexander Pfaus"
     git config --global user.email "simon.pfaus@pixlinemedia.de"
-    echo "Private mode disabled"
+    echo "Work mode enabled"
 fi
