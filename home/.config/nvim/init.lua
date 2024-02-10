@@ -7,6 +7,7 @@ vim.opt.colorcolumn = '80'
 vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg=238, bg=LightGrey })
 
 local autocmd = vim.api.nvim_create_autocmd
+
 autocmd("FileType", {
     pattern = "rust",
     callback = function()
@@ -18,4 +19,9 @@ autocmd("FileType", {
 	})
 	vim.lsp.buf_attach_client(0, client)
     end
+})
+
+autocmd("BufWritePre", {
+    pattern = "*.rs",
+    command = "lua vim.lsp.buf.format()"
 })
