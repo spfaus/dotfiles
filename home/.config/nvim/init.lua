@@ -29,7 +29,7 @@ autocmd("FileType", {
 	    name = 'lua-language-server',
 	    cmd = {'lua-language-server'},
 	    root_dir = root_dir,
-	    settings = { Lua = { diagnostics = { globals = {'vim'} } } }, -- Complains about undefined global 'vim' otherwise
+	    settings = { Lua = { diagnostics = { globals = {'vim', 'LightGrey'} } } },
 	})
 	vim.lsp.buf_attach_client(0, client)
     end
