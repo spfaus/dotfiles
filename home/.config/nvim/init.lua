@@ -21,6 +21,12 @@ autocmd("FileType", {
     end
 })
 
+autocmd('LspAttach', {
+    callback = function(args)
+	vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = args.buf })
+    end,
+})
+
 autocmd("BufWritePre", {
     pattern = "*.rs",
     command = "lua vim.lsp.buf.format()"
