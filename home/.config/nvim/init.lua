@@ -21,6 +21,20 @@ autocmd("FileType", {
     end
 })
 
+autocmd("FileType", {
+    pattern = "lua",
+    callback = function()
+	local root_dir = vim.fs.dirname(vim.fs.find({'init.lua', 'init.vim', '.git'}, { upward = true })[1])
+	local client = vim.lsp.start({
+	    name = 'lua-language-server',
+	    cmd = {'lua-language-server'},
+	    root_dir = root_dir,
+	    settings = { Lua = { diagnostics = { globals = {'vim'} } } }, -- Complains about undefined global 'vim' otherwise
+	})
+	vim.lsp.buf_attach_client(0, client)
+    end
+})
+
 autocmd('LspAttach', {
     callback = function(args)
 	local client = vim.lsp.get_client_by_id(args.data.client_id)
