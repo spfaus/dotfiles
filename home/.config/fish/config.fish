@@ -2,6 +2,7 @@ if status is-interactive
     alias ls="ls -lAh --color"
     alias :q="exit"
     alias :q!="exit"
+    alias docker-killall="docker stop (docker ps -qa); docker rm (docker ps -qa); docker rmi -f (docker images -qa); docker volume rm (docker volume ls -q); docker network rm (docker network ls -q)"
     export PATH="$HOME/.cargo/bin:$PATH"
     export SHELL="/usr/bin/fish"
     export VISUAL="/usr/bin/nvim"
