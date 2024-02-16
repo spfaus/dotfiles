@@ -13,7 +13,8 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.undofile = true
 --vim.opt.clipboard = unnamedplus -- Needs to be fixed (provider not working?)
-
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
 --vim.opt.colorcolumn = '80'
 --vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg = 238, bg = LightGrey }) -- does not work with termguicolors
 
