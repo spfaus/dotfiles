@@ -62,7 +62,8 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     lldb cmake \
     nordvpn-bin \
     dbeaver \
-    libfido2
+    libfido2 \
+    authenticator
 
 # Install Visual Studio Code extensions
 code \
