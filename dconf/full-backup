@@ -181,6 +181,7 @@ window-screenshot=@as []
 window-screenshot-clip=@as []
 
 [org/gnome/settings-daemon/plugins/power]
+idle-dim=false
 power-button-action='interactive'
 power-saver-profile-on-low-battery=true
 sleep-inactive-ac-type='nothing'
@@ -226,7 +227,7 @@ toggle-message-tray=@as []
 toggle-overview=@as []
 
 [org/gnome/system/location]
-enabled=false
+enabled=true
 
 [org/gnome/tweaks]
 show-extensions-notice=false
