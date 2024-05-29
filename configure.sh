@@ -112,7 +112,7 @@ sudo ln -sf /home/$USER/shopware-docker/swdc /usr/local/bin/swdc
 
 sudo ln -sf /usr/bin/nvim /usr/bin/vim
 sudo ln -sf /usr/bin/nvim /usr/bin/vi
-sudo ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+#sudo ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime # Is done by gnome 'Time Zone' setting
 
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
