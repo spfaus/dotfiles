@@ -60,16 +60,10 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     libreoffice-fresh \
     php composer mysql \
     lldb cmake \
-    nordvpn-bin \
     dbeaver \
     libfido2 \
     authenticator \
     ncdu
-
-# Set up NordVPN
-groupadd -rf nordvpn
-sudo gpasswd -a $USER nordvpn
-sudo systemctl enable nordvpnd.service
 
 # Load all dconf settings
 dconf load / < $(pwd)/dconf/full-backup
