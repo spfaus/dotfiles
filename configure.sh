@@ -63,7 +63,8 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     dbeaver \
     libfido2 \
     authenticator \
-    ncdu
+    ncdu \
+    bat
 
 # Load all dconf settings
 dconf load / < $(pwd)/dconf/full-backup
