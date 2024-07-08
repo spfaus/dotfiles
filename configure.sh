@@ -64,7 +64,8 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     libfido2 \
     authenticator \
     ncdu \
-    bat
+    bat \
+    tldr
 
 # Load all dconf settings
 dconf load / < $(pwd)/dconf/full-backup
