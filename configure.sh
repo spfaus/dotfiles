@@ -51,7 +51,7 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     xorg-server gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
     noto-fonts-extra ttf-jetbrains-mono-nerd gnome-shell-extension-pop-shell-git yay ntfs-3g chromium \
     firefox amd-ucode discord cups bitwarden anki-bin neovim \
-    autojump-rs htop \
+    htop \
     lua-language-server grub-customizer \
     phpstorm-jre phpstorm \
     docker docker-compose docker-machine \
@@ -65,7 +65,8 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     authenticator \
     ncdu \
     bat \
-    tldr
+    tldr \
+    zoxide
 
 # Load all dconf settings
 dconf load / < $(pwd)/dconf/full-backup
