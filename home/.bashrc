@@ -2,6 +2,7 @@ eval "$(fzf --bash)"
 export FZF_DEFAULT_OPTS='--preview="bat --color=always {}"'
 
 alias docker-killall='docker stop $(docker ps -qa); docker rm $(docker ps -qa); docker rmi -f $(docker images -qa); docker volume rm $(docker volume ls -q); docker network rm $(docker network ls -q)'
+alias ls='ls --color=auto'
 export PATH="$HOME/.cargo/bin:$PATH"
 
 function parse_git_dirty {
