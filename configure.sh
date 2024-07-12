@@ -66,7 +66,8 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     ncdu \
     bat \
     tldr \
-    zoxide
+    zoxide \
+    fzf
 
 # Load all dconf settings
 dconf load / < $(pwd)/dconf/full-backup
