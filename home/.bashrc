@@ -34,8 +34,9 @@ function parse_git_upstream {
     fi
 }
 function parse_git_branch {
-  git branch --show-current --no-color 2> /dev/null
+	local branch=$(git branch --show-current --no-color 2> /dev/null)
+	[ -n "$branch" ] && echo " $branch"
 }
-export PS1="\n$bold$colorDir\w $colorGit\$(parse_git_branch)$colorDirty\$(parse_git_dirty)\$(parse_git_upstream)$noStyle \$ "
+export PS1="\n$bold$colorDir\w$colorGit\$(parse_git_branch)$colorDirty\$(parse_git_dirty)\$(parse_git_upstream)$noStyle \$ "
 
 eval "$(zoxide init bash --cmd cd)"
