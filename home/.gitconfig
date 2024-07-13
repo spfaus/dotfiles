@@ -4,6 +4,8 @@
 
 [includeIf "gitdir:~/work/"]
 	path = ~/work/.gitconfig-work
+[includeIf "gitdir:~/personal/"]
+	path = ~/work/.gitconfig-personal
 [rerere]
 	enabled = true
 [branch]
