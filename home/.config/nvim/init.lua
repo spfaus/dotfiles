@@ -1,3 +1,9 @@
+-- maybe remap
+-- esc to :noh
+-- n / N / ctr-d / ctrl-u to also zz
+-- switch ; and :
+-- leader y/p to use system clipboard
+
 vim.g.mapleader = " "
 vim.cmd('colorscheme slate')
 vim.cmd('filetype plugin on')
