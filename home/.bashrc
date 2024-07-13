@@ -34,7 +34,7 @@ function parse_git_upstream {
     fi
 }
 function parse_git_branch {
-	local branch=$(git branch --show-current --no-color 2> /dev/null)
+	local branch=$(git branch --show-current --no-color 2> /dev/null || git rev-parse --short HEAD)
 	[ -n "$branch" ] && echo " $branch"
 }
 export PS1="\n$bold$colorDir\w$colorGit\$(parse_git_branch)$colorDirty\$(parse_git_dirty)\$(parse_git_upstream)$noStyle \$ "
