@@ -1,8 +1,9 @@
--- maybe remap
+-- maybe remap or change
 -- esc to :noh
 -- n / N / ctr-d / ctrl-u to also zz
 -- switch ; and :
 -- leader y/p to use system clipboard
+-- when reopening a file, jump to last edited location or location where closed
 
 vim.g.mapleader = " "
 vim.cmd('colorscheme slate')
