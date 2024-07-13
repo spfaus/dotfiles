@@ -13,6 +13,7 @@ export HISTFILESIZE="$HISTSIZE"
 
 colorDir=$(tput setaf 4)
 colorGit=$(tput setaf 2)
+colorDirty=$(tput setaf 3)
 bold=$(tput bold)
 noStyle=$(tput sgr0)
 function parse_git_dirty {
@@ -32,8 +33,8 @@ function parse_git_upstream {
     fi
 }
 function parse_git_branch {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1$(parse_git_dirty)$(parse_git_upstream))/"
+  git branch --show-current --no-color 2> /dev/null
 }
-export PS1="\n$bold$colorDir\w$colorGit$(parse_git_branch)$noStyle \$ "
+export PS1="\n$bold$colorDir\w $colorGit$(parse_git_branch)$colorDirty$(parse_git_dirty)$(parse_git_upstream)$noStyle \$ "
 
 eval "$(zoxide init bash --cmd cd)"
