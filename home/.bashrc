@@ -8,6 +8,8 @@ alias ls='ls --color=auto'
 export PATH="$HOME/.cargo/bin:$PATH"
 export EDITOR="/usr/bin/nvim"
 export VISUAL="$EDITOR"
+export HISTSIZE="10000"
+export HISTFILESIZE="$HISTSIZE"
 
 function parse_git_dirty {
   [[ $(git status --porcelain 2> /dev/null) ]] && echo "*"
