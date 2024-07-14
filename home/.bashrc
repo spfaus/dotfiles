@@ -18,6 +18,7 @@ export VISUAL="$EDITOR"
 export HISTSIZE="10000"
 export HISTFILESIZE="$HISTSIZE"
 export HISTTIMEFORMAT="$colorHistory%Y-%m-%d %T$noStyle  "
+export HISTCONTROL="ignoredups"
 
 function parse_git_dirty {
   [[ $(git status --porcelain 2> /dev/null) ]] && echo " *"
