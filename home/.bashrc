@@ -1,9 +1,9 @@
-colorDir=$(tput setaf 4)
-colorGit=$(tput setaf 2)
-colorDirty=$(tput setaf 3)
-colorHistory=$(tput setaf 4)
-bold=$(tput bold)
-noStyle=$(tput sgr0)
+colorDir="\[$(tput setaf 4)\]"
+colorGit="\[$(tput setaf 2)\]"
+colorDirty="\[$(tput setaf 3)\]"
+colorHistory="\[$(tput setaf 4)\]"
+bold="\[$(tput bold)\]"
+noStyle="\[$(tput sgr0)\]"
 
 eval "$(fzf --bash)"
 export FZF_DEFAULT_OPTS='--preview="bat --color=always {}"'
