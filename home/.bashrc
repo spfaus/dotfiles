@@ -1,3 +1,10 @@
+colorDir=$(tput setaf 4)
+colorGit=$(tput setaf 2)
+colorDirty=$(tput setaf 3)
+colorHistory=$(tput setaf 4)
+bold=$(tput bold)
+noStyle=$(tput sgr0)
+
 eval "$(fzf --bash)"
 export FZF_DEFAULT_OPTS='--preview="bat --color=always {}"'
 alias j='cd'
@@ -10,12 +17,8 @@ export EDITOR="/usr/bin/nvim"
 export VISUAL="$EDITOR"
 export HISTSIZE="10000"
 export HISTFILESIZE="$HISTSIZE"
+export HISTTIMEFORMAT="$colorHistory%Y-%m-%d %T$noStyle  "
 
-colorDir=$(tput setaf 4)
-colorGit=$(tput setaf 2)
-colorDirty=$(tput setaf 3)
-bold=$(tput bold)
-noStyle=$(tput sgr0)
 function parse_git_dirty {
   [[ $(git status --porcelain 2> /dev/null) ]] && echo " *"
 }
