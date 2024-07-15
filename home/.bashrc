@@ -23,11 +23,11 @@ export HISTCONTROL="ignoredups"
 
 function parse_git_untracked {
     local untrackedCount=$(git ls-files --others --exclude-standard 2> /dev/null | wc -l)
-    [ -n "$untrackedCount" ] && [ "$untrackedCount" != "0" ] && echo " ${untrackedCount}?"
+    [ -n "$untrackedCount" ] && [ "$untrackedCount" != "0" ] && echo " ${untrackedCount}○"
 }
 function parse_git_unstaged {
     local unstagedCount=$(git ls-files --modified --exclude-standard 2> /dev/null | wc -l)
-    [ -n "$unstagedCount" ] && [ "$unstagedCount" != "0" ] && echo " ${unstagedCount}○"
+    [ -n "$unstagedCount" ] && [ "$unstagedCount" != "0" ] && echo " ${unstagedCount}*"
 }
 function parse_git_staged {
     local stagedCount=$(git diff --cached --numstat 2> /dev/null | wc -l)
