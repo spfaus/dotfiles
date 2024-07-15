@@ -1,7 +1,6 @@
 colorDir="\[$(tput setaf 4)\]"
 colorGit="\[$(tput setaf 2)\]"
 colorDirty="\[$(tput setaf 3)\]"
-colorHistory="\[$(tput setaf 4)\]"
 bold="\[$(tput bold)\]"
 noStyle="\[$(tput sgr0)\]"
 
@@ -18,7 +17,7 @@ export EDITOR="/usr/bin/nvim"
 export VISUAL="$EDITOR"
 export HISTSIZE="10000"
 export HISTFILESIZE="$HISTSIZE"
-export HISTTIMEFORMAT="$colorHistory%Y-%m-%d %T$noStyle  "
+export HISTTIMEFORMAT="$(tput setaf 4)%Y-%m-%d %T$(tput sgr0)  "
 export HISTCONTROL="ignoredups"
 
 function parse_git_untracked {
