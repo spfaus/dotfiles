@@ -1,9 +1,3 @@
-colorDir="\[$(tput setaf 4)\]"
-colorGit="\[$(tput setaf 2)\]"
-colorDirty="\[$(tput setaf 3)\]"
-bold="\[$(tput bold)\]"
-noStyle="\[$(tput sgr0)\]"
-
 eval "$(fzf --bash)"
 export FZF_DEFAULT_OPTS='--preview="bat --color=always {}"'
 alias j='cd'
@@ -20,36 +14,17 @@ export HISTFILESIZE="$HISTSIZE"
 export HISTTIMEFORMAT="$(tput setaf 4)%Y-%m-%d %T$(tput sgr0)  "
 export HISTCONTROL="ignoredups"
 
-function parse_git_untracked {
-    local untrackedCount=$(git ls-files --others --exclude-standard 2> /dev/null | wc -l)
-    [ -n "$untrackedCount" ] && [ "$untrackedCount" != "0" ] && echo " ${untrackedCount}○"
-}
-function parse_git_unstaged {
-    local unstagedCount=$(git ls-files --modified --exclude-standard 2> /dev/null | wc -l)
-    [ -n "$unstagedCount" ] && [ "$unstagedCount" != "0" ] && echo " ${unstagedCount}*"
-}
-function parse_git_staged {
-    local stagedCount=$(git diff --cached --numstat 2> /dev/null | wc -l)
-    [ -n "$stagedCount" ] && [ "$stagedCount" != "0" ] && echo " ${stagedCount}●"
-}
-function parse_git_upstream {
-    local commitCount=$(git rev-list --count --left-right @{upstream}...HEAD 2> /dev/null)
-    if [ -n "$commitCount" ]; then
-       local behindCount=$(echo -n "$commitCount" | cut -f1)
-       local aheadCount=$(echo -n "$commitCount" | cut -f2)
-       if [ "$behindCount" != "0" ]; then
-           echo -n " ${behindCount}↓"
-       fi
-       if [ "$aheadCount" != "0" ]; then
-          echo -n " ${aheadCount}↑"
-       fi
-    fi
-}
-function parse_git_branch {
-	local branch=$(git branch --show-current --no-color 2> /dev/null)
-	[ -n "$branch" ] || local branch=$(git rev-parse --short HEAD 2> /dev/null)
-	[ -n "$branch" ] && echo " $branch"
-}
-export PS1="\n$bold$colorDir\w$colorGit\$(parse_git_branch)$colorDirty\$(parse_git_untracked)\$(parse_git_unstaged)\$(parse_git_staged)\$(parse_git_upstream)$noStyle \$ "
+source ~/.config/bash/git-prompt.sh
+export GIT_PS1_SHOWCOLORHINTS="true"
+export GIT_PS1_SHOWDIRTYSTATE="true"
+export GIT_PS1_SHOWSTASHSTATE="true"
+export GIT_PS1_SHOWUNTRACKEDFILES="true"
+export GIT_PS1_SHOWUPSTREAM="auto"
+export GIT_PS1_STATESEPARATOR=""
+export GIT_PS1_SHOWCONFLICTSTATE="yes"
+bold="\[$(tput bold)\]"
+noStyle="\[$(tput sgr0)\]"
+#export PS1="${bold}\n${colorDir}\w\$(__git_ps1 " %s")${noStyle} \$ "
+export PS1='\n\[$(tput bold)$(tput setaf 4)\]\W\[$(tput sgr0)$(tput bold)\]$(__git_ps1 " %s") \$\[$(tput sgr0)\] '
 
 eval "$(zoxide init bash --cmd cd)"
