@@ -23,18 +23,10 @@ function cdev() {
 }
 
 # PROMPT
-source ~/.config/bash/git-prompt.sh
-export GIT_PS1_SHOWCOLORHINTS="true"
-export GIT_PS1_SHOWDIRTYSTATE="true"
-export GIT_PS1_SHOWSTASHSTATE="true"
-export GIT_PS1_SHOWUNTRACKEDFILES="true"
-export GIT_PS1_SHOWUPSTREAM="auto"
-export GIT_PS1_STATESEPARATOR=""
-export GIT_PS1_SHOWCONFLICTSTATE="yes"
-bold="\[$(tput bold)\]"
-noStyle="\[$(tput sgr0)\]"
-#export PS1="${bold}\n${colorDir}\w\$(__git_ps1 " %s")${noStyle} \$ "
-export PS1='\n\[$(tput bold)$(tput setaf 4)\]\W\[$(tput sgr0)$(tput bold)\]$(__git_ps1 " %s") \$\[$(tput sgr0)\] '
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1)/"
+}
+export PS1="\n \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 # ZOXIDE
 eval "$(zoxide init bash --cmd cd)"
