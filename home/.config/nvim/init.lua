@@ -1,12 +1,7 @@
--- maybe remap or change
--- esc to :noh
--- n / N / ctr-d / ctrl-u to also zz
--- switch ; and :
--- leader y/p to use system clipboard
--- when reopening a file, jump to last edited location or location where closed
--- column 80 highlight
-
 vim.g.mapleader = " "
+vim.keymap.set('n', '<Leader>y', '"+y')
+vim.keymap.set('n', '<Leader>p', '"+p')
+
 vim.cmd('colorscheme slate')
 vim.cmd('filetype plugin on')
 vim.opt.termguicolors = true
@@ -24,3 +19,5 @@ vim.opt.smartcase = true
 vim.opt.undofile = true
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
+vim.opt.colorcolumn = "80"
+vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg=233, bg="#222222" })
