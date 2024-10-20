@@ -1,3 +1,5 @@
+-- Automatic closing pairs ", ), ], }, ...
+
 vim.g.mapleader = " "
 vim.keymap.set('n', '<Leader>y', '"+y')
 vim.keymap.set('n', '<Leader>p', '"+p')
@@ -21,3 +23,15 @@ vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
 vim.opt.colorcolumn = "80"
 vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg=233, bg="#222222" })
+
+-- Complete first useful PHP LSP or other integration
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = 'php',
+    callback = function(ev)
+        vim.lsp.start({
+            name = 'phpactor',
+            cmd = {'phpactor', 'language-server'},
+            root_dir = vim.fs.root(ev.buf, {'.env', '.env.local.php', '.env.local', '.env.test'}),
+        })
+    end,
+})
