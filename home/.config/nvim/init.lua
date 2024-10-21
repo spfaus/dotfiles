@@ -1,31 +1,57 @@
+-- TODOS
+-- colorscheme
+-- php integration / lsp
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-  if vim.v.shell_error ~= 0 then
-    vim.api.nvim_echo({
-      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
-      { "\nPress any key to exit..." },
-    }, true, {})
-    vim.fn.getchar()
-    os.exit(1)
-  end
+    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+    if vim.v.shell_error ~= 0 then
+        vim.api.nvim_echo({
+            { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+            { out, "WarningMsg" },
+            { "\nPress any key to exit..." },
+        }, true, {})
+        vim.fn.getchar()
+        os.exit(1)
+    end
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
+-- Make sure to setup `mapleader` and `maplocalleader`
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
-vim.keymap.set('n', '<Leader>y', '"+y')
-vim.keymap.set('n', '<Leader>p', '"+p')
 
-vim.cmd('colorscheme habamax')
+-- Setup lazy.nvim
+require("lazy").setup({
+    spec = {
+        { "echasnovski/mini.pairs", version = '*', opts = {} },
+        { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = {} },
+    },
+    install = { colorscheme = { "gruvbox" } },
+    checker = { enabled = true },
+})
+
+-- Keybindings
+vim.keymap.set('n', '<Leader>y', '"+y')
+vim.keymap.set('n', '<Leader>Y', '"+Y')
+vim.keymap.set('n', '<Leader>p', '"+p')
+vim.keymap.set('n', '<Leader>P', '"+P')
+vim.keymap.set('v', '<Leader>y', '"+y')
+vim.keymap.set('v', '<Leader>Y', '"+Y')
+vim.keymap.set('v', '<Leader>p', '"+p')
+vim.keymap.set('v', '<Leader>P', '"+P')
+
+-- Visuals
+vim.cmd('colorscheme gruvbox')
+vim.opt.background = "dark"
+vim.opt.cursorline = true
+--vim.opt.cursorcolumn = true
+vim.opt.colorcolumn = "100"
+
+--vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg=233, bg="#222222" })
 vim.cmd('filetype plugin on')
-vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.smartindent = true
@@ -38,28 +64,4 @@ vim.opt.scrolloff = 8
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.undofile = true
-vim.opt.cursorline = true
-vim.opt.cursorcolumn = true
-vim.opt.colorcolumn = "80"
-vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg=233, bg="#222222" })
 
--- TODO: Complete first useful PHP LSP or other integration
-vim.api.nvim_create_autocmd('FileType', {
-    pattern = 'php',
-    callback = function(ev)
-        vim.lsp.start({
-            name = 'phpactor',
-            cmd = {'phpactor', 'language-server'},
-            root_dir = vim.fs.root(ev.buf, {'.env', '.env.local.php', '.env.local', '.env.test'}),
-        })
-    end,
-})
-
--- Setup lazy.nvim
-require("lazy").setup({
-  spec = {
-      { 'echasnovski/mini.pairs', version = '*', opts = {} },
-  },
-  install = { colorscheme = { "habamax" } },
-  checker = { enabled = true },
-})
