@@ -47,7 +47,7 @@ vim.cmd('colorscheme gruvbox')
 vim.opt.background = "dark"
 vim.opt.cursorline = true
 --vim.opt.cursorcolumn = true
-vim.opt.colorcolumn = "100"
+vim.opt.colorcolumn = "80"
 
 -- Functionality
 --vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg=233, bg="#222222" })
