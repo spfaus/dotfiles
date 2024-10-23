@@ -42,20 +42,20 @@ vim.keymap.set('v', '<Leader>Y', '"+Y')
 vim.keymap.set('v', '<Leader>p', '"+p')
 vim.keymap.set('v', '<Leader>P', '"+P')
 
--- Visuals
+vim.cmd('filetype plugin on')
+
+-- Colors
 vim.cmd('colorscheme gruvbox')
 vim.opt.background = "dark"
 vim.opt.cursorline = true
---vim.opt.cursorcolumn = true
 vim.opt.colorcolumn = "80"
 
--- Functionality
---vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg=233, bg="#222222" })
-vim.cmd('filetype plugin on')
-
+-- Signcolumn
+vim.opt.signcolumn = 'yes'
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- Indentation, whitespace, wrapping
 vim.opt.smartindent = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
@@ -63,25 +63,29 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-
 vim.opt.wrap = false
 vim.opt.breakindent = true
 
+-- Buffer navigation, scrolling
 vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
 
+-- Search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.wildignorecase = true
 
+-- History
 vim.opt.undofile = true
 
+-- Mouse
 vim.opt.mouse = 'a'
 
-vim.opt.signcolumn = 'yes'
-
+-- Timings
 vim.opt.updatetime = 250
 --vim.opt.timeoutlen = 300
 
+-- Splits and windows
 vim.opt.splitright = true
 vim.opt.splitbelow = true
-
 vim.opt.inccommand = 'split'
