@@ -29,7 +29,7 @@ require("lazy").setup({
         { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = {} },
     },
     install = { colorscheme = { "gruvbox" } },
-    checker = { enabled = true },
+    checker = { enabled = false },
 })
 
 -- Keybindings
