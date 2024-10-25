@@ -32,6 +32,7 @@ sources=[('xkb', 'us+altgr-intl')]
 xkb-options=['lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
+accent-color='blue'
 clock-show-seconds=false
 clock-show-weekday=true
 color-scheme='prefer-dark'
