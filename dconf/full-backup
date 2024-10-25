@@ -1,8 +1,17 @@
 [org/freedesktop/tracker/miner/files]
 index-recursive-directories=['&DESKTOP', '&DOCUMENTS', '&MUSIC', '&PICTURES', '&VIDEOS', '&DOWNLOAD']
 
+[org/gnome/Console]
+custom-font='JetBrainsMonoNL Nerd Font Mono 11'
+font-scale=1.0
+ignore-scrollback-limit=true
+use-system-font=false
+
 [org/gnome/GWeather]
 temperature-unit='centigrade'
+
+[org/gnome/clocks]
+world-clocks=[{'location': <(uint32 2, <('Berlin', 'EDDB', true, [(0.91426163401859872, 0.23591034304566436)], [(0.91658875132345297, 0.23387411976724018)])>)>}]
 
 [org/gnome/desktop/background]
 color-shading-type='solid'
@@ -34,10 +43,12 @@ enable-hot-corners=false
 font-antialiasing='grayscale'
 font-hinting='slight'
 font-name='Cantarell 11'
+gtk-enable-primary-paste=false
 gtk-theme='adw-gtk3-dark'
 icon-theme='Adwaita'
 locate-pointer=false
 monospace-font-name='JetBrainsMono Nerd Font 11'
+overlay-scrolling=false
 show-battery-percentage=true
 toolbar-style='text'
 toolkit-accessibility=false
@@ -63,6 +74,10 @@ two-finger-scrolling-enabled=true
 [org/gnome/desktop/privacy]
 disable-camera=true
 disable-microphone=true
+old-files-age=uint32 7
+recent-files-max-age=30
+remove-old-temp-files=true
+remove-old-trash-files=true
 
 [org/gnome/desktop/screensaver]
 color-shading-type='solid'
@@ -135,10 +150,15 @@ toggle-maximized=['<Super>m']
 unmaximize=@as []
 
 [org/gnome/desktop/wm/preferences]
+action-double-click-titlebar='none'
+action-right-click-titlebar='none'
 button-layout=''
 num-workspaces=1
 titlebar-font='Cantarell Bold 11'
 workspace-names=@as []
+
+[org/gnome/file-roller/file-selector]
+show-hidden=true
 
 [org/gnome/mutter]
 attach-modal-dialogs=true
@@ -156,6 +176,9 @@ restore-shortcuts=@as []
 
 [org/gnome/nautilus/compression]
 default-compression-format='zip'
+
+[org/gnome/nautilus/icon-view]
+default-zoom-level='small-plus'
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=false
@@ -204,6 +227,7 @@ focus-down=['<Super>Down']
 focus-left=['<Super>Left']
 focus-right=['<Super>Right']
 focus-up=['<Super>Up']
+fullscreen-launcher=false
 gap-inner=uint32 0
 gap-outer=uint32 0
 hint-color-rgba='rgb(6,84,146)'
@@ -225,6 +249,9 @@ open-application-menu=@as []
 toggle-application-view=@as []
 toggle-message-tray=@as []
 toggle-overview=@as []
+
+[org/gnome/shell/world-clocks]
+locations=[<(uint32 2, <('Berlin', 'EDDB', true, [(0.91426163401859872, 0.23591034304566436)], [(0.91658875132345297, 0.23387411976724018)])>)>]
 
 [org/gnome/system/location]
 enabled=true
