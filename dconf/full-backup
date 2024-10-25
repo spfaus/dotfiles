@@ -222,7 +222,7 @@ favorite-apps=@as []
 
 [org/gnome/shell/extensions/pop-shell]
 activate-launcher=@as []
-active-hint=false
+active-hint=true
 active-hint-border-radius=uint32 0
 focus-down=['<Super>Down']
 focus-left=['<Super>Left']
@@ -231,7 +231,7 @@ focus-up=['<Super>Up']
 fullscreen-launcher=false
 gap-inner=uint32 0
 gap-outer=uint32 0
-hint-color-rgba='rgb(6,84,146)'
+hint-color-rgba='rgba(255,255,255,0.08)'
 log-level=uint32 1
 pop-monitor-left=['<Shift><Super>KP_Left', '<Shift><Super>h']
 pop-monitor-right=['<Shift><Super>KP_Right', '<Shift><Super>l']
