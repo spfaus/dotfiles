@@ -52,6 +52,9 @@ require'nvim-treesitter.configs'.setup {
         -- Using this option may slow down your editor, and you may see some duplicate highlights.
         additional_vim_regex_highlighting = false,
     },
+    indent = {
+        enable = true
+    }
 }
 
 -- Keybindings
