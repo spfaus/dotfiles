@@ -27,10 +27,32 @@ require("lazy").setup({
     spec = {
         { "echasnovski/mini.pairs", version = '*', opts = {} },
         { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = {} },
+        { "nvim-treesitter/nvim-treesitter", version = '*', opts = {}, build = ":TSUpdate" },
     },
     install = { colorscheme = { "gruvbox" } },
     checker = { enabled = false },
 })
+
+require'nvim-treesitter.configs'.setup {
+    ensure_installed = {},
+    sync_install = false,
+    auto_install = true,
+    highlight = {
+        enable = true,
+        -- disable slow treesitter highlight for large files
+        disable = function(lang, buf)
+            local max_filesize = 100 * 1024 -- 100 KB
+            local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+            if ok and stats and stats.size > max_filesize then
+                return true
+            end
+        end,
+
+        -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+        -- Using this option may slow down your editor, and you may see some duplicate highlights.
+        additional_vim_regex_highlighting = false,
+    },
+}
 
 -- Keybindings
 vim.keymap.set('n', '<Leader>y', '"+y')
