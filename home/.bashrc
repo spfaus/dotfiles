@@ -1,8 +1,9 @@
 # FZF
 eval "$(fzf --bash)"
-export FZF_DEFAULT_OPTS='--preview="bat --color=always {}"'
+export FZF_DEFAULT_OPTS=''
 alias j='cd'
 alias ji='cdi'
+alias :q='exit'
 
 # GENERAL
 #set -o vi
