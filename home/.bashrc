@@ -25,6 +25,7 @@ function cdev() {
 }
 
 # PROMPT
+# TODO: Fix error message when running sh (parse_git_branch not known in prompt)
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1)/"
 }
