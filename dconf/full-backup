@@ -206,7 +206,7 @@ window-screenshot-clip=@as []
 
 [org/gnome/settings-daemon/plugins/power]
 idle-dim=false
-power-button-action='interactive'
+power-button-action='nothing'
 power-saver-profile-on-low-battery=true
 sleep-inactive-ac-type='nothing'
 sleep-inactive-battery-type='nothing'
