@@ -29,16 +29,6 @@ require("lazy").setup({
     checker = { enabled = false },
 })
 
--- Keybindings
-vim.keymap.set('n', '<Leader>y', '"+y')
-vim.keymap.set('n', '<Leader>Y', '"+Y')
-vim.keymap.set('n', '<Leader>p', '"+p')
-vim.keymap.set('n', '<Leader>P', '"+P')
-vim.keymap.set('v', '<Leader>y', '"+y')
-vim.keymap.set('v', '<Leader>Y', '"+Y')
-vim.keymap.set('v', '<Leader>p', '"+p')
-vim.keymap.set('v', '<Leader>P', '"+P')
-
 -- Colors
 vim.cmd('colorscheme gruvbox')
 vim.opt.background = "dark"
@@ -84,3 +74,6 @@ vim.opt.updatetime = 250
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.inccommand = 'split'
+
+-- Yank, paste, clipboard
+vim.opt.clipboard = 'unnamedplus'
