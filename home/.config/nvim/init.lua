@@ -22,7 +22,6 @@ vim.g.maplocalleader = " "
 -- Setup lazy.nvim
 require("lazy").setup({
     spec = {
-        { "echasnovski/mini.pairs", version = '*', opts = {} },
         { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = {} },
     },
     install = { colorscheme = { "gruvbox" } },
