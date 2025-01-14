@@ -7,7 +7,7 @@ alias :q='exit'
 
 # GENERAL
 #set -o vi
-alias docker-killall='docker stop $(docker ps -qa); docker rm $(docker ps -qa); docker rmi -f $(docker images -qa); docker volume rm $(docker volume ls -q); docker network rm $(docker network ls -q)'
+alias docker-killall='ddev stop -aORU --stop-ssh-agent && docker stop $(docker ps -qa); docker system prune --all --volumes --force'
 alias ls='ls --color=auto'
 export PATH="$HOME/.cargo/bin:$PATH"
 export PROMPT_COMMAND='history -a'
