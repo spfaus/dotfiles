@@ -51,8 +51,8 @@ vim.opt.wrap = false
 vim.opt.breakindent = true
 
 -- Buffer navigation, scrolling
-vim.opt.scrolloff = 8
-vim.opt.sidescrolloff = 8
+vim.opt.scrolloff = 999
+vim.opt.sidescrolloff = 999
 
 -- Search
 vim.opt.ignorecase = true
