@@ -76,3 +76,9 @@ vim.opt.inccommand = 'split'
 
 -- Yank, paste, clipboard
 vim.opt.clipboard = 'unnamedplus'
+vim.keymap.set('n', '<Leader>p', '"0p', { noremap = true })
+vim.keymap.set('n', '<Leader>P', '"0P', { noremap = true })
+vim.keymap.set('x', '<Leader>p', '"0p', { noremap = true })
+vim.keymap.set('x', '<Leader>P', '"0P', { noremap = true })
+vim.keymap.set('n', '<Leader>gp', '"0gp', { noremap = true })
+vim.keymap.set('n', '<Leader>gP', '"0gP', { noremap = true })
