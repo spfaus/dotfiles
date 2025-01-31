@@ -70,7 +70,7 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     zoxide \
     fzf \
     mpv \
-    odin \
+    odin odinfmt \
     tree \
     shutter
 
