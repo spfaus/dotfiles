@@ -55,7 +55,7 @@ toolbar-style='text'
 toolkit-accessibility=false
 
 [org/gnome/desktop/lockdown]
-disable-lock-screen=true
+disable-lock-screen=false
 
 [org/gnome/desktop/notifications]
 show-banners=false
