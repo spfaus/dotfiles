@@ -50,7 +50,7 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers \
     xorg-server gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
     noto-fonts-extra ttf-jetbrains-mono-nerd gnome-shell-extension-pop-shell-git yay ntfs-3g chromium \
-    firefox amd-ucode discord cups bitwarden anki-bin \
+    amd-ucode discord cups bitwarden anki-bin \
     neovim luarocks lua51 ripgrep \
     htop \
     grub-customizer \
