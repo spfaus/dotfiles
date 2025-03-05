@@ -39,13 +39,6 @@ yay -Syyuu --noconfirm
 
 sudo pacman -S gnome xorg --noconfirm
 
-yay -S --noconfirm rustup clang
-
-rustup default stable
-rustup update
-cargo install cargo-watch cross
-rustup component add rust-analyzer
-
 yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages \
     texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers \
     xorg-server gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
@@ -60,7 +53,6 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     ddev-bin mkcert dialog jq \
     libreoffice-fresh \
     php composer mysql \
-    lldb cmake \
     dbeaver \
     libfido2 \
     authenticator \
