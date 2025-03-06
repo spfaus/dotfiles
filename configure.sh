@@ -44,7 +44,7 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     xorg-server gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
     noto-fonts-extra ttf-jetbrains-mono-nerd gnome-shell-extension-pop-shell-git yay ntfs-3g chromium \
     amd-ucode discord cups bitwarden anki-bin \
-    neovim luarocks lua51 ripgrep \
+    neovim \
     htop \
     grub-customizer \
     phpstorm-jre phpstorm \
@@ -64,7 +64,6 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     mpv \
     odin odinfmt \
     tree \
-    shutter \
     xclip
 
 # Load all dconf settings
