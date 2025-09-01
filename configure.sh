@@ -43,21 +43,13 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers \
     xorg-server gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
     noto-fonts-extra ttf-jetbrains-mono-nerd gnome-shell-extension-pop-shell-git yay ntfs-3g chromium \
-    amd-ucode discord cups bitwarden anki-bin \
+    amd-ucode bitwarden anki-bin \
     neovim \
     htop \
     grub-customizer \
-    phpstorm-jre phpstorm \
-    docker docker-compose docker-machine \
-    slack-desktop \
-    ddev-bin mkcert dialog jq \
-    libreoffice-fresh \
-    php composer mysql \
-    dbeaver \
     libfido2 \
     authenticator \
     ncdu \
-    bat \
     tldr \
     zoxide \
     fzf \
@@ -78,21 +70,12 @@ sudo cp -as --remove-destination $(pwd)/root/. /
 
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable gdm.service
-sudo systemctl enable cups.service
 
 sudo sed -i -e 's/#Color/Color/g' /etc/pacman.conf
 
-sudo systemctl enable docker.service
-sudo usermod -aG docker $USER
-
-if [ ! -d ~/shopware-docker ] ; then
-    git clone https://github.com/shyim/shopware-docker.git ~/shopware-docker
-fi
-sudo ln -sf /home/$USER/shopware-docker/swdc /usr/local/bin/swdc
 
 sudo ln -sf /usr/bin/nvim /usr/bin/vim
 sudo ln -sf /usr/bin/nvim /usr/bin/vi
-#sudo ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime # Is done by gnome 'Time Zone' setting
 
 sudo timedatectl set-ntp true
 sudo hwclock --systohc
