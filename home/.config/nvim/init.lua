@@ -22,7 +22,21 @@ vim.g.maplocalleader = " "
 -- Setup lazy.nvim
 require("lazy").setup({
     spec = {
-        { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = {} },
+        { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = {} },
+        { "windwp/nvim-autopairs", config = true },
+        { "kylechui/nvim-surround", config = true },
+        { "HiPhish/rainbow-delimiters.nvim" },
+        {
+            "nvim-treesitter/nvim-treesitter",
+            build = ":TSUpdate",
+            config = function()
+                require("nvim-treesitter.configs").setup({
+                    ensure_installed = { "odin" },
+                    highlight = { enable = true },
+                    indent = { enable = true },
+                })
+            end,
+        },
     },
     install = { colorscheme = { "gruvbox" } },
     checker = { enabled = false },
@@ -52,7 +66,7 @@ vim.opt.breakindent = true
 
 -- Buffer navigation, scrolling
 vim.opt.scrolloff = 999
-vim.opt.sidescrolloff = 999
+vim.opt.sidescrolloff = 8
 
 -- Search
 vim.opt.ignorecase = true
@@ -82,3 +96,14 @@ vim.keymap.set('x', '<Leader>p', '"0p', { noremap = true })
 vim.keymap.set('x', '<Leader>P', '"0P', { noremap = true })
 vim.keymap.set('n', '<Leader>gp', '"0gp', { noremap = true })
 vim.keymap.set('n', '<Leader>gP', '"0gP', { noremap = true })
+
+-- Restore cursor position on reopen
+vim.api.nvim_create_autocmd("BufReadPost", {
+    callback = function()
+        local mark = vim.api.nvim_buf_get_mark(0, '"')
+        local lcount = vim.api.nvim_buf_line_count(0)
+        if mark[1] > 0 and mark[1] <= lcount then
+            pcall(vim.api.nvim_win_set_cursor, 0, mark)
+        end
+    end,
+})
