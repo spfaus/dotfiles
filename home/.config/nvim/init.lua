@@ -63,6 +63,9 @@ vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.wrap = false
 vim.opt.breakindent = true
+vim.opt.foldmethod = "indent"
+vim.opt.foldenable = false
+vim.opt.foldnestmax = 1
 
 -- Buffer navigation, scrolling
 vim.opt.scrolloff = 999
