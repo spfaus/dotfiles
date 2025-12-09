@@ -217,7 +217,7 @@ enabled-connections=@as []
 [org/gnome/shell]
 disable-user-extensions=false
 disabled-extensions=['windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'status-icons@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'pop-shell@system76.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
+enabled-extensions=['launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'pop-shell@system76.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'focused-window-dbus@flexagoon.com']
 favorite-apps=@as []
 
 [org/gnome/shell/extensions/pop-shell]

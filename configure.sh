@@ -57,7 +57,7 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     odin odinfmt \
     tree \
     xclip \
-    activitywatch-bin
+    activitywatch-bin gnome-shell-extension-focused-window-dbus-git aw-awatcher
 
 # Load all dconf settings
 dconf load / < $(pwd)/dconf/full-backup
