@@ -37,6 +37,7 @@ require("lazy").setup({
                 })
             end,
         },
+        { "lowitea/aw-watcher.nvim", opts = {} }
     },
     install = { colorscheme = { "gruvbox" } },
     checker = { enabled = false },

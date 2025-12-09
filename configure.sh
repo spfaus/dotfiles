@@ -56,7 +56,8 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     mpv \
     odin odinfmt \
     tree \
-    xclip
+    xclip \
+    activitywatch-bin
 
 # Load all dconf settings
 dconf load / < $(pwd)/dconf/full-backup
