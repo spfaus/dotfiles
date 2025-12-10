@@ -1,0 +1,11 @@
+[Unit]
+Description=ActivityWatch Server
+
+[Service]
+ExecStart=/opt/activitywatch/aw-server/aw-server
+Restart=always
+RestartSec=5
+StartLimitIntervalSec=0
+
+[Install]
+WantedBy=default.target

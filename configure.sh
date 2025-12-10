@@ -71,6 +71,7 @@ sudo cp -as --remove-destination $(pwd)/root/. /
 
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable gdm.service
+systemctl --user enable aw-server.service aw-awatcher.service
 
 sudo sed -i -e 's/#Color/Color/g' /etc/pacman.conf
 

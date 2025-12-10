@@ -1,0 +1,13 @@
+[Unit]
+Description=ActivityWatch Awatcher
+After=aw-server.service
+Requires=aw-server.service
+
+[Service]
+ExecStart=/usr/bin/aw-awatcher
+Restart=always
+RestartSec=5
+StartLimitIntervalSec=0
+
+[Install]
+WantedBy=default.target
