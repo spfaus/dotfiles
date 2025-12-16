@@ -35,6 +35,8 @@ if [ ! -x /usr/bin/yay ] ; then
     rm -rf yay
 fi
 
+yay -S archlinux-keyring --noconfirm
+
 yay -Syyuu --noconfirm
 
 sudo pacman -S gnome xorg --noconfirm
