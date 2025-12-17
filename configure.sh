@@ -24,7 +24,7 @@ git config user.name "spfaus"
 git config user.email "simon.pfaus@web.de"
 git status
 
-sudo reflector --verbose --latest 10 --sort rate \
+sudo reflector --verbose --protocol https --latest 20 --sort rate \
     --save /etc/pacman.d/mirrorlist
 
 if [ ! -x /usr/bin/yay ] ; then
