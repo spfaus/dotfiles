@@ -5,7 +5,7 @@ SCRIPT_DIR=$(dirname "$0")
 
 cd $SCRIPT_DIR
 
-sudo pacman -Sy
+sudo pacman -Sy archlinux-keyring --noconfirm
 
 if [ ! -x /usr/bin/rsync ] ; then
     sudo pacman -S --noconfirm rsync
@@ -34,8 +34,6 @@ if [ ! -x /usr/bin/yay ] ; then
     cd ..
     rm -rf yay
 fi
-
-yay -S archlinux-keyring --noconfirm
 
 yay -Syyuu --noconfirm
 
