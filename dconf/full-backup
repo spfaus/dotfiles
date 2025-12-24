@@ -26,9 +26,10 @@ show-desktop-icons=false
 automatic-timezone=true
 
 [org/gnome/desktop/input-sources]
+mru-sources=[('xkb', 'us'), ('ibus', 'mozc-jp')]
 per-window=false
 show-all-sources=false
-sources=[('xkb', 'us+altgr-intl')]
+sources=[('xkb', 'us'), ('ibus', 'mozc-jp')]
 xkb-options=['lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
@@ -133,8 +134,8 @@ switch-applications=@as []
 switch-applications-backward=@as []
 switch-group=@as []
 switch-group-backward=@as []
-switch-input-source=@as []
-switch-input-source-backward=@as []
+switch-input-source=['<Super>Tab']
+switch-input-source-backward=['<Shift><Super>Tab']
 switch-panels=@as []
 switch-panels-backward=@as []
 switch-to-workspace-1=@as []
