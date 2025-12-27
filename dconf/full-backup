@@ -26,10 +26,10 @@ show-desktop-icons=false
 automatic-timezone=true
 
 [org/gnome/desktop/input-sources]
-mru-sources=[('xkb', 'us'), ('ibus', 'mozc-jp')]
+mru-sources=[('xkb', 'us+altgr-intl'), ('ibus', 'mozc-jp')]
 per-window=false
 show-all-sources=false
-sources=[('xkb', 'us'), ('ibus', 'mozc-jp')]
+sources=[('xkb', 'us+altgr-intl'), ('ibus', 'mozc-jp')]
 xkb-options=['lv3:ralt_switch']
 
 [org/gnome/desktop/interface]
