@@ -60,7 +60,8 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     activitywatch-bin gnome-shell-extension-focused-window-dbus-git aw-awatcher \
     jq \
     ibus-mozc \
-    macchanger
+    macchanger \
+    libreoffice-fresh
 
 # Load all dconf settings
 dconf load / < $(pwd)/dconf/full-backup
