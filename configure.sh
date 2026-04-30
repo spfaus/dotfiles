@@ -61,7 +61,8 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     jq \
     ibus-mozc \
     macchanger \
-    libreoffice-fresh
+    libreoffice-fresh \
+    proton-vpn-gtk-app
 
 # Load all dconf settings
 dconf load / < $(pwd)/dconf/full-backup
