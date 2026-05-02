@@ -44,7 +44,7 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     xorg-server gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
     noto-fonts-extra ttf-jetbrains-mono-nerd gnome-shell-extension-pop-shell-git yay ntfs-3g \
     firefox \
-    amd-ucode bitwarden anki-bin \
+    amd-ucode bitwarden anki \
     neovim luarocks \
     htop \
     grub-customizer \
