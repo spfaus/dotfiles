@@ -42,9 +42,10 @@ sudo pacman -S gnome xorg --noconfirm
 yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db man-pages \
     texinfo networkmanager curl wget rsync git grub efibootmgr dkms linux-headers \
     xorg-server gnome-tweaks noto-fonts noto-fonts-cjk noto-fonts-emoji \
-    noto-fonts-extra ttf-jetbrains-mono-nerd gnome-shell-extension-pop-shell-git yay ntfs-3g chromium \
+    noto-fonts-extra ttf-jetbrains-mono-nerd gnome-shell-extension-pop-shell-git yay ntfs-3g \
+    firefox \
     amd-ucode bitwarden anki-bin \
-    neovim \
+    neovim luarocks \
     htop \
     grub-customizer \
     libfido2 \
