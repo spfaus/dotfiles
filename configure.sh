@@ -57,10 +57,8 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     odin odinfmt \
     tree \
     xclip \
-    activitywatch-bin gnome-shell-extension-focused-window-dbus-git aw-awatcher \
     jq \
     ibus-mozc \
-    macchanger \
     libreoffice-fresh \
     proton-vpn-gtk-app
 
@@ -76,7 +74,6 @@ sudo cp -as --remove-destination $(pwd)/root/. /
 
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable gdm.service
-systemctl --user enable aw-server.service aw-awatcher.service
 
 sudo sed -i -e 's/#Color/Color/g' /etc/pacman.conf
 
