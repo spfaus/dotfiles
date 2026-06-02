@@ -73,8 +73,8 @@ cp -as --remove-destination $(pwd)/home/. $HOME/
 sudo chown -R root:root $(pwd)/root/
 sudo cp -as --remove-destination $(pwd)/root/. /
 
-sudo systemctl enable NetworkManager.service
-sudo systemctl enable gdm.service
+sudo systemctl enable --now NetworkManager.service
+sudo systemctl enable --now gdm.service
 
 sudo sed -i -e 's/#Color/Color/g' /etc/pacman.conf
 
