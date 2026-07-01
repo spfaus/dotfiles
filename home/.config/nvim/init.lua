@@ -110,3 +110,12 @@ vim.api.nvim_create_autocmd("BufReadPost", {
         end
     end,
 })
+
+-- Odin
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "odin",
+    callback = function()
+        vim.bo.makeprg = "odin build ."
+        vim.bo.errorformat = '%f(%l:%c) %m'
+    end,
+})
