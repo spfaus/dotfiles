@@ -62,8 +62,7 @@ yay -S --noconfirm base base-devel linux linux-firmware reflector sudo man-db ma
     ibus-mozc \
     libreoffice-fresh \
     proton-vpn-gtk-app \
-    cups cups-filters avahi nss-mdns sane sane-airscan simple-scan \
-    docker docker-compose
+    cups cups-filters avahi nss-mdns sane sane-airscan simple-scan
 
 # Load all dconf settings
 dconf load / < $(pwd)/dconf/full-backup
@@ -78,9 +77,6 @@ sudo cp -as --remove-destination $(pwd)/root/. /
 sudo systemctl enable --now NetworkManager.service
 sudo systemctl enable --now gdm.service
 sudo systemctl enable --now cups.service avahi-daemon.service
-sudo systemctl enable --now docker.service
-
-sudo usermod -aG docker $USER
 
 # Brother HL-L2390DW (driverless IPP-Everywhere)
 if ! lpstat -v Brother_HLL2390DW &>/dev/null ; then
