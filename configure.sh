@@ -77,6 +77,7 @@ sudo cp -as --remove-destination $(pwd)/root/. /
 sudo systemctl enable --now NetworkManager.service
 sudo systemctl enable --now gdm.service
 sudo systemctl enable --now cups.service avahi-daemon.service
+sudo systemctl enable --now bluetooth
 
 # Brother HL-L2390DW (driverless IPP-Everywhere)
 if ! lpstat -v Brother_HLL2390DW &>/dev/null ; then
